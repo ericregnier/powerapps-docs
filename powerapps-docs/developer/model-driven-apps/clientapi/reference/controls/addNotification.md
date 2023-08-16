@@ -1,18 +1,16 @@
 ---
 title: "addNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 09/03/2019
-ms.service: powerapps
-ms.topic: "reference"
+description: Displays an error or recommendation notification for a control, and lets you specify to execute based on the notification.
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # addNotification (Client API reference)
 
@@ -28,7 +26,7 @@ All
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -39,9 +37,9 @@ All
 <td>notification</td>
 <td>Object</td>
 <td>Yes</td>
-<td>The notification to add. The object contains the following attributes:
+<td>The notification to add. The object contains the following parameters:
 <ul>
-<li><b>actions</b>: (Optional) Array of objects. A collection of objects with the following attributes:
+<li><b>actions</b>: (Optional) Array of objects. A collection of objects with the following parameters:
 <ul>
 <li><b>message</b>: (Optional) String. The body message of the notification to be displayed to the user. Limit your message to 100 characters for optimal user experience.</li>
 <li><b>actions</b>: (Optional) Array of functions. The corresponding actions for the message.</li>
@@ -53,6 +51,8 @@ All
 </tr>
 
 </table>
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Return Value
 
@@ -72,7 +72,7 @@ In Unified Interface:
 
 ## Example
 
-The following sample code displays a notification on the **Account Name** field of the account form to set the **Ticker Symbol** if the **Account Name** field contains "Microsoft", and the ticker symbol is not already set to "MSFT". Clicking **Apply** in the notification will set the **Ticker Symbol** field to "MSFT".
+The following sample code displays a notification on the **Account Name** column of the account form to set the **Ticker Symbol** if the **Account Name** column contains "Microsoft", and the ticker symbol is not already set to "MSFT". Clicking **Apply** in the notification will set the **Ticker Symbol** column to "MSFT".
 
 ```JavaScript
 function addTickerSymbolRecommendation(executionContext) {
@@ -107,7 +107,7 @@ function addTickerSymbolRecommendation(executionContext) {
 This how the notification appears in model-driven apps:
 
 > [!div class="mx-imgBorder"]
-> ![Example add notification](../../../media/clientapi_addnotification.png "Example add notification")
+> ![Example add notification.](../../../media/clientapi_addnotification.png "Example add notification")
 
 ### Related topics
 

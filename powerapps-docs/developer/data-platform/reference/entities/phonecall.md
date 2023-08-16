@@ -1,18 +1,14 @@
 ---
-title: "PhoneCall table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "PhoneCall table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the PhoneCall table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # PhoneCall table/entity reference
@@ -25,21 +21,20 @@ Activity to track a telephone call.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/phonecalls(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/phonecalls<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/phonecalls(*activityid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/phonecalls(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/phonecalls<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/phonecalls(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/phonecalls(*activityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /phonecalls(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /phonecalls<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /phonecalls(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /phonecalls(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /phonecalls<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /phonecalls(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /phonecalls(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -224,12 +219,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DirectionCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Outgoing|
-|0|Incoming|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Outgoing||
+|0|Incoming||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -278,12 +273,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBilled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -301,12 +296,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWorkflowCreated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -339,12 +334,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### LeftVoiceMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -421,11 +416,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -735,6 +730,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -877,8 +873,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -897,12 +893,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsRegularActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1067,12 +1063,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the phone call activity.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1233,7 +1245,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [phonecall_PostRegardings](#BKMK_phonecall_PostRegardings)
 - [phonecall_PostFollows](#BKMK_phonecall_PostFollows)
 - [PhoneCall_AsyncOperations](#BKMK_PhoneCall_AsyncOperations)
 - [phonecall_connections2](#BKMK_phonecall_connections2)
@@ -1251,24 +1262,9 @@ Listed by **SchemaName**.
 - [phonecall_principalobjectattributeaccess](#BKMK_phonecall_principalobjectattributeaccess)
 
 
-### <a name="BKMK_phonecall_PostRegardings"></a> phonecall_PostRegardings
-
-Same as postregarding table [phonecall_PostRegardings](postregarding.md#BKMK_phonecall_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|phonecall_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_phonecall_PostFollows"></a> phonecall_PostFollows
 
-Same as postfollow table [phonecall_PostFollows](postfollow.md#BKMK_phonecall_PostFollows) Many-To-One relationship.
+Same as the [phonecall_PostFollows](postfollow.md#BKMK_phonecall_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1283,7 +1279,7 @@ Same as postfollow table [phonecall_PostFollows](postfollow.md#BKMK_phonecall_Po
 
 ### <a name="BKMK_PhoneCall_AsyncOperations"></a> PhoneCall_AsyncOperations
 
-Same as asyncoperation table [PhoneCall_AsyncOperations](asyncoperation.md#BKMK_PhoneCall_AsyncOperations) Many-To-One relationship.
+Same as the [PhoneCall_AsyncOperations](asyncoperation.md#BKMK_PhoneCall_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1298,7 +1294,7 @@ Same as asyncoperation table [PhoneCall_AsyncOperations](asyncoperation.md#BKMK_
 
 ### <a name="BKMK_phonecall_connections2"></a> phonecall_connections2
 
-Same as connection table [phonecall_connections2](connection.md#BKMK_phonecall_connections2) Many-To-One relationship.
+Same as the [phonecall_connections2](connection.md#BKMK_phonecall_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1313,7 +1309,7 @@ Same as connection table [phonecall_connections2](connection.md#BKMK_phonecall_c
 
 ### <a name="BKMK_PhoneCall_SyncErrors"></a> PhoneCall_SyncErrors
 
-Same as syncerror table [PhoneCall_SyncErrors](syncerror.md#BKMK_PhoneCall_SyncErrors) Many-To-One relationship.
+Same as the [PhoneCall_SyncErrors](syncerror.md#BKMK_PhoneCall_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1328,7 +1324,7 @@ Same as syncerror table [PhoneCall_SyncErrors](syncerror.md#BKMK_PhoneCall_SyncE
 
 ### <a name="BKMK_PhoneCall_ProcessSessions"></a> PhoneCall_ProcessSessions
 
-Same as processsession table [PhoneCall_ProcessSessions](processsession.md#BKMK_PhoneCall_ProcessSessions) Many-To-One relationship.
+Same as the [PhoneCall_ProcessSessions](processsession.md#BKMK_PhoneCall_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1343,7 +1339,7 @@ Same as processsession table [PhoneCall_ProcessSessions](processsession.md#BKMK_
 
 ### <a name="BKMK_PhoneCall_DuplicateMatchingRecord"></a> PhoneCall_DuplicateMatchingRecord
 
-Same as duplicaterecord table [PhoneCall_DuplicateMatchingRecord](duplicaterecord.md#BKMK_PhoneCall_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [PhoneCall_DuplicateMatchingRecord](duplicaterecord.md#BKMK_PhoneCall_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1358,7 +1354,7 @@ Same as duplicaterecord table [PhoneCall_DuplicateMatchingRecord](duplicaterecor
 
 ### <a name="BKMK_slakpiinstance_phonecall"></a> slakpiinstance_phonecall
 
-Same as slakpiinstance table [slakpiinstance_phonecall](slakpiinstance.md#BKMK_slakpiinstance_phonecall) Many-To-One relationship.
+Same as the [slakpiinstance_phonecall](slakpiinstance.md#BKMK_slakpiinstance_phonecall) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1373,7 +1369,7 @@ Same as slakpiinstance table [slakpiinstance_phonecall](slakpiinstance.md#BKMK_s
 
 ### <a name="BKMK_PhoneCall_DuplicateBaseRecord"></a> PhoneCall_DuplicateBaseRecord
 
-Same as duplicaterecord table [PhoneCall_DuplicateBaseRecord](duplicaterecord.md#BKMK_PhoneCall_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [PhoneCall_DuplicateBaseRecord](duplicaterecord.md#BKMK_PhoneCall_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1388,7 +1384,7 @@ Same as duplicaterecord table [PhoneCall_DuplicateBaseRecord](duplicaterecord.md
 
 ### <a name="BKMK_PhoneCall_Annotation"></a> PhoneCall_Annotation
 
-Same as annotation table [PhoneCall_Annotation](annotation.md#BKMK_PhoneCall_Annotation) Many-To-One relationship.
+Same as the [PhoneCall_Annotation](annotation.md#BKMK_PhoneCall_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1403,7 +1399,7 @@ Same as annotation table [PhoneCall_Annotation](annotation.md#BKMK_PhoneCall_Ann
 
 ### <a name="BKMK_phonecall_actioncard"></a> phonecall_actioncard
 
-Same as actioncard table [phonecall_actioncard](actioncard.md#BKMK_phonecall_actioncard) Many-To-One relationship.
+Same as the [phonecall_actioncard](actioncard.md#BKMK_phonecall_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1418,7 +1414,7 @@ Same as actioncard table [phonecall_actioncard](actioncard.md#BKMK_phonecall_act
 
 ### <a name="BKMK_phonecall_connections1"></a> phonecall_connections1
 
-Same as connection table [phonecall_connections1](connection.md#BKMK_phonecall_connections1) Many-To-One relationship.
+Same as the [phonecall_connections1](connection.md#BKMK_phonecall_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1433,7 +1429,7 @@ Same as connection table [phonecall_connections1](connection.md#BKMK_phonecall_c
 
 ### <a name="BKMK_PhoneCall_BulkDeleteFailures"></a> PhoneCall_BulkDeleteFailures
 
-Same as bulkdeletefailure table [PhoneCall_BulkDeleteFailures](bulkdeletefailure.md#BKMK_PhoneCall_BulkDeleteFailures) Many-To-One relationship.
+Same as the [PhoneCall_BulkDeleteFailures](bulkdeletefailure.md#BKMK_PhoneCall_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1448,7 +1444,7 @@ Same as bulkdeletefailure table [PhoneCall_BulkDeleteFailures](bulkdeletefailure
 
 ### <a name="BKMK_phonecall_activity_parties"></a> phonecall_activity_parties
 
-Same as activityparty table [phonecall_activity_parties](activityparty.md#BKMK_phonecall_activity_parties) Many-To-One relationship.
+Same as the [phonecall_activity_parties](activityparty.md#BKMK_phonecall_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1463,7 +1459,7 @@ Same as activityparty table [phonecall_activity_parties](activityparty.md#BKMK_p
 
 ### <a name="BKMK_PhoneCall_QueueItem"></a> PhoneCall_QueueItem
 
-Same as queueitem table [PhoneCall_QueueItem](queueitem.md#BKMK_PhoneCall_QueueItem) Many-To-One relationship.
+Same as the [PhoneCall_QueueItem](queueitem.md#BKMK_PhoneCall_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1478,7 +1474,7 @@ Same as queueitem table [PhoneCall_QueueItem](queueitem.md#BKMK_PhoneCall_QueueI
 
 ### <a name="BKMK_phonecall_principalobjectattributeaccess"></a> phonecall_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [phonecall_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_phonecall_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [phonecall_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_phonecall_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1512,79 +1508,74 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [team_phonecall](#BKMK_team_phonecall)
 - [TransactionCurrency_PhoneCall](#BKMK_TransactionCurrency_PhoneCall)
 - [business_unit_phone_call_activities](#BKMK_business_unit_phone_call_activities)
-- [owner_phonecalls](#BKMK_owner_phonecalls)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_PhoneCalls"></a> KnowledgeBaseRecord_PhoneCalls
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_PhoneCalls](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_PhoneCalls) One-To-Many relationship.
+See the [KnowledgeBaseRecord_PhoneCalls](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_PhoneCalls) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_lk_phonecall_modifiedonbehalfby"></a> lk_phonecall_modifiedonbehalfby
 
-See systemuser Table [lk_phonecall_modifiedonbehalfby](systemuser.md#BKMK_lk_phonecall_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_phonecall_modifiedonbehalfby](systemuser.md#BKMK_lk_phonecall_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_phonecall_createdonbehalfby"></a> lk_phonecall_createdonbehalfby
 
-See systemuser Table [lk_phonecall_createdonbehalfby](systemuser.md#BKMK_lk_phonecall_createdonbehalfby) One-To-Many relationship.
+See the [lk_phonecall_createdonbehalfby](systemuser.md#BKMK_lk_phonecall_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Account_Phonecalls"></a> Account_Phonecalls
 
-See account Table [Account_Phonecalls](account.md#BKMK_Account_Phonecalls) One-To-Many relationship.
+See the [Account_Phonecalls](account.md#BKMK_Account_Phonecalls) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_lk_phonecall_modifiedby"></a> lk_phonecall_modifiedby
 
-See systemuser Table [lk_phonecall_modifiedby](systemuser.md#BKMK_lk_phonecall_modifiedby) One-To-Many relationship.
+See the [lk_phonecall_modifiedby](systemuser.md#BKMK_lk_phonecall_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Contact_Phonecalls"></a> Contact_Phonecalls
 
-See contact Table [Contact_Phonecalls](contact.md#BKMK_Contact_Phonecalls) One-To-Many relationship.
+See the [Contact_Phonecalls](contact.md#BKMK_Contact_Phonecalls) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_manualsla_phonecall"></a> manualsla_phonecall
 
-See sla Table [manualsla_phonecall](sla.md#BKMK_manualsla_phonecall) One-To-Many relationship.
+See the [manualsla_phonecall](sla.md#BKMK_manualsla_phonecall) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_sla_phonecall"></a> sla_phonecall
 
-See sla Table [sla_phonecall](sla.md#BKMK_sla_phonecall) One-To-Many relationship.
+See the [sla_phonecall](sla.md#BKMK_sla_phonecall) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_Phonecalls"></a> KnowledgeArticle_Phonecalls
 
-See knowledgearticle Table [KnowledgeArticle_Phonecalls](knowledgearticle.md#BKMK_KnowledgeArticle_Phonecalls) One-To-Many relationship.
+See the [KnowledgeArticle_Phonecalls](knowledgearticle.md#BKMK_KnowledgeArticle_Phonecalls) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_lk_phonecall_createdby"></a> lk_phonecall_createdby
 
-See systemuser Table [lk_phonecall_createdby](systemuser.md#BKMK_lk_phonecall_createdby) One-To-Many relationship.
+See the [lk_phonecall_createdby](systemuser.md#BKMK_lk_phonecall_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_processstage_phonecalls"></a> processstage_phonecalls
 
-See processstage Table [processstage_phonecalls](processstage.md#BKMK_processstage_phonecalls) One-To-Many relationship.
+See the [processstage_phonecalls](processstage.md#BKMK_processstage_phonecalls) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_user_phonecall"></a> user_phonecall
 
-See systemuser Table [user_phonecall](systemuser.md#BKMK_user_phonecall) One-To-Many relationship.
+See the [user_phonecall](systemuser.md#BKMK_user_phonecall) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_phonecall"></a> activity_pointer_phonecall
 
-See activitypointer Table [activity_pointer_phonecall](activitypointer.md#BKMK_activity_pointer_phonecall) One-To-Many relationship.
+See the [activity_pointer_phonecall](activitypointer.md#BKMK_activity_pointer_phonecall) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_team_phonecall"></a> team_phonecall
 
-See team Table [team_phonecall](team.md#BKMK_team_phonecall) One-To-Many relationship.
+See the [team_phonecall](team.md#BKMK_team_phonecall) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_PhoneCall"></a> TransactionCurrency_PhoneCall
 
-See transactioncurrency Table [TransactionCurrency_PhoneCall](transactioncurrency.md#BKMK_TransactionCurrency_PhoneCall) One-To-Many relationship.
+See the [TransactionCurrency_PhoneCall](transactioncurrency.md#BKMK_TransactionCurrency_PhoneCall) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_business_unit_phone_call_activities"></a> business_unit_phone_call_activities
 
-See businessunit Table [business_unit_phone_call_activities](businessunit.md#BKMK_business_unit_phone_call_activities) One-To-Many relationship.
-
-### <a name="BKMK_owner_phonecalls"></a> owner_phonecalls
-
-See owner Table [owner_phonecalls](owner.md#BKMK_owner_phonecalls) One-To-Many relationship.
+See the [business_unit_phone_call_activities](businessunit.md#BKMK_business_unit_phone_call_activities) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.phonecall?text=phonecall EntityType" />

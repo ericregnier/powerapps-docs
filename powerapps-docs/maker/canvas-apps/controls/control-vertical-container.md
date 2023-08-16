@@ -1,20 +1,21 @@
 ---
-title: 'Vertical container: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Vertical container control
+title: Vertical container control in Power Apps
+description: Learn about the details, properties and examples of the Vertical container control in Power Apps.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 10/30/2020
+ms.reviewer: mkaur
+ms.date: 01/27/2022
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
+  - emcoope-msft
 ---
-# Vertical container control 
+# Vertical container control in Power Apps
 
 Vertical container control determines the position of the child components so that you never have to set X, Y for a component inside the container.
 
@@ -32,6 +33,8 @@ Vertical container control determines the position of the child components so th
 
 **[Color](properties-color-border.md)** - The color of the container control.
 
+**[Drop shadow](properties-color-border.md)** - Adds shadow effects around the control.
+
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
@@ -45,6 +48,14 @@ Vertical container control determines the position of the child components so th
 **Gap** - Defines the space between containers child components in pixels. 
 
 **Horizontal Overflow** - Defines whether the container shows scrollbars or remove content when it is too large to fit. **Scroll** and **Hide**.
+
+**[RadiusBottomLeft](properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
+
+**[RadiusBottomRight](properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
+
+**[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
+
+**[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
 **Vertical Overflow** - Defines whether the container shows scrollbars or remove content when it is too large to fit. **Scroll** and **Hide**.
 
@@ -75,14 +86,12 @@ Vertical container control determines the position of the child components so th
 
 ## Example
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
-1. On the **Blank app** tile, select **Tablet layout**.
-1. Select **File** > **Settings** > **Screen size + orientation** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
+1. Create a [blank canvas app](../create-blank-app.md) with **Tablet** layout.
+1. Select **Settings** > **Display** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Vertical container**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Insert containers](../media/create-responsive-layout/insert-containers.png "Insert containers")
+   > ![Insert containers.](../media/create-responsive-layout/insert-containers.png "Insert containers")
 
 1. Set the following properties to occupy the full available space of the screen:
    1. X = 0

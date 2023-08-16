@@ -4,16 +4,12 @@ description: "Learn about the different paging behaviors for FetchXML queries an
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "NHelgren" # GitHub ID
 ms.author: "nhelgren" # MSFT alias of Microsoft employees only
-manager: "mayadu" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Paging behaviors and ordering

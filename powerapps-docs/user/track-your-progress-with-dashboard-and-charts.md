@@ -1,21 +1,18 @@
 ---
 title: "Track your progress with dashboards and charts in model-driven apps| MicrosoftDocs"
 description: How to use charts in Power Apps.
-author: mduelae
-manager: kvivek
-ms.service: powerapps
+author: sericks007
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 9/14/2020
-ms.author: mkaur
+ms.date: 04/07/2023
+ms.subservice: end-user
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-dashboard
@@ -30,7 +27,7 @@ A dashboard is made up of a collection of easy-to-read charts and graphs that pr
 Dashboards are available for all row types. Charts are available on the Dashboard page, Grid page, Associated Home page, and Edit Form page. 
 
 > [!div class="mx-imgBorder"]
-> ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
+> ![Dashboard.](media/dashboard_sample.png "Sample Dashboard") 
 
 
 ## View dashboards
@@ -55,9 +52,9 @@ Legend:
 
 Legend:
 
-1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
-2. **Refresh**: Refreshes the rows in the chart.
-3. **View Rows**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+1. **Refresh**: Refreshes the rows in the chart.
+2. **View Records**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+3. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
@@ -86,11 +83,11 @@ Legend:
  
 5. On the **Add Component** dialog box, select your options. 
  
-      |  |  |
-      | --- | --- |
-      | **Row Type** |Select a row.  |
-      | **View** |Select a view for the row.  |
-      | **Chart** |Select the type of chart that you want use. |
+      |              |Options                                   |
+      |--------------|--------------------------------------------|
+      | **Row Type** |Select a row.                               |
+      | **View**     |Select a view for the row.                  |
+      | **Chart**    |Select the type of chart that you want use. |
 
 
       > [!div class="mx-imgBorder"]
@@ -204,9 +201,15 @@ You can continue drilling further into the chart data. As you drill down deeper,
 ## Known issues  
 
 
+- In the chart designer, adding an order on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using other calculated columns, a related table column, or a local column on the table.
 
-In the chart designer, adding an order on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using other calculated columns, a related table column, or a local column on the table.
+- Chart displays zero values when there is no data. With Unified Interface for model-driven apps you can still select a chart with zero value and drill down in to the data. More information: [Chart displays zero values when there is no data](https://support.microsoft.com/topic/chart-displays-zero-values-when-there-is-no-data-56f9e224-cb71-40eb-4dc1-bbcda7e28b12) 
 
+- By design, charts in rollup column can't be displayed because rollup columns contain an aggregate value computed over the rows related to a specified row.
+
+- Chart drill-down functionality is not available on charts in a subgrid or an associated grid.
+
+- When you add a list control to a dashboard and switch the control to the **Power Apps Read-Only grid** control, you will see a blank tile on the dashboard because the **Power Apps Read-Only grid** control is not supported on dashboards. We recommend that you use **Power Apps grid** control.
 
 
 

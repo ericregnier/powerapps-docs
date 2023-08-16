@@ -1,18 +1,16 @@
 ---
-title: "addOnPostSearch (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
+title: "removeOnPostSearch (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the removeOnPostSearch method.
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c398dbca-0ead-487a-8a92-35b1f2953bf6
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # removeOnPostSearch (Client API reference)
 
@@ -26,7 +24,7 @@ knowledge base search control
 
 ## Syntax
 
-```
+```JavaScript
 var kbSearchControl = formContext.getControl("<name>";
 kbSearchControl.removeOnPostSearch(myFunction);
 ```

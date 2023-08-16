@@ -1,18 +1,18 @@
 ---
-title: "onPreProcessStatusChange Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 06/30/2019
-ms.service: powerapps
+title: "onPreProcessStatusChange event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the onPreProcessStatusChange event.
+author: HemantGaur
+ms.author: hemantg
+
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: reference
-ms.assetid: 
-author: MSFTMan
-ms.author: Deonhe
-manager: KVivek
 search.audienceType: 
   - developer
-search.app: 
-  - D365CE
+contributors:
+  - JimDaly
 ---
-# onPreProcessStatusChange Event (Client API reference)
+# onPreProcessStatusChange event (Client API reference)
 
 [!INCLUDE[](../../../../../includes/cc_applies_to_update_9_0_0.md)]
 
@@ -33,6 +33,7 @@ When you invoke `preventDefault`:
 This client API is only supported on the unified client. The legacy web client does not support this client API.
 
 ## Methods supported for this event
+
 - **formContext.data.process**.[addOnPreProcessStatusChange](../formcontext-data-process/eventhandlers/addOnPreProcessStatusChange.md) method to add event handlers for this event.
 - **formContext.data.process**.[removeOnPreProcessStatusChange](../formcontext-data-process/eventhandlers/removeOnPreProcessStatusChange.md) method to remove event handlers for this event. 
 

@@ -1,31 +1,22 @@
 ---
 title: "Developers: Best practices and guidance for model-driven apps | Microsoft Docs"
 description: Best practices and guidance for developers of model-driven apps in Power Apps.
-services: ''
 suite: powerapps
-documentationcenter: na
-author: jowells
-manager: austinj
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
+author: JimDaly
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/12/2018
-ms.author: jowells
+ms.date: 04/14/2021
+ms.subservice: mda-developer
+ms.author: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Best practices and guidance for model-driven apps
 
 Model-driven apps is a component-focused approach to app development which can be extended by a developer to achieve a much more
 tailored experience. While customizing model-driven apps, a developer should be aware of the established guidance and best practices. 
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 Within this section you will learn about the issues we have identified, their impact, and understand the guidance to resolve them. We will explain the background about why things should be done in a certain way and avoid potential problems in the future. This can benefit the usability, supportability, and performance of your environment. The guidance documentation supports the existing information within the Developer and Administration guides.
 
@@ -38,7 +29,7 @@ Within this section you will learn about the issues we have identified, their im
 The documentation targets the following customization types:
 
 - Model-driven app design
-- Entity form design
+- Form design
 - Client scripting
 - Web resources
 

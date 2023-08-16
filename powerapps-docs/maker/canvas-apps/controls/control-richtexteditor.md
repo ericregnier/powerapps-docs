@@ -1,18 +1,19 @@
 ---
-title: 'Rich text editor control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Rich text editor control
+title: Rich text editor control in Power Apps
+description: Learn about the details, properties, and examples of the Rich text editor control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/24/2018
+ms.reviewer: mkaur
+ms.date: 07/19/2022
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
+  - tahoon-ms
 ---
 # Rich text editor control in Power Apps
 Allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.
@@ -22,7 +23,7 @@ The **Rich text editor** control provides the app user a WYSIWYG editing area fo
 
 Control allows copied rich text (i.e from web browser or Word) to be pasted into the control.  
 
-Control's intended use is to format text and does not guarantee to preserve the integrity of the input HTML.  All script, style, object and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of Power Apps, it may not look the same as in the product where it was created.
+Control's intended use is to format text and doesn't guarantee to preserve the integrity of the input HTML.  All script, style, object, and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of Power Apps, it may not look the same as in the product where it was created.
 
 Currently supported features include:
 - Bold, Italic, Underline
@@ -32,7 +33,7 @@ Currently supported features include:
 - Hyperlinks
 - Clear formatting
 
-To use the control inside a form, select the "Edit multi-line text" card, and customize it by inserting the RTE control.
+To use the control inside a form, select the **Edit multi-line tex** card, and customize it by inserting the RTE control.
 
 ## Key properties
 **[Default](properties-core.md)** – Input property for the initial text value shown in editor.
@@ -45,7 +46,7 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 **[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**EnableSpellCheck** – Whether the browser spell checker is enabled. Note that the this functionality will provide spell checking only in the default language of the browser.  Power Apps for Windows doesn't support this property.
+**EnableSpellCheck** – Whether the browser spell checker is enabled. This functionality will provide spell checking only in the default language of the browser.  Power Apps for Windows doesn't support this property.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -70,5 +71,24 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 > [!TIP]
 > Use **Alt+0** while the editor is focused to learn about other keyboard shortcuts.
 
+> [!NOTE]
+> When the toolbar is focused, **Tab** and **Shift+Tab** keys will navigate between toolbar groups. But you can't cycle back from the last group to the first group and vice versa.
+
+## Limitations
+
+You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
+
+Pasting images in the rich text editor has the following limitations:
+- Cross-Origin Resource Sharing (CORS) 
+- Authentication
+- Image format support in browser
+- Type of image (inline vs URL)
+- How programs represent images differently when they are copied.
+
+> [!NOTE]
+> Browsers represent image data differently, some browsers will capture the image as raw image data while others may get a reference to a URL which may not be accessible after pasting.
+
+> [!TIP]
+>  Using a screen clipping or screen shotting tool to copy / paste images will provide the best experience.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,32 +1,29 @@
 ---
 title: "Set personal options| MicrosoftDocs"
 description: How to set personal options in Power Apps
-author: mduelae
-manager: kvivek
-ms.service: powerapps
+author: sericks007
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/30/2020
-ms.author: mkaur
+ms.subservice: end-user
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Set personal options
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 
 Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone.  
     
 ## To set personal options  
   
-1. In the upper-right corner of the screen, select **Settings** ![Options button for Power Apps](media/user-profile-settings-button.png "Options button for Power Apps") > **Personalization Settings**.  
+1. In the upper-right corner of the screen, select **Settings** ![Options button for Power Apps.](media/user-profile-settings-button.png "Options button for Power Apps") > **Personalization Settings**.  
   
 2. Fill in the information, as required.
   
@@ -42,7 +39,7 @@ Change your display settings in an app to suit your preferences. For example, yo
 |                            Default Pane                             | Select the default home pane (page) that you want to see when you sign in. By default, the **Default based on user role** option is selected, which shows the default pane based on the app you are using. This option does not apply when you sign in using the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md). <br /><br />  |
 |                             Default Tab                             |                                                                                                                                                                                                                          Select the default tab that you want to see for the selected default pane. For example, select the **Accounts** tab for the **Service** pane.                                                                                                                                                                                                                          |
 | **Set the number of rows shown per page in any list of rows** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                          Rows Per Page                           |                                                                                                                                                                                                                                          Select the maximum number of rows you want to see in a list on a page. You can set a value from 25 to 250.                                                                                                                                                                                                                                           |
+|                          Rows Per Page                           |                                                                                                                                                                                                                                          Select the maximum number of rows you want to see in a list on a page. You can set a value from 25 to 250. A smaller number of rows per page is recommended, as it will help maximize grid performance. Selecting a larger number of rows per page can negatively impact grid performance.                                                                                                                                                                                                                                               |
 |            **Select the default mode in Advanced Find**             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                         Advanced Find Mode                          |                                                                                                                                  By default, every time you open the **Advanced Find Mode** dialog box, the query details are hidden. To see the query details every time, select **Detailed**.                                                                                                                                  |
 |            **Select the default search experience**             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 

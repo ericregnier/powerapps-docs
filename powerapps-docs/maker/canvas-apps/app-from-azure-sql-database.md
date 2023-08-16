@@ -1,28 +1,24 @@
 ---
-title: Create a canvas app from Azure SQL Database | Microsoft Docs
+title: Create a canvas app from Azure SQL Database
 description: Describes how to create canvas app from your data in Azure SQL Database
-author: tapanm-msft
-manager: kvivek
-ms.service: powerapps
+author: mduelae
+
 ms.topic: conceptual
 ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
-ms.date: 06/03/2020
-ms.author: tapanm
+ms.date: 10/21/2021
+ms.subservice: canvas-maker
+ms.author: hahuber
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
 ---
-# Preview: Create a canvas app from Azure SQL Database
 
-[This article is pre-release documentation and is subject to change.]
+# Create a canvas app from Azure SQL Database
 
 In this article, you'll use data in your Azure SQL Database to create an app with Power Apps in minutes. You'll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - A preview feature may have limited availability and restricted functionality. A preview feature is available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
@@ -41,7 +37,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 1. Go to your SQL database.
 1. Select **Power Apps**.
     
-    ![Power Apps option in SQL database options](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL database")
+    ![Power Apps option in SQL database options.](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL database")
 
 1. Select **Get started**.
 
@@ -57,7 +53,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 
 1. Select **Create**.
 
-    ![Specify the information for your app](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
+    ![Specify the information for your app.](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
 
     The [Power Apps Studio](https://create.powerapps.com/studio/) opens in a new tab. If the pop-up is blocked, update the browser to allow pop-ups and try again. Once created, you'll have a three-page app with data from your SQL database.
 
@@ -75,7 +71,7 @@ You can configure Power Apps access to Azure SQL Database server using the Azure
 
 To configure access using the Azure portal, sign in to the [Azure portal](https://portal.azure.com/), and go to your **SQL Server**. Select **Firewalls and virtual networks** and set the control **Allow Azure services and resources to access this server** to **ON**. Select **Save** to submit changes.
 
-You can also use stored procedure [sp_set_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) with IP address **0.0.0.0** to allow Azure services access to your SQL Database server.
+You can also use stored procedure [sp_set_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database) with IP address **0.0.0.0** to allow Azure services access to your SQL Database server.
 
 ## Limitations
 
@@ -87,7 +83,7 @@ You can also use stored procedure [sp_set_firewall_rule](/sql/relational-databas
 ## Other considerations
 
 - The access of the app to SQL Database is implicitly shared to all users that you [share this app](share-app.md) with. Ensure the SQL authentication credentials have appropriate access for reading and writing data. </br> For example, you can create a separate app that connects to the same SQL Database with different SQL authentication credentials to segregate read and read/write access.
-- Review throttling limits, delegatable functions and operations, known issues, and limitations of the [SQL Database](/connectors/sql/) connector this feature uses for performance considerations.
+- Review throttling limits, delegable functions and operations, known issues, and limitations of the [SQL Database](/connectors/sql/) connector this feature uses for performance considerations.
 - Create an app from [Power Apps](https://make.powerapps.com) when you need to create an app for a non-default environment and a different region for the tenant using data from SQL Database.
 
 ## Next steps
@@ -101,7 +97,6 @@ As a next step, use [Power Apps](https://make.powerapps.com) studio to customize
 
 - [Share a canvas app in Power Apps](share-app.md) </br>
 - [Add a data connection to a canvas app in Power Apps](add-data-connection.md#add-data-source)</br>
-- [Microsoft Learn: Customize a canvas app in Power Apps](/learn/modules/customize-apps-in-powerapps/)
-
+- [Customize a canvas app in Power Apps](/training/modules/customize-apps-in-powerapps/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

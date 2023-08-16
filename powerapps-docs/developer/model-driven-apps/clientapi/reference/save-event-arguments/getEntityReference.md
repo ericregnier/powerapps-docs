@@ -1,23 +1,22 @@
 ---
-title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Information about getEntityReference parameter.
-ms.date: 02/01/2021
-ms.service: powerapps
-ms.topic: "reference"
+title: EventArgs.getEntityReference (Client API reference)
+description: Includes description and supported parameters for the EventArgs.getEntityReference method.
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 03e970ee-7ed3-4df2-9670-222d76a479fd
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityReference (Client API reference)
+# EventArgs.getEntityReference (Client API reference)
 
-Use this method to know information about an entity being saved/updated. It returns entity ID, and entity name if success.
+Use this method to know information about a table being saved/updated. It returns table ID, and table name if success.
+
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
 
 ## Syntax
 

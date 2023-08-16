@@ -1,22 +1,18 @@
 ---
 title: "removeOnSelection (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
+description: Includes description and supported parameters for the removeOnSelection method.
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 3ca41e3e-af2b-4aa8-8233-64a8c276d0ef
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # removeOnSelection (Client API reference)
-
-
 
 Removes an event handler from the [OnSelection](../events/onselection.md) event. 
 
@@ -26,7 +22,7 @@ Knowledge base search control
 
 ## Syntax
 
-```
+```JavaScript
 var kbSearchControl = formContext.getControl("<name>");
 kbSearchControl.removeOnSelection(myFunction);
 ```

@@ -1,24 +1,22 @@
 ---
 title: "getEntityTypes (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
+description: Gets the types of tables allowed in the lookup control.
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c20ba958-821f-4168-a518-e39431603b28
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getEntityTypes (Client API reference)
 
+Gets the types of tables allowed in the lookup control. 
 
-
-Gets the types of entities allowed in the lookup control. 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Control types supported
 
@@ -32,7 +30,7 @@ Lookup control
 
 **Type**: Array of String
 
-**Description**: The logical names of the entities allowed in this control.
+**Description**: The logical names of the tables allowed in this control.
 
 ### Related topics
 

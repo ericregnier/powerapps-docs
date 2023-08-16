@@ -1,18 +1,14 @@
 ---
-title: "EntityRelationship table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "EntityRelationship table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EntityRelationship table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # EntityRelationship table/entity reference
@@ -25,9 +21,9 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|RetrieveMultiple|GET /entityrelationships<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -109,12 +105,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -156,7 +152,7 @@ Listed by **SchemaName**.
 
 **Added by**: Solution Component Configuration Solution
 
-Same as solutioncomponentrelationshipconfiguration table [entityrelationship_config](solutioncomponentrelationshipconfiguration.md#BKMK_entityrelationship_config) Many-To-One relationship.
+Same as the [entityrelationship_config](solutioncomponentrelationshipconfiguration.md#BKMK_entityrelationship_config) many-to-one relationship for the [solutioncomponentrelationshipconfiguration](solutioncomponentrelationshipconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -171,6 +167,6 @@ Same as solutioncomponentrelationshipconfiguration table [entityrelationship_con
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.entityrelationship?text=entityrelationship EntityType" />

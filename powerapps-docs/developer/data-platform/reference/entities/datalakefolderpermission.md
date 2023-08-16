@@ -1,18 +1,14 @@
 ---
-title: "datalakefolderpermission table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "datalakefolderpermission table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the datalakefolderpermission table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # datalakefolderpermission table/entity reference
@@ -27,22 +23,13 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/datalakefolderpermissions(*datalakefolderpermissionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/datalakefolderpermissions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/datalakefolderpermissions(*datalakefolderpermissionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/datalakefolderpermissions(*datalakefolderpermissionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/datalakefolderpermissions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/datalakefolderpermissions(*datalakefolderpermissionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/datalakefolderpermissions(*datalakefolderpermissionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST /datalakefolderpermissions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /datalakefolderpermissions(*datalakefolderpermissionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /datalakefolderpermissions(*datalakefolderpermissionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /datalakefolderpermissions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /datalakefolderpermissions(*datalakefolderpermissionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -55,7 +42,7 @@ search.app:
 |IsBPFEntity|False|
 |LogicalCollectionName|datalakefolderpermissions|
 |LogicalName|datalakefolderpermission|
-|OwnershipType|UserOwned|
+|OwnershipType|None|
 |PrimaryIdAttribute|datalakefolderpermissionid|
 |PrimaryNameAttribute|name|
 |SchemaName|datalakefolderpermission|
@@ -77,8 +64,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
-- [OwnerId](#BKMK_OwnerId)
-- [OwnerIdType](#BKMK_OwnerIdType)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
@@ -111,12 +96,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### canexecute Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -134,12 +119,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### canread Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -157,12 +142,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### canwrite Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -277,37 +262,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
-### <a name="BKMK_OwnerId"></a> OwnerId
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Owner Id|
-|DisplayName|Owner|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|ownerid|
-|RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
-|Type|Owner|
-
-
-### <a name="BKMK_OwnerIdType"></a> OwnerIdType
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owneridtype|
-|RequiredLevel|SystemRequired|
-|Type|EntityName|
-
-
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
@@ -364,8 +318,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OverwriteTime](#BKMK_OverwriteTime)
-- [OwnerIdName](#BKMK_OwnerIdName)
-- [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
+- [OwnerId](#BKMK_OwnerId)
+- [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
@@ -407,12 +361,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -567,12 +521,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -712,40 +666,38 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
-### <a name="BKMK_OwnerIdName"></a> OwnerIdName
+### <a name="BKMK_OwnerId"></a> OwnerId
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Name of the owner|
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
+|Description|Owner Id|
+|DisplayName|Owner|
+|IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|ownerid|
 |RequiredLevel|SystemRequired|
-|Type|String|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
-### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
+### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Yomi name of the owner|
+|Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
+|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|owneridtype|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 |RequiredLevel|SystemRequired|
-|Type|String|
+|Type|Integer|
 
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
@@ -904,7 +856,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [datalakefolderpermission_SyncErrors](syncerror.md#BKMK_datalakefolderpermission_SyncErrors) Many-To-One relationship.
+Same as the [datalakefolderpermission_SyncErrors](syncerror.md#BKMK_datalakefolderpermission_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -921,7 +873,7 @@ Same as syncerror table [datalakefolderpermission_SyncErrors](syncerror.md#BKMK_
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [datalakefolderpermission_DuplicateMatchingRecord](duplicaterecord.md#BKMK_datalakefolderpermission_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [datalakefolderpermission_DuplicateMatchingRecord](duplicaterecord.md#BKMK_datalakefolderpermission_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -938,7 +890,7 @@ Same as duplicaterecord table [datalakefolderpermission_DuplicateMatchingRecord]
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [datalakefolderpermission_DuplicateBaseRecord](duplicaterecord.md#BKMK_datalakefolderpermission_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [datalakefolderpermission_DuplicateBaseRecord](duplicaterecord.md#BKMK_datalakefolderpermission_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -955,7 +907,7 @@ Same as duplicaterecord table [datalakefolderpermission_DuplicateBaseRecord](dup
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [datalakefolderpermission_AsyncOperations](asyncoperation.md#BKMK_datalakefolderpermission_AsyncOperations) Many-To-One relationship.
+Same as the [datalakefolderpermission_AsyncOperations](asyncoperation.md#BKMK_datalakefolderpermission_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -972,7 +924,7 @@ Same as asyncoperation table [datalakefolderpermission_AsyncOperations](asyncope
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [datalakefolderpermission_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_datalakefolderpermission_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [datalakefolderpermission_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_datalakefolderpermission_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -989,7 +941,7 @@ Same as mailboxtrackingfolder table [datalakefolderpermission_MailboxTrackingFol
 
 **Added by**: System Solution Solution
 
-Same as processsession table [datalakefolderpermission_ProcessSession](processsession.md#BKMK_datalakefolderpermission_ProcessSession) Many-To-One relationship.
+Same as the [datalakefolderpermission_ProcessSession](processsession.md#BKMK_datalakefolderpermission_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1006,7 +958,7 @@ Same as processsession table [datalakefolderpermission_ProcessSession](processse
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [datalakefolderpermission_BulkDeleteFailures](bulkdeletefailure.md#BKMK_datalakefolderpermission_BulkDeleteFailures) Many-To-One relationship.
+Same as the [datalakefolderpermission_BulkDeleteFailures](bulkdeletefailure.md#BKMK_datalakefolderpermission_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1023,7 +975,7 @@ Same as bulkdeletefailure table [datalakefolderpermission_BulkDeleteFailures](bu
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [datalakefolderpermission_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_datalakefolderpermission_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [datalakefolderpermission_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_datalakefolderpermission_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1045,10 +997,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_datalakefolderpermission_createdonbehalfby](#BKMK_lk_datalakefolderpermission_createdonbehalfby)
 - [lk_datalakefolderpermission_modifiedby](#BKMK_lk_datalakefolderpermission_modifiedby)
 - [lk_datalakefolderpermission_modifiedonbehalfby](#BKMK_lk_datalakefolderpermission_modifiedonbehalfby)
-- [user_datalakefolderpermission](#BKMK_user_datalakefolderpermission)
-- [team_datalakefolderpermission](#BKMK_team_datalakefolderpermission)
-- [owner_datalakefolderpermission](#BKMK_owner_datalakefolderpermission)
-- [business_unit_datalakefolderpermission](#BKMK_business_unit_datalakefolderpermission)
 - [datalakefolder_datalakefolderpermission](#BKMK_datalakefolder_datalakefolderpermission)
 
 
@@ -1056,55 +1004,32 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_datalakefolderpermission_createdby](systemuser.md#BKMK_lk_datalakefolderpermission_createdby) One-To-Many relationship.
+See the [lk_datalakefolderpermission_createdby](systemuser.md#BKMK_lk_datalakefolderpermission_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakefolderpermission_createdonbehalfby"></a> lk_datalakefolderpermission_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_datalakefolderpermission_createdonbehalfby](systemuser.md#BKMK_lk_datalakefolderpermission_createdonbehalfby) One-To-Many relationship.
+See the [lk_datalakefolderpermission_createdonbehalfby](systemuser.md#BKMK_lk_datalakefolderpermission_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakefolderpermission_modifiedby"></a> lk_datalakefolderpermission_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_datalakefolderpermission_modifiedby](systemuser.md#BKMK_lk_datalakefolderpermission_modifiedby) One-To-Many relationship.
+See the [lk_datalakefolderpermission_modifiedby](systemuser.md#BKMK_lk_datalakefolderpermission_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakefolderpermission_modifiedonbehalfby"></a> lk_datalakefolderpermission_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_datalakefolderpermission_modifiedonbehalfby](systemuser.md#BKMK_lk_datalakefolderpermission_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_user_datalakefolderpermission"></a> user_datalakefolderpermission
-
-**Added by**: System Solution Solution
-
-See systemuser Table [user_datalakefolderpermission](systemuser.md#BKMK_user_datalakefolderpermission) One-To-Many relationship.
-
-### <a name="BKMK_team_datalakefolderpermission"></a> team_datalakefolderpermission
-
-**Added by**: System Solution Solution
-
-See team Table [team_datalakefolderpermission](team.md#BKMK_team_datalakefolderpermission) One-To-Many relationship.
-
-### <a name="BKMK_owner_datalakefolderpermission"></a> owner_datalakefolderpermission
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_datalakefolderpermission](owner.md#BKMK_owner_datalakefolderpermission) One-To-Many relationship.
-
-### <a name="BKMK_business_unit_datalakefolderpermission"></a> business_unit_datalakefolderpermission
-
-**Added by**: System Solution Solution
-
-See businessunit Table [business_unit_datalakefolderpermission](businessunit.md#BKMK_business_unit_datalakefolderpermission) One-To-Many relationship.
+See the [lk_datalakefolderpermission_modifiedonbehalfby](systemuser.md#BKMK_lk_datalakefolderpermission_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_datalakefolder_datalakefolderpermission"></a> datalakefolder_datalakefolderpermission
 
-See datalakefolder Table [datalakefolder_datalakefolderpermission](datalakefolder.md#BKMK_datalakefolder_datalakefolderpermission) One-To-Many relationship.
+See the [datalakefolder_datalakefolderpermission](datalakefolder.md#BKMK_datalakefolder_datalakefolderpermission) one-to-many relationship for the [datalakefolder](datalakefolder.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
+<xref href="Microsoft.Dynamics.CRM.datalakefolderpermission?text=datalakefolderpermission EntityType" />

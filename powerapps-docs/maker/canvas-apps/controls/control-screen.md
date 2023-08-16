@@ -1,18 +1,20 @@
 ---
-title: 'Screen control: reference | Microsoft Docs'
-description: Information, including properties and examples, about a Screen control
+title: Screen control in Power Apps
+description: Learn about the details, properties and examples of the screen control in Power Apps.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 09/14/2019
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
+  - emcoope-msft
 ---
 # Screen control in Power Apps
 

@@ -2,10 +2,11 @@
 title: Data needs for each step of a business process | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, document the data required for each step of the business process you want to automate.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -52,7 +53,7 @@ And if the user is a worker, should they only see their own work items?
 app:
 > - The originator of the expense report: they should be able to see only their own
     expense reports.
-> - Managers (Nick): Nick should only be able to see the expense reports of his
+> - Managers (Nick): Nick should only be able to see the expense reports of their
     direct reports.
 > - Accountant (Abhay): Abhay should have the authority to review *all* the expense
     reports.

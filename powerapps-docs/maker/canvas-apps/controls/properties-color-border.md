@@ -1,18 +1,20 @@
 ---
-title: Color and border properties | Microsoft Docs
-description: Reference information about properties such as BorderColor, HoverBorderColor, and PressedBorderColor
-author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+title: Color and border properties in Power Apps
+description: Reference information about the color and border properties in Power Apps.
+author: chmoncay
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 10/25/2016
-ms.author: gregli
+ms.reviewer: mkaur
+ms.date: 09/01/2021
+ms.subservice: canvas-maker
+ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
+  - gregli-msft
 ---
 # Color and border properties in Power Apps
 
@@ -62,6 +64,11 @@ These properties are in effect normally, when the user is not interacting with t
 
 - Applies to **[Add picture](control-add-picture.md)**, **[Button](control-button.md)**, **[Check box](control-check-box.md)**, **[Column chart](control-column-line-chart.md)**, **[Date Picker](control-date-picker.md)**, **[Drop down](control-drop-down.md)**, **[Export](control-export-import.md)**, **[HTML text](control-html-text.md)**, **[Import](control-export-import.md)**, **[Label](control-text-box.md)**, **[Line chart](control-column-line-chart.md)**, **[List Box](control-list-box.md)**, **[Microphone](control-microphone.md)**, **[Pen input](control-pen-input.md)**, **[Pie chart](control-pie-chart.md)**, **[Radio](control-radio.md)**, **[Text input](control-text-input.md)**, and **[Timer](control-timer.md)** controls.
 
+
+**Drop Shadow** - Adds shadow effects around the control.
+
+- Applies to **[Horizontal container](control-horizontal-container.md)** and **[Vertical container](control-vertical-container.md)** controls.
+
 **Fill** – The background color of a control.
 
 - Applies to **[Add picture](control-add-picture.md)**, **[Audio](control-audio-video.md)**, **[Button](control-button.md)**, **[Card](control-card.md)**, **[Check box](control-check-box.md)**, **[Date Picker](control-date-picker.md)**, **[Display form](control-form-detail.md)**, **[Drop down](control-drop-down.md)**, **[Edit form](control-form-detail.md)**, **[Export](control-export-import.md)**, **[Gallery](control-gallery.md)**, **[HTML text](control-html-text.md)**, **[Icon](control-shapes-icons.md)**, **[Image](control-image.md)**, **[Import](control-export-import.md)**, **[Label](control-text-box.md)**, **[List Box](control-list-box.md)**, **[Microphone](control-microphone.md)**, **[PDF viewer](control-pdf-viewer.md)**, **[Pen input](control-pen-input.md)**, **[Radio](control-radio.md)**, **[Rating](control-rating.md)**, **[Screen](control-screen.md)**, **[Shape](control-shapes-icons.md)**, **[Text input](control-text-input.md)**, **[Timer](control-timer.md)**, **[Toggle](control-toggle.md)**, and **[Video](control-audio-video.md)** controls.
@@ -78,7 +85,7 @@ These properties are in effect when the control is focused.
 
 ## Disabled
 
-These properties are in effect when the control is disabled.  A control can be disabled if the **[Disabled](properties-core.md)** property is set to *true*.
+These properties are in effect when the control is disabled.  A control can be disabled if the **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **DisabledBorderColor** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
@@ -135,5 +142,15 @@ These properties are in effect when the user selects an item in a control.
 **SelectionFill** – The background color of a selected item or items in a list or a selected area of a pen control.
 
 - Applies to **[Drop down](control-drop-down.md)** and **[List Box](control-list-box.md)** controls.
+
+## Order of color
+
+A control can be in multiple states.  For example: focused and hovered.  Only one color is used, in this order:
+
+1. Disabled
+1. Pressed
+1. Hover
+1. Focus 
+1. Normal
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

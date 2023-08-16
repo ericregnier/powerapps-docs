@@ -5,25 +5,22 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jowells
-manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 1/15/2019
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Performance
 

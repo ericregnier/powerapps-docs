@@ -2,23 +2,18 @@
 title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn what subset of the Transact-SQL language is supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 12/16/2020
+ms.date: 09/09/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# How Dataverse SQL differs from Transact-SQL (Preview)
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# How Dataverse SQL differs from Transact-SQL
 
 This article describes the differences between Dataverse SQL and Transact-SQL. Dataverse SQL is a subset of Transact-SQL.
 
@@ -41,6 +36,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - nchar
 - numeric
 - nvarchar*
+- nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text
 - real
 - smalldatetime
 - smallint
@@ -55,25 +51,22 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - owner
 - state
 - status
-- multiselectpicklist
+
 
 ### [Not supported](#tab/not-supported)
 
 - binary
 - image
-- ntext
-- nvarchar(max)
 - sql_variant
-- text
 - timestamp
 - varbinary
-- varchar(max)
 - virtual
 - partylist
 - HierarchyId
 - managedproperty
 - file
 - xml
+- multiselectpicklist
 
 ---
 
@@ -96,6 +89,7 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
   - All WHERE conditions
   - All nested queries (SELECT, FROM, WHERE)
   - Union
+  - PIVOT and UNPIVOT
   - [GROUP BY](#select-group-by)/Having
 - General
   - IF THEN ELSE
@@ -110,7 +104,6 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
 - DCL
 - Stored Procedure
 - DQL
-  - Pivot
   - DQL XML function
   - DQL JSON function
   - CUBE and ROLLUP

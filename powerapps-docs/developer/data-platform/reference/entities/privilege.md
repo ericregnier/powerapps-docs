@@ -1,18 +1,14 @@
 ---
-title: "Privilege table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Privilege table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Privilege table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Privilege table/entity reference
@@ -25,11 +21,10 @@ Permission to perform an action in Microsoft CRM. The platform checks for the pr
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/privileges(*privilegeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/privileges<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET /privileges(*privilegeid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /privileges<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -60,7 +55,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CanBeGlobal](#BKMK_CanBeGlobal)
 - [CanBeLocal](#BKMK_CanBeLocal)
 - [CanBeParentEntityReference](#BKMK_CanBeParentEntityReference)
+- [CanBeRecordFilter](#BKMK_CanBeRecordFilter)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
+- [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
 - [PrivilegeId](#BKMK_PrivilegeId)
 - [PrivilegeRowId](#BKMK_PrivilegeRowId)
@@ -96,12 +93,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeBasic Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -119,12 +116,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeDeep Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -142,12 +139,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeEntityReference Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -165,12 +162,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeGlobal Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -188,12 +185,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeLocal Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -211,12 +208,37 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeParentEntityReference Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_CanBeRecordFilter"></a> CanBeRecordFilter
+
+**Added by**: AuthorizationCore Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether the privilege applies to the record filters.|
+|DisplayName|Can Be Record Filter|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|canberecordfilter|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### CanBeRecordFilter Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -235,6 +257,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|48|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+**Added by**: AuthorizationCore Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether this component can be customized.|
+|DisplayName|Customizable|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomizable|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -309,12 +346,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -332,12 +369,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsDisabledWhenIntegrated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -355,12 +392,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -431,7 +468,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Privilege_AsyncOperations"></a> Privilege_AsyncOperations
 
-Same as asyncoperation table [Privilege_AsyncOperations](asyncoperation.md#BKMK_Privilege_AsyncOperations) Many-To-One relationship.
+Same as the [Privilege_AsyncOperations](asyncoperation.md#BKMK_Privilege_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -446,7 +483,7 @@ Same as asyncoperation table [Privilege_AsyncOperations](asyncoperation.md#BKMK_
 
 ### <a name="BKMK_Privilege_BulkDeleteFailures"></a> Privilege_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Privilege_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Privilege_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Privilege_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Privilege_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -467,15 +504,12 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_solution_privilege"></a> solution_privilege
 
-See solution Table [solution_privilege](solution.md#BKMK_solution_privilege) One-To-Many relationship.
+See the [solution_privilege](solution.md#BKMK_solution_privilege) one-to-many relationship for the [solution](solution.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
 Relationship details provided where the Privilege table is the first table in the relationship. Listed by **SchemaName**.
-
-- [roleprivileges_association](#BKMK_roleprivileges_association)
-- [roletemplateprivileges_association](#BKMK_roletemplateprivileges_association)
 
 
 ### <a name="BKMK_roleprivileges_association"></a> roleprivileges_association
@@ -501,12 +535,8 @@ IntersectEntityName: roleprivileges<br />
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
 
-### <a name="BKMK_roletemplateprivileges_association"></a> roletemplateprivileges_association
-
-See roletemplate Table [roletemplateprivileges_association](roletemplate.md#BKMK_roletemplateprivileges_association) Many-To-Many Relationship.
-
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.privilege?text=privilege EntityType" />

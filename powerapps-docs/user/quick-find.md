@@ -1,21 +1,18 @@
 ---
 title: "Quick Find| MicrosoftDocs"
 description: Learn how to use quick find to search for records
-author: mduelae
-manager: kvivek
-ms.service: powerapps
+author: sericks007
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/11/2021
-ms.author: mkaur
+ms.date: 10/27/2022
+ms.subservice: end-user
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-activity
@@ -39,29 +36,28 @@ With categorized search, you can search for rows that begin with a specific word
 
 ## Single table quick find 
 
-Use single-table quick find to only search for rows in a view. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Single-table Quick Find](media/quick-find-view-only.gif "Single-table quick find search box") 
+*Single table quick find* is aslo called *grid search*. For more information, see [Grid search](grid-filters.md#grid-search).
 
 ## Multiple-table quick find (categorized search)
 
 Multiple-table quick find searches up to 10 tables and returns the search results grouped by table.
 
+You can view a maximum of 80 rows per table with multiple-table quick find. You may need to refine your query, if the row that you're looking for is outside the maximum range.
+
 1.  To start a categorized search, on the command bar, select **Search**.  
 
      > [!div class="mx-imgBorder"]
-     > ![Global Search Button](media/global-search-button.png "Global search")
+     > ![Global Search Button.](media/global-search-button.png "Global search")
   
 2.  Type your search words in the search box, and then select **Search**. The search results are grouped by table such as Products, Reservations, and Reviews.
 
      > [!div class="mx-imgBorder"]
-     > ![Categorized Search Results](media/categorized-search-results.png "Categorized search results page") 
+     > ![Categorized Search Results.](media/categorized-search-results.png "Categorized search results page") 
 
  3. Select a table from the **Filter with** list to filter results by table type. To search across all tables, select **None**.
  
     > [!div class="mx-imgBorder"]
-    > ![Filtering Categorized Search Results](media/filter-categorized-search-results.png "Filtering categorized search results")  
+    > ![Filtering Categorized Search Results.](media/filter-categorized-search-results.png "Filtering categorized search results")  
 
   
 

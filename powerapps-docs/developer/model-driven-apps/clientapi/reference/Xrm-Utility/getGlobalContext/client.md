@@ -1,18 +1,16 @@
 ---
 title: "getGlobalContext.client (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/04/2021
-ms.service: powerapps
-ms.topic: "reference"
+description: "Describes the client object returned from the getGlobalContext method."
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getGlobalContext.client (Client API reference)
 
@@ -48,7 +46,7 @@ Value |Client |
 
 ## getClientState
 
-Returns a value to indicate the state of the client.
+Returns a value to indicate the state of the client. A client in offline-first mode (in preview) always indicates it's offline.
 
 ### Syntax
 
@@ -89,7 +87,7 @@ Value |Form Factor |
 
 ## isOffline
 
-Returns information whether the server is online or offline.
+Returns information whether the client state is online or offline. A client in offline-first mode always reports it's offline.
 
 ### Syntax
 
@@ -103,7 +101,9 @@ Returns information whether the server is online or offline.
 
 ## isNetworkAvailable
 
-Returns information whether the network is available or not.
+Returns information whether the network is available or not, regardless of client mode.
+
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
 
 ### Syntax
 
@@ -115,7 +115,7 @@ Returns information whether the network is available or not.
 
 **Description**: **true** if the network is available; **false** otherwise.
 
-## Related topics
+## Related articles
 
 [Organization Settings](organizationSettings.md)
 

@@ -1,25 +1,22 @@
 ---
 title: "Open your model-driven app data in Excel Online | MicrosoftDocs"
 description: How to open your data to Excel Online in model-driven app and make  edits.
-author: mduelae
-manager: kvivek
-ms.service: powerapps
+author: sericks007
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021
-ms.author: mkaur
+ms.subservice: end-user
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Open your app data in Excel Online 
 
-Open your app data in Excel Online and make quick edits or do a ad-hoc analysis. You can make changes to your app data in Excel Online and then save the updated information back your app. 
+Open your app data in Excel Online and make quick edits or do an ad-hoc analysis. You can make changes to your app data in Excel Online and then save the updated information back to your app. 
 
 This feature requires that you have an Office 365 subscription or a subscription to an online service such as SharePoint Online or Exchange Online and a Microsoft account. 
 
@@ -37,17 +34,17 @@ A few things to note:
 3. On the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to Excel Online](media/export-excel-online.png "Select export to Excel Online")
+   > ![Export to Excel Online.](media/export-excel-online.png "Select export to Excel Online")
 
 3. Make your edits in the Excel Online file and when you're done select **Save**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select Save on the Excel Online file](media/export-excel-online-1.png "Select Save on the Excel Online file")
+   > ![Select Save on the Excel Online file.](media/export-excel-online-1.png "Select Save on the Excel Online file")
    
 4. Your changes are submitted for import. To track the progress of the import, select **Track Progress**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Track the import progress](media/export-excel-online-2.png "Track the import progress")
+   > ![Track the import progress.](media/export-excel-online-2.png "Track the import progress")
 
  > [!NOTE]
  > By design, you can’t do a File > **Save As** in Excel Online. If you do, you’ll get a **Can’t Save Workbook** error message.

@@ -1,22 +1,18 @@
 ---
 title: "Export data to Excel in Power Apps | MicrosoftDocs"
 description: How to export data to Excel
-author: mduelae
-manager: kvivek
-ms.service: powerapps
+author: sericks007
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/12/2021
-ms.author: mkaur
+ms.subservice: end-user
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
-  - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-lead
@@ -32,7 +28,7 @@ Export data from your model-driven app to Excel. You can export up to 100,000 ro
 2. On the command bar, select **Export to Excel**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
+   > ![Export to excel.](media/export_to_excel.png "Select export to Excel")
 3. When the download is complete, navigate to the location of the downloaded file.
   
    > [!NOTE]
@@ -51,7 +47,7 @@ Export data from your model-driven app to Excel. You can export up to 100,000 ro
 5. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Enable content](media/enable-content.png "Enable content") 
+   > ![Enable content.](media/enable-content.png "Enable content") 
 
 The data is exported in the same format that you see in your app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
   
@@ -71,7 +67,7 @@ The data is exported in the same format that you see in your app. Text will rema
 There are other export options such as Excel Online, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
 
 > [!div class="mx-imgBorder"] 
-> ![Export to excel options](media/export_to_excel_options.png "Select export to Excel options")
+> ![Export to excel options.](media/export_to_excel_options.png "Select export to Excel options")
 
 
 The table below summerizes the different options. Pick the one that works best for you.

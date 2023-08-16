@@ -1,16 +1,23 @@
 ---
-title: Overview of themes in Power Apps portals | Microsoft Docs
-description: Introduction to themes in Power Apps portals.
+title: Themes overview
+description: Overview of themes and basic themes in Power Apps portals.
 author: neerajnandwana-msft
-ms.service: powerapps
-ms.topic: conceptual
+
+ms.topic: overview
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 12/01/2022
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: kkendrick
+contributors:
+    - neerajnandwana-msft
+    - nickdoelman
+    - ProfessorKendrick
 ---
 
-# Overview of themes in Power Apps portals
+# Themes overview
+
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 In Power Apps portals, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
 
@@ -22,15 +29,15 @@ In this article, you'll walk through the basic themes feature. For advanced them
 
 1. Select **Apps** from the left navigation pane, and then select the portal.
 
-    ![Select Apps and a portal](./media/theme-overview/select-app-portal.png "Select Apps and a portal")
+    ![Select Apps and a portal.](./media/theme-overview/select-app-portal.png "Select Apps and a portal")
 
 1. Select **More Commands** (**...**), and then select **Edit**.
 
-    ![Edit a portal](./media/theme-overview/edit-portal.png "Edit a portal")
+    ![Edit a portal.](./media/theme-overview/edit-portal.png "Edit a portal")
 
 1. Select **Themes** from the left navigation pane, and then turn on the **Enable basic theme** toggle.
 
-    ![Enable basic themes](./media/theme-overview/enable-basic-theme.png "Enable basic themes")
+    ![Enable basic themes.](./media/theme-overview/enable-basic-theme.png "Enable basic themes")
 
 ## Change theme for your portal
 
@@ -44,15 +51,15 @@ You can set any existing theme in your portal to a default theme.
 
 1. Select **Theme** from the components pane.
 
-    ![Select theme icon](./media/theme-overview/select-theme.png "Select theme icon")
+    ![Select theme icon.](./media/theme-overview/select-theme.png "Select theme icon")
 
 1. Select any default theme from the available presets (in our example, we selected **Green**).
 
-    ![Select a default theme](./media/theme-overview/basic-theme.png "Select a default theme")
+    ![Select a default theme.](./media/theme-overview/basic-theme.png "Select a default theme")
 
 The selected theme is applied to your portal.
 
-![Applied theme](./media/theme-overview/theme-applied.png "Applied theme")
+![Applied theme.](./media/theme-overview/theme-applied.png "Applied theme")
 
 > [!NOTE]
 > After changing theme or theme properties such as colors inside the Studio, select **Browse website** to view the changes in a separate browser tab. If you make multiple changes using this method and switch to different pages inside the browser, the stale browser cache may cause your browser to show theme changes that aren't latest. If this happens, use **Ctrl+F5** to reload the page.
@@ -69,7 +76,7 @@ The selected theme is applied to your portal.
 
 1. Select **New Theme**.
 
-    ![Create a new theme](./media/theme-overview/new-theme.png "Create a new theme")
+    ![Create a new theme.](./media/theme-overview/new-theme.png "Create a new theme")
 
 ## Edit theme details
 
@@ -86,7 +93,7 @@ You can update theme name, description, color, and other typography settings in 
 1. Select the theme that's currently applied, or select a new theme from the presets.
    Selecting a theme opens the details pane on the right side of your workspace.
 
-    ![Theme details](./media/theme-overview/theme-details.png "Theme details")
+    ![Theme details.](./media/theme-overview/theme-details.png "Theme details")
 
 1. Edit theme details such as name, description, and color for different areas.
 
@@ -112,9 +119,9 @@ You can update theme name, description, color, and other typography settings in 
 
 1. Select **Theme** from the components pane.
 
-1. Select the theme from presets that you want to copy, select **...**, and then select **Save as Copy**.
+1. Select the theme from presets that you want to copy, select **...**, and then select **Customize**.
 
-    ![Copy preset theme](./media/theme-overview/copy-preset-theme.png "Copy a preset theme")
+    ![Copy preset theme.](./media/theme-overview/copy-preset-theme.png "Copy a preset theme")
 
 1. Update the theme details as described in the preceding section, and then save the theme.
 
@@ -128,7 +135,7 @@ For example, if you want the **Header** color to be 25 percent lighter than the 
 lighten($primaryColor, 25%);
 ```
 
-![Sass example](./media/theme-overview/sass-example.png "Sass example")
+![Sass example.](./media/theme-overview/sass-example.png "Sass example")
 
 You can use the following Sass variables with basic themes:
 

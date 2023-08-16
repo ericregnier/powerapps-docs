@@ -1,20 +1,18 @@
 ---
-title: "setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
+title: "navigationItem.setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the navigationItem.setFocus method.
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: a34a73d2-b315-4fff-ae84-91575a9d79ea
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
-# setFocus (Client API reference)
+# navigationItem.setFocus (Client API reference)
 
 
 

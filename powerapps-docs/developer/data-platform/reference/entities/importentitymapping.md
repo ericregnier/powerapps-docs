@@ -1,18 +1,14 @@
 ---
-title: "ImportEntityMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ImportEntityMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ImportEntityMapping table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # ImportEntityMapping table/entity reference
@@ -25,13 +21,12 @@ Mapping for entities in a data map.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/importentitymappings<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/importentitymappings(*importentitymappingid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/importentitymappings(*importentitymappingid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importentitymappings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Create|POST /importentitymappings<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /importentitymappings(*importentitymappingid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /importentitymappings(*importentitymappingid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /importentitymappings<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -79,10 +74,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DeDupe Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Ignore|
-|2|Eliminate|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Ignore||
+|2|Eliminate||
 
 
 
@@ -145,11 +140,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProcessCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Process|
-|2|Ignore|
-|3|Internal|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Process||
+|2|Ignore||
+|3|Internal||
 
 
 
@@ -248,12 +243,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -407,12 +402,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -598,26 +593,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_importentitymapping_createdonbehalfby"></a> lk_importentitymapping_createdonbehalfby
 
-See systemuser Table [lk_importentitymapping_createdonbehalfby](systemuser.md#BKMK_lk_importentitymapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_importentitymapping_createdonbehalfby](systemuser.md#BKMK_lk_importentitymapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importentitymapping_modifiedonbehalfby"></a> lk_importentitymapping_modifiedonbehalfby
 
-See systemuser Table [lk_importentitymapping_modifiedonbehalfby](systemuser.md#BKMK_lk_importentitymapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_importentitymapping_modifiedonbehalfby](systemuser.md#BKMK_lk_importentitymapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importentitymapping_createdby"></a> lk_importentitymapping_createdby
 
-See systemuser Table [lk_importentitymapping_createdby](systemuser.md#BKMK_lk_importentitymapping_createdby) One-To-Many relationship.
+See the [lk_importentitymapping_createdby](systemuser.md#BKMK_lk_importentitymapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_ImportEntityMapping_ImportMap"></a> ImportEntityMapping_ImportMap
 
-See importmap Table [ImportEntityMapping_ImportMap](importmap.md#BKMK_ImportEntityMapping_ImportMap) One-To-Many relationship.
+See the [ImportEntityMapping_ImportMap](importmap.md#BKMK_ImportEntityMapping_ImportMap) one-to-many relationship for the [importmap](importmap.md) table/entity.
 
 ### <a name="BKMK_lk_importentitymapping_modifiedby"></a> lk_importentitymapping_modifiedby
 
-See systemuser Table [lk_importentitymapping_modifiedby](systemuser.md#BKMK_lk_importentitymapping_modifiedby) One-To-Many relationship.
+See the [lk_importentitymapping_modifiedby](systemuser.md#BKMK_lk_importentitymapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.importentitymapping?text=importentitymapping EntityType" />

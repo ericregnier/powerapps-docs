@@ -1,18 +1,19 @@
 ---
-title: 'Text-input control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the text-input control
+title: Text input control in Power Apps
+description: Learn about the details, properties and examples of the text input control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/22/2019
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
 ---
 # Text input control in Power Apps
 A box in which the user can type text, numbers, and other data.
@@ -62,7 +63,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-**Format** – Whether the user input is restricted to numbers only or can be any text.
+**Format** – Whether the user input is restricted to numbers only or can be any text. When set to **Number**, only digits and certain numeric symbols can be entered. Supported symbols and formats depend on the browser language and cannot be set on individual controls.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -82,9 +83,9 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **Mode** – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 

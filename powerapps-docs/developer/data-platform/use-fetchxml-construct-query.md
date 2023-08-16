@@ -2,18 +2,15 @@
 title: "Use FetchXML to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about FetchXML, a proprietary XML based language that is used in Microsoft Dataverse to query data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/25/2021
+ms.date: 05/31/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use FetchXML to construct a query
@@ -92,9 +89,7 @@ This example shows an inner join between EntityMap and AttributeMap where the En
 ```  
 
 > [!IMPORTANT]
-> A FetchXML query has a limit of a maximum of 10 allowed link tables.
->
-> The `in` operator of a FetchXML query is limited to 2000 values.
+> A FetchXML query has a limit of a maximum of 15 allowed link tables.
 
 ## Execute the FetchXML query
 
@@ -102,7 +97,7 @@ You can execute a FetchXML query by using either the **Web API** or the **Organi
 
 ### Using Web API
 
-You can pass a URL encoded FetchXml string to the appropriate entityset using the `fetchXml` query string parameter. More information: [Use custom FetchXML](webapi/retrieve-and-execute-predefined-queries.md#use-custom-fetchxml).
+You can pass a URL encoded FetchXml string to the appropriate entityset using the `fetchXml` query string parameter. More information: [Use FetchXml with Web API](webapi/use-fetchxml-web-api.md).
 
 ### Using Organization service
 
@@ -134,11 +129,17 @@ foreach (var c in result.Entities)
 }  
 ```
 
-> [!NOTE]
-> You can convert a FetchXML query to a query expression with the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message.
+> [!IMPORTANT]
+> When working with code such as the above example, always make sure that your string is a valid encoded XML string. This is especially true regarding the possibility of containing special characters in condition values such as &<> being encoded as \&amp;\&lt;\&gt;.
+
+You can convert a FetchXML query to a query expression with the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message.
   
 ## FetchXML query results
 
  When you execute a FetchXML query by using the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.RetrieveMultiple(Microsoft.Xrm.Sdk.Query.QueryBase)> method, the return value is an <xref:Microsoft.Xrm.Sdk.EntityCollection> that contains the results of the query. You can then iterate through the table collection. The previous example uses the `foreach` loop to iterate through the result collection of the FetchXML query.
+
+## Use Wildcard characters in conditions using string values
+
+You can use wildcard characters when you construct queries using conditions on string values. More information: [Use wildcard characters in conditions for string values](wildcard-characters.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

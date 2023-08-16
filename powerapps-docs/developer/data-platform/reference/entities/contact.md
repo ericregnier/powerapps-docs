@@ -1,18 +1,14 @@
 ---
-title: "Contact table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Contact table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Contact table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Contact table/entity reference
@@ -25,23 +21,22 @@ Person with whom a business unit has a relationship, such as customer, supplier,
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/contacts(*contactid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/contacts<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/contacts(*contactid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|Merge|<xref href="Microsoft.Dynamics.CRM.Merge?text=Merge Action" />|<xref:Microsoft.Crm.Sdk.Messages.MergeRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/contacts(*contactid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/contacts<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|Rollup|<xref href="Microsoft.Dynamics.CRM.Rollup?text=Rollup Function" />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/contacts(*contactid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/contacts(*contactid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /contacts(*contactid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /contacts<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /contacts(*contactid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|Merge|<xref:Microsoft.Dynamics.CRM.Merge?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.MergeRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /contacts(*contactid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /contacts<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|Rollup|<xref:Microsoft.Dynamics.CRM.Rollup?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
+|SetState|PATCH /contacts(*contactid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /contacts(*contactid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -238,11 +233,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AccountRoleCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Decision Maker|
-|2|Employee|
-|3|Influencer|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Decision Maker||
+|2|Employee||
+|3|Influencer||
 
 
 
@@ -273,12 +268,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Bill To|
-|2|Ship To|
-|3|Primary|
-|4|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Bill To||
+|2|Ship To||
+|3|Primary||
+|4|Other||
 
 
 
@@ -360,10 +355,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FOB|
-|2|No Charge|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FOB||
+|2|No Charge||
 
 
 
@@ -525,15 +520,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Airborne|
-|2|DHL|
-|3|FedEx|
-|4|UPS|
-|5|Postal Mail|
-|6|Full Load|
-|7|Will Call|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Airborne||
+|2|DHL||
+|3|FedEx||
+|4|UPS||
+|5|Postal Mail||
+|6|Full Load||
+|7|Will Call||
 
 
 
@@ -660,9 +655,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -744,9 +739,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -908,9 +903,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1037,9 +1032,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address3_AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1121,9 +1116,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address3_FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1285,9 +1280,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address3_ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1575,12 +1570,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CreditOnHold Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1598,9 +1593,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CustomerSizeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1618,9 +1613,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CustomerTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1670,12 +1665,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotBulkEMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1693,12 +1688,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotBulkPostalMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1716,12 +1711,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotEMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1739,12 +1734,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotFax Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1762,12 +1757,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotPhone Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1785,12 +1780,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotPostalMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1808,12 +1803,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotSendMM Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Send|
-|0|Send|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Send||
+|0|Send||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1831,9 +1826,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EducationCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1947,12 +1942,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FamilyStatusCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Single|
-|2|Married|
-|3|Divorced|
-|4|Widowed|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Single||
+|2|Married||
+|3|Divorced||
+|4|Widowed||
 
 
 
@@ -2002,12 +1997,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FollowEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Allow|
-|0|Do Not Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Allow||
+|0|Do Not Allow||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -2041,10 +2036,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GenderCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Male|
-|2|Female|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Male||
+|2|Female||
 
 
 
@@ -2078,9 +2073,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### HasChildrenCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2131,12 +2126,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBackofficeCustomer Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2217,9 +2212,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### LeadSourceCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2269,12 +2264,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### MarketingOnly Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2442,12 +2437,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ParticipatesInWorkflow Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2465,12 +2460,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PaymentTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Net 30|
-|2|2% 10, Net 30|
-|3|Net 45|
-|4|Net 60|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Net 30||
+|2|2% 10, Net 30||
+|3|Net 45||
+|4|Net 60||
 
 
 
@@ -2488,15 +2483,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredAppointmentDayCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Sunday|
-|1|Monday|
-|2|Tuesday|
-|3|Wednesday|
-|4|Thursday|
-|5|Friday|
-|6|Saturday|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Sunday||
+|1|Monday||
+|2|Tuesday||
+|3|Wednesday||
+|4|Thursday||
+|5|Friday||
+|6|Saturday||
 
 
 
@@ -2514,11 +2509,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredAppointmentTimeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Morning|
-|2|Afternoon|
-|3|Evening|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Morning||
+|2|Afternoon||
+|3|Evening||
 
 
 
@@ -2536,13 +2531,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredContactMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Any|
-|2|Email|
-|3|Phone|
-|4|Fax|
-|5|Mail|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Any||
+|2|Email||
+|3|Phone||
+|4|Fax||
+|5|Mail||
 
 
 
@@ -2603,9 +2598,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2787,9 +2782,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TerritoryCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2973,6 +2968,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentContactId](#BKMK_ParentContactId)
@@ -3428,8 +3424,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -3464,12 +3460,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsAutoCreate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3487,12 +3483,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3556,12 +3552,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Merged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3772,12 +3768,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the contact.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -4038,7 +4050,6 @@ Listed by **SchemaName**.
 - [Contact_Email_EmailSender](#BKMK_Contact_Email_EmailSender)
 - [Contact_Tasks](#BKMK_Contact_Tasks)
 - [contact_PostFollows](#BKMK_contact_PostFollows)
-- [contact_PostRegardings](#BKMK_contact_PostRegardings)
 - [Contact_RecurringAppointmentMasters](#BKMK_Contact_RecurringAppointmentMasters)
 - [contact_master_contact](#BKMK_contact_master_contact)
 - [lk_contact_feedback_createdby](#BKMK_lk_contact_feedback_createdby)
@@ -4068,11 +4079,12 @@ Listed by **SchemaName**.
 - [Contact_DuplicateMatchingRecord](#BKMK_Contact_DuplicateMatchingRecord)
 - [Contact_Faxes](#BKMK_Contact_Faxes)
 - [Contact_Letters](#BKMK_Contact_Letters)
+- [contact_chats](#BKMK_contact_chats)
 
 
 ### <a name="BKMK_contact_principalobjectattributeaccess"></a> contact_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [contact_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_contact_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [contact_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_contact_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4087,7 +4099,7 @@ Same as principalobjectattributeaccess table [contact_principalobjectattributeac
 
 ### <a name="BKMK_slakpiinstance_contact"></a> slakpiinstance_contact
 
-Same as slakpiinstance table [slakpiinstance_contact](slakpiinstance.md#BKMK_slakpiinstance_contact) Many-To-One relationship.
+Same as the [slakpiinstance_contact](slakpiinstance.md#BKMK_slakpiinstance_contact) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4102,7 +4114,7 @@ Same as slakpiinstance table [slakpiinstance_contact](slakpiinstance.md#BKMK_sla
 
 ### <a name="BKMK_socialactivity_postauthoraccount_contacts"></a> socialactivity_postauthoraccount_contacts
 
-Same as socialactivity table [socialactivity_postauthoraccount_contacts](socialactivity.md#BKMK_socialactivity_postauthoraccount_contacts) Many-To-One relationship.
+Same as the [socialactivity_postauthoraccount_contacts](socialactivity.md#BKMK_socialactivity_postauthoraccount_contacts) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4117,7 +4129,7 @@ Same as socialactivity table [socialactivity_postauthoraccount_contacts](sociala
 
 ### <a name="BKMK_Contact_Email_EmailSender"></a> Contact_Email_EmailSender
 
-Same as email table [Contact_Email_EmailSender](email.md#BKMK_Contact_Email_EmailSender) Many-To-One relationship.
+Same as the [Contact_Email_EmailSender](email.md#BKMK_Contact_Email_EmailSender) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4132,7 +4144,7 @@ Same as email table [Contact_Email_EmailSender](email.md#BKMK_Contact_Email_Emai
 
 ### <a name="BKMK_Contact_Tasks"></a> Contact_Tasks
 
-Same as task table [Contact_Tasks](task.md#BKMK_Contact_Tasks) Many-To-One relationship.
+Same as the [Contact_Tasks](task.md#BKMK_Contact_Tasks) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4147,7 +4159,7 @@ Same as task table [Contact_Tasks](task.md#BKMK_Contact_Tasks) Many-To-One relat
 
 ### <a name="BKMK_contact_PostFollows"></a> contact_PostFollows
 
-Same as postfollow table [contact_PostFollows](postfollow.md#BKMK_contact_PostFollows) Many-To-One relationship.
+Same as the [contact_PostFollows](postfollow.md#BKMK_contact_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4160,24 +4172,9 @@ Same as postfollow table [contact_PostFollows](postfollow.md#BKMK_contact_PostFo
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_contact_PostRegardings"></a> contact_PostRegardings
-
-Same as postregarding table [contact_PostRegardings](postregarding.md#BKMK_contact_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|contact_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_Contact_RecurringAppointmentMasters"></a> Contact_RecurringAppointmentMasters
 
-Same as recurringappointmentmaster table [Contact_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_Contact_RecurringAppointmentMasters) Many-To-One relationship.
+Same as the [Contact_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_Contact_RecurringAppointmentMasters) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4192,7 +4189,7 @@ Same as recurringappointmentmaster table [Contact_RecurringAppointmentMasters](r
 
 ### <a name="BKMK_contact_master_contact"></a> contact_master_contact
 
-Same as contact table [contact_master_contact](contact.md#BKMK_contact_master_contact) Many-To-One relationship.
+Same as the [contact_master_contact](contact.md#BKMK_contact_master_contact) many-to-one relationship for the [contact](contact.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4207,7 +4204,7 @@ Same as contact table [contact_master_contact](contact.md#BKMK_contact_master_co
 
 ### <a name="BKMK_lk_contact_feedback_createdby"></a> lk_contact_feedback_createdby
 
-Same as feedback table [lk_contact_feedback_createdby](feedback.md#BKMK_lk_contact_feedback_createdby) Many-To-One relationship.
+Same as the [lk_contact_feedback_createdby](feedback.md#BKMK_lk_contact_feedback_createdby) many-to-one relationship for the [feedback](feedback.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4222,7 +4219,7 @@ Same as feedback table [lk_contact_feedback_createdby](feedback.md#BKMK_lk_conta
 
 ### <a name="BKMK_contact_actioncard"></a> contact_actioncard
 
-Same as actioncard table [contact_actioncard](actioncard.md#BKMK_contact_actioncard) Many-To-One relationship.
+Same as the [contact_actioncard](actioncard.md#BKMK_contact_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4237,7 +4234,7 @@ Same as actioncard table [contact_actioncard](actioncard.md#BKMK_contact_actionc
 
 ### <a name="BKMK_contact_connections2"></a> contact_connections2
 
-Same as connection table [contact_connections2](connection.md#BKMK_contact_connections2) Many-To-One relationship.
+Same as the [contact_connections2](connection.md#BKMK_contact_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4252,7 +4249,7 @@ Same as connection table [contact_connections2](connection.md#BKMK_contact_conne
 
 ### <a name="BKMK_Contact_BulkDeleteFailures"></a> Contact_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Contact_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Contact_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Contact_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Contact_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4267,7 +4264,7 @@ Same as bulkdeletefailure table [Contact_BulkDeleteFailures](bulkdeletefailure.m
 
 ### <a name="BKMK_contact_activity_parties"></a> contact_activity_parties
 
-Same as activityparty table [contact_activity_parties](activityparty.md#BKMK_contact_activity_parties) Many-To-One relationship.
+Same as the [contact_activity_parties](activityparty.md#BKMK_contact_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4282,7 +4279,7 @@ Same as activityparty table [contact_activity_parties](activityparty.md#BKMK_con
 
 ### <a name="BKMK_Contact_DuplicateBaseRecord"></a> Contact_DuplicateBaseRecord
 
-Same as duplicaterecord table [Contact_DuplicateBaseRecord](duplicaterecord.md#BKMK_Contact_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Contact_DuplicateBaseRecord](duplicaterecord.md#BKMK_Contact_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4297,7 +4294,7 @@ Same as duplicaterecord table [Contact_DuplicateBaseRecord](duplicaterecord.md#B
 
 ### <a name="BKMK_Contact_Annotation"></a> Contact_Annotation
 
-Same as annotation table [Contact_Annotation](annotation.md#BKMK_Contact_Annotation) Many-To-One relationship.
+Same as the [Contact_Annotation](annotation.md#BKMK_Contact_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4312,7 +4309,7 @@ Same as annotation table [Contact_Annotation](annotation.md#BKMK_Contact_Annotat
 
 ### <a name="BKMK_Contact_SocialActivities"></a> Contact_SocialActivities
 
-Same as socialactivity table [Contact_SocialActivities](socialactivity.md#BKMK_Contact_SocialActivities) Many-To-One relationship.
+Same as the [Contact_SocialActivities](socialactivity.md#BKMK_Contact_SocialActivities) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4327,7 +4324,7 @@ Same as socialactivity table [Contact_SocialActivities](socialactivity.md#BKMK_C
 
 ### <a name="BKMK_Contact_ActivityPointers"></a> Contact_ActivityPointers
 
-Same as activitypointer table [Contact_ActivityPointers](activitypointer.md#BKMK_Contact_ActivityPointers) Many-To-One relationship.
+Same as the [Contact_ActivityPointers](activitypointer.md#BKMK_Contact_ActivityPointers) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4342,7 +4339,7 @@ Same as activitypointer table [Contact_ActivityPointers](activitypointer.md#BKMK
 
 ### <a name="BKMK_Contact_MailboxTrackingFolder"></a> Contact_MailboxTrackingFolder
 
-Same as mailboxtrackingfolder table [Contact_MailboxTrackingFolder](mailboxtrackingfolder.md#BKMK_Contact_MailboxTrackingFolder) Many-To-One relationship.
+Same as the [Contact_MailboxTrackingFolder](mailboxtrackingfolder.md#BKMK_Contact_MailboxTrackingFolder) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4357,7 +4354,7 @@ Same as mailboxtrackingfolder table [Contact_MailboxTrackingFolder](mailboxtrack
 
 ### <a name="BKMK_account_primary_contact"></a> account_primary_contact
 
-Same as account table [account_primary_contact](account.md#BKMK_account_primary_contact) Many-To-One relationship.
+Same as the [account_primary_contact](account.md#BKMK_account_primary_contact) many-to-one relationship for the [account](account.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4372,7 +4369,7 @@ Same as account table [account_primary_contact](account.md#BKMK_account_primary_
 
 ### <a name="BKMK_Socialprofile_customer_contacts"></a> Socialprofile_customer_contacts
 
-Same as socialprofile table [Socialprofile_customer_contacts](socialprofile.md#BKMK_Socialprofile_customer_contacts) Many-To-One relationship.
+Same as the [Socialprofile_customer_contacts](socialprofile.md#BKMK_Socialprofile_customer_contacts) many-to-one relationship for the [socialprofile](socialprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4387,7 +4384,7 @@ Same as socialprofile table [Socialprofile_customer_contacts](socialprofile.md#B
 
 ### <a name="BKMK_socialactivity_postauthor_contacts"></a> socialactivity_postauthor_contacts
 
-Same as socialactivity table [socialactivity_postauthor_contacts](socialactivity.md#BKMK_socialactivity_postauthor_contacts) Many-To-One relationship.
+Same as the [socialactivity_postauthor_contacts](socialactivity.md#BKMK_socialactivity_postauthor_contacts) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4402,7 +4399,7 @@ Same as socialactivity table [socialactivity_postauthor_contacts](socialactivity
 
 ### <a name="BKMK_lk_contact_feedback_createdonbehalfby"></a> lk_contact_feedback_createdonbehalfby
 
-Same as feedback table [lk_contact_feedback_createdonbehalfby](feedback.md#BKMK_lk_contact_feedback_createdonbehalfby) Many-To-One relationship.
+Same as the [lk_contact_feedback_createdonbehalfby](feedback.md#BKMK_lk_contact_feedback_createdonbehalfby) many-to-one relationship for the [feedback](feedback.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4417,7 +4414,7 @@ Same as feedback table [lk_contact_feedback_createdonbehalfby](feedback.md#BKMK_
 
 ### <a name="BKMK_Contact_Emails"></a> Contact_Emails
 
-Same as email table [Contact_Emails](email.md#BKMK_Contact_Emails) Many-To-One relationship.
+Same as the [Contact_Emails](email.md#BKMK_Contact_Emails) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4432,7 +4429,7 @@ Same as email table [Contact_Emails](email.md#BKMK_Contact_Emails) Many-To-One r
 
 ### <a name="BKMK_Contact_Appointments"></a> Contact_Appointments
 
-Same as appointment table [Contact_Appointments](appointment.md#BKMK_Contact_Appointments) Many-To-One relationship.
+Same as the [Contact_Appointments](appointment.md#BKMK_Contact_Appointments) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4447,7 +4444,7 @@ Same as appointment table [Contact_Appointments](appointment.md#BKMK_Contact_App
 
 ### <a name="BKMK_Contact_Feedback"></a> Contact_Feedback
 
-Same as feedback table [Contact_Feedback](feedback.md#BKMK_Contact_Feedback) Many-To-One relationship.
+Same as the [Contact_Feedback](feedback.md#BKMK_Contact_Feedback) many-to-one relationship for the [feedback](feedback.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4462,7 +4459,7 @@ Same as feedback table [Contact_Feedback](feedback.md#BKMK_Contact_Feedback) Man
 
 ### <a name="BKMK_Contact_ProcessSessions"></a> Contact_ProcessSessions
 
-Same as processsession table [Contact_ProcessSessions](processsession.md#BKMK_Contact_ProcessSessions) Many-To-One relationship.
+Same as the [Contact_ProcessSessions](processsession.md#BKMK_Contact_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4477,7 +4474,7 @@ Same as processsession table [Contact_ProcessSessions](processsession.md#BKMK_Co
 
 ### <a name="BKMK_Contact_AsyncOperations"></a> Contact_AsyncOperations
 
-Same as asyncoperation table [Contact_AsyncOperations](asyncoperation.md#BKMK_Contact_AsyncOperations) Many-To-One relationship.
+Same as the [Contact_AsyncOperations](asyncoperation.md#BKMK_Contact_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4492,7 +4489,7 @@ Same as asyncoperation table [Contact_AsyncOperations](asyncoperation.md#BKMK_Co
 
 ### <a name="BKMK_contact_connections1"></a> contact_connections1
 
-Same as connection table [contact_connections1](connection.md#BKMK_contact_connections1) Many-To-One relationship.
+Same as the [contact_connections1](connection.md#BKMK_contact_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4507,7 +4504,7 @@ Same as connection table [contact_connections1](connection.md#BKMK_contact_conne
 
 ### <a name="BKMK_Contact_CustomerAddress"></a> Contact_CustomerAddress
 
-Same as customeraddress table [Contact_CustomerAddress](customeraddress.md#BKMK_Contact_CustomerAddress) Many-To-One relationship.
+Same as the [Contact_CustomerAddress](customeraddress.md#BKMK_Contact_CustomerAddress) many-to-one relationship for the [customeraddress](customeraddress.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4522,7 +4519,7 @@ Same as customeraddress table [Contact_CustomerAddress](customeraddress.md#BKMK_
 
 ### <a name="BKMK_Contact_Phonecalls"></a> Contact_Phonecalls
 
-Same as phonecall table [Contact_Phonecalls](phonecall.md#BKMK_Contact_Phonecalls) Many-To-One relationship.
+Same as the [Contact_Phonecalls](phonecall.md#BKMK_Contact_Phonecalls) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4537,7 +4534,7 @@ Same as phonecall table [Contact_Phonecalls](phonecall.md#BKMK_Contact_Phonecall
 
 ### <a name="BKMK_contact_customer_contacts"></a> contact_customer_contacts
 
-Same as contact table [contact_customer_contacts](contact.md#BKMK_contact_customer_contacts) Many-To-One relationship.
+Same as the [contact_customer_contacts](contact.md#BKMK_contact_customer_contacts) many-to-one relationship for the [contact](contact.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4552,7 +4549,7 @@ Same as contact table [contact_customer_contacts](contact.md#BKMK_contact_custom
 
 ### <a name="BKMK_Contact_SyncErrors"></a> Contact_SyncErrors
 
-Same as syncerror table [Contact_SyncErrors](syncerror.md#BKMK_Contact_SyncErrors) Many-To-One relationship.
+Same as the [Contact_SyncErrors](syncerror.md#BKMK_Contact_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4567,7 +4564,7 @@ Same as syncerror table [Contact_SyncErrors](syncerror.md#BKMK_Contact_SyncError
 
 ### <a name="BKMK_Contact_DuplicateMatchingRecord"></a> Contact_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Contact_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Contact_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Contact_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Contact_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4582,7 +4579,7 @@ Same as duplicaterecord table [Contact_DuplicateMatchingRecord](duplicaterecord.
 
 ### <a name="BKMK_Contact_Faxes"></a> Contact_Faxes
 
-Same as fax table [Contact_Faxes](fax.md#BKMK_Contact_Faxes) Many-To-One relationship.
+Same as the [Contact_Faxes](fax.md#BKMK_Contact_Faxes) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4597,7 +4594,7 @@ Same as fax table [Contact_Faxes](fax.md#BKMK_Contact_Faxes) Many-To-One relatio
 
 ### <a name="BKMK_Contact_Letters"></a> Contact_Letters
 
-Same as letter table [Contact_Letters](letter.md#BKMK_Contact_Letters) Many-To-One relationship.
+Same as the [Contact_Letters](letter.md#BKMK_Contact_Letters) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -4606,6 +4603,23 @@ Same as letter table [Contact_Letters](letter.md#BKMK_Contact_Letters) Many-To-O
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|Contact_Letters|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_contact_chats"></a> contact_chats
+
+**Added by**: Activities Patch Solution
+
+Same as the [contact_chats](chat.md#BKMK_contact_chats) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|contact_chats|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
@@ -4623,7 +4637,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [manualsla_contact](#BKMK_manualsla_contact)
 - [system_user_contacts](#BKMK_system_user_contacts)
 - [lk_contactbase_modifiedby](#BKMK_lk_contactbase_modifiedby)
-- [owner_contacts](#BKMK_owner_contacts)
 - [sla_contact](#BKMK_sla_contact)
 - [contact_customer_accounts](#BKMK_contact_customer_accounts)
 - [lk_contact_modifiedonbehalfby](#BKMK_lk_contact_modifiedonbehalfby)
@@ -4635,70 +4648,66 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_transactioncurrency_contact"></a> transactioncurrency_contact
 
-See transactioncurrency Table [transactioncurrency_contact](transactioncurrency.md#BKMK_transactioncurrency_contact) One-To-Many relationship.
+See the [transactioncurrency_contact](transactioncurrency.md#BKMK_transactioncurrency_contact) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_contact_master_contact"></a> contact_master_contact
 
-See contact Table [contact_master_contact](contact.md#BKMK_contact_master_contact) One-To-Many relationship.
+See the [contact_master_contact](contact.md#BKMK_contact_master_contact) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_contactbase_createdby"></a> lk_contactbase_createdby
 
-See systemuser Table [lk_contactbase_createdby](systemuser.md#BKMK_lk_contactbase_createdby) One-To-Many relationship.
+See the [lk_contactbase_createdby](systemuser.md#BKMK_lk_contactbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_contact_createdonbehalfby"></a> lk_contact_createdonbehalfby
 
-See systemuser Table [lk_contact_createdonbehalfby](systemuser.md#BKMK_lk_contact_createdonbehalfby) One-To-Many relationship.
+See the [lk_contact_createdonbehalfby](systemuser.md#BKMK_lk_contact_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_contacts"></a> team_contacts
 
-See team Table [team_contacts](team.md#BKMK_team_contacts) One-To-Many relationship.
+See the [team_contacts](team.md#BKMK_team_contacts) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_manualsla_contact"></a> manualsla_contact
 
-See sla Table [manualsla_contact](sla.md#BKMK_manualsla_contact) One-To-Many relationship.
+See the [manualsla_contact](sla.md#BKMK_manualsla_contact) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_system_user_contacts"></a> system_user_contacts
 
-See systemuser Table [system_user_contacts](systemuser.md#BKMK_system_user_contacts) One-To-Many relationship.
+See the [system_user_contacts](systemuser.md#BKMK_system_user_contacts) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_contactbase_modifiedby"></a> lk_contactbase_modifiedby
 
-See systemuser Table [lk_contactbase_modifiedby](systemuser.md#BKMK_lk_contactbase_modifiedby) One-To-Many relationship.
-
-### <a name="BKMK_owner_contacts"></a> owner_contacts
-
-See owner Table [owner_contacts](owner.md#BKMK_owner_contacts) One-To-Many relationship.
+See the [lk_contactbase_modifiedby](systemuser.md#BKMK_lk_contactbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_sla_contact"></a> sla_contact
 
-See sla Table [sla_contact](sla.md#BKMK_sla_contact) One-To-Many relationship.
+See the [sla_contact](sla.md#BKMK_sla_contact) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_contact_customer_accounts"></a> contact_customer_accounts
 
-See account Table [contact_customer_accounts](account.md#BKMK_contact_customer_accounts) One-To-Many relationship.
+See the [contact_customer_accounts](account.md#BKMK_contact_customer_accounts) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_lk_contact_modifiedonbehalfby"></a> lk_contact_modifiedonbehalfby
 
-See systemuser Table [lk_contact_modifiedonbehalfby](systemuser.md#BKMK_lk_contact_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_contact_modifiedonbehalfby](systemuser.md#BKMK_lk_contact_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_processstage_contact"></a> processstage_contact
 
-See processstage Table [processstage_contact](processstage.md#BKMK_processstage_contact) One-To-Many relationship.
+See the [processstage_contact](processstage.md#BKMK_processstage_contact) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_contact_owning_user"></a> contact_owning_user
 
-See systemuser Table [contact_owning_user](systemuser.md#BKMK_contact_owning_user) One-To-Many relationship.
+See the [contact_owning_user](systemuser.md#BKMK_contact_owning_user) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_contact_customer_contacts"></a> contact_customer_contacts
 
-See contact Table [contact_customer_contacts](contact.md#BKMK_contact_customer_contacts) One-To-Many relationship.
+See the [contact_customer_contacts](contact.md#BKMK_contact_customer_contacts) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_business_unit_contacts"></a> business_unit_contacts
 
-See businessunit Table [business_unit_contacts](businessunit.md#BKMK_business_unit_contacts) One-To-Many relationship.
+See the [business_unit_contacts](businessunit.md#BKMK_business_unit_contacts) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />

@@ -1,18 +1,14 @@
 ---
-title: "msdyn_solutionhistory table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_solutionhistory table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_solutionhistory table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # msdyn_solutionhistory table/entity reference
@@ -27,14 +23,14 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_solutionhistories<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_solutionhistories(*msdyn_solutionhistoryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_solutionhistories(*msdyn_solutionhistoryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Create|POST /msdyn_solutionhistories<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /msdyn_solutionhistories(*msdyn_solutionhistoryid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /msdyn_solutionhistories(*msdyn_solutionhistoryid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_solutionhistories<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhistories(*msdyn_solutionhistoryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|RetrieveMultiple|GET /msdyn_solutionhistories<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /msdyn_solutionhistories(*msdyn_solutionhistoryid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -67,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_ismanaged](#BKMK_msdyn_ismanaged)
 - [msdyn_isoverwritecustomizations](#BKMK_msdyn_isoverwritecustomizations)
 - [msdyn_ispatch](#BKMK_msdyn_ispatch)
+- [msdyn_maxretries](#BKMK_msdyn_maxretries)
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_operation](#BKMK_msdyn_operation)
 - [msdyn_packagename](#BKMK_msdyn_packagename)
@@ -74,6 +71,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_publisherid](#BKMK_msdyn_publisherid)
 - [msdyn_publishername](#BKMK_msdyn_publishername)
 - [msdyn_result](#BKMK_msdyn_result)
+- [msdyn_retrycount](#BKMK_msdyn_retrycount)
 - [msdyn_solutionhistoryId](#BKMK_msdyn_solutionhistoryId)
 - [msdyn_solutionid](#BKMK_msdyn_solutionid)
 - [msdyn_solutionversion](#BKMK_msdyn_solutionversion)
@@ -192,12 +190,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ismanaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -215,12 +213,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isoverwritecustomizations Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -238,13 +236,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ispatch Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
+
+
+### <a name="BKMK_msdyn_maxretries"></a> msdyn_maxretries
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum number of retries.|
+|DisplayName|Maximum Retries|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_maxretries|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_msdyn_name"></a> msdyn_name
@@ -277,18 +291,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_operation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Import|
-|1|Uninstall|
-|2|Export|
-|3|Publish|
-|4|PublishAll|
-|5|LanguageProvision|
-|6|ImportTranslation|
-|7|RibbonMetadataGeneration|
-|8|WorkflowSetState|
-|9|None|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Import||
+|1|Uninstall||
+|2|Export||
+|3|Publish||
+|4|PublishAll||
+|5|LanguageProvision||
+|6|ImportTranslation||
+|7|RibbonMetadataGeneration||
+|8|WorkflowSetState||
+|9|None||
 
 
 
@@ -370,13 +384,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_result Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Success|
-|0|Failure|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Success||
+|0|Failure||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
+
+
+### <a name="BKMK_msdyn_retrycount"></a> msdyn_retrycount
+
+|Property|Value|
+|--------|-----|
+|Description|Retry count|
+|DisplayName|Retry count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_retrycount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_msdyn_solutionhistoryId"></a> msdyn_solutionhistoryId
@@ -454,10 +484,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_status Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Started|
-|1|Completed|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Started||
+|1|Completed||
 
 
 
@@ -475,13 +505,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_suboperation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|New|
-|2|Upgrade|
-|3|Update|
-|4|Delete|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|New||
+|2|Upgrade||
+|3|Update||
+|4|Delete||
 
 
 
@@ -504,6 +534,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_solutionhistory?text=msdyn_solutionhistory EntityType" />

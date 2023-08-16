@@ -1,21 +1,18 @@
 ---
 title: "Work with business processes in model-driven apps| MicrosoftDocs"
 description: Overview of business process 
-author: mduelae
-manager: kvivek
-ms.service: powerapps
+author: sericks007
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 08/21/2020
-ms.author: mkaur
+ms.subservice: end-user
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Work with business processes
 
@@ -26,16 +23,16 @@ As you work on a new customer row, the business process flow helps you see each 
 
 
   > [!div class="mx-imgBorder"]
-  > ![Business process bar](media/business-process.png "The business process bar")
+  > ![Business process bar.](media/business-process.png "The business process bar")
 
 
 
 The process bar can also be docked to the right side of the screen for easy reference as you work with a customer row. 
 
-- On the prcess bar select a stage, and then select **Pin the stage flyout** ![Pin business stage flyout"](media/bp_stage_flyout.png "Pin business process stage flyout"). 
+- On the prcess bar select a stage, and then select **Pin the stage flyout** ![Pin business stage flyout."](media/bp_stage_flyout.png "Pin business process stage flyout"). 
 
   > [!div class="mx-imgBorder"]
-  > ![Business process](media/bpdock.gif "Business process")
+  > ![Business process.](media/bpdock.gif "Business process")
  
   
  

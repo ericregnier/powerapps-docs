@@ -1,16 +1,15 @@
 ---
 title: "removeOnPreProcessStatusChange (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
-ms.date: 06/30/2019
-ms.service: powerapps
+description: Includes description and supported parameters for the removeOnPreProcessStatusChange method.
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: reference
-ms.assetid: 
-author: MSFTMan
-ms.author: Deonhe
-manager: KVivek
 search.audienceType: 
   - developer
-search.app: 
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # removeOnPreProcessStatusChange (Client API reference)
 

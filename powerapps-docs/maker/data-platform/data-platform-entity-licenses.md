@@ -2,28 +2,26 @@
 title: License requirements for tables| Microsoft Docs
 description: An explanation of license requirements for tables with complex business logic and restricted tables in Microsoft Dataverse.
 author: MicroSri
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.date: 08/28/2020
+ms.subservice: dataverse-maker
 ms.author: sriknair
 ms.reviewer: kvivek
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # License requirements for tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 App makers can use most of the tables available within Microsoft Dataverse (including custom tables and tables that are part of the Common Data Model) to create apps and flows for users who have a Power Apps or Power Automate license. 
 
 In some cases, tables contain complex business logic or are tied to customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) that require app users to have a specific license. This topic provides licensing information for tables with complex business logic and tables that are tied to Dynamics 365 apps (termed as restricted tables).
 
 ## Tables with complex business logic
-Tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a [Power Apps](https://powerapps.microsoft.com/pricing/) or [Power Automate](https://flow.microsoft.com/pricing/) license:
+Tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a [Power Apps](https://powerapps.microsoft.com/pricing/) or [Power Automate](https://make.powerautomate.com/pricing/) license:
 
 - Code plug-ins (for more information, see [Plug-in development](../../developer/data-platform/plug-ins.md))
 - Real-time workflows (for more information, see [Workflow processes](/flow/workflow-processes))

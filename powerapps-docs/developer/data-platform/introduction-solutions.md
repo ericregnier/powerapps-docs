@@ -1,25 +1,16 @@
 ---
 title: Introduction to solutions | Microsoft Docs
 description: Learn about using solutions to package your Microsoft Dataverse customizations.
-services: ''
 suite: powerapps
-documentationcenter: na
-author: "shmcarth" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
+author: shmcarth # GitHub ID
+ms.author: shmcarth
 ms.topic: article
-ms.reviewer: "pehecke"
-ms.workload: na
+ms.reviewer: pehecke
+ms.collection: get-started
 ms.date: 03/17/2021
-ms.author: jdaly
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Introduction to solutions

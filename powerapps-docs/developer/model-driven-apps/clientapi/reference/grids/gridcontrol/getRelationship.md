@@ -1,18 +1,16 @@
 ---
 title: "getRelationship (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
+description: Includes description and supported parameters for the getRelationship method.
+author: jasongre
+ms.author: jasongre
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getRelationship (Client API reference)
 
@@ -32,8 +30,9 @@ Read-only and editable grids
 
 **Type**: Object.
 
-**Description**: A relationship object with the following attributes:
-- **attributeName**: String. Name of the attribute.
+**Description**: A relationship object with the following:
+
+- **attributeName**: String. Name of the column.
 - **name**: String. Name of the relationship. 
 - **navigationPropertyName**: String. Name of the navigation property for this relationship.
 - **relationshipType**: Number. Returns one of the following values to indicate the relationship type:
@@ -51,8 +50,6 @@ To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gri
 
 [openRelatedGrid](openRelatedGrid.md)
 
-<!-- TODO:
-[Customize entity relationship metadata](../../../../customize-entity-relationship-metadata.md) -->
 
 
 

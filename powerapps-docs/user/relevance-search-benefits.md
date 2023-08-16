@@ -1,26 +1,24 @@
 ---
-title: "What is relevance search and its benefits| MicrosoftDocs"
-description: Benefits of relevance search
-author: mduelae
-manager: kvivek
-ms.service: powerapps
+title: What is Dataverse search?
+description: Dataverse search for model-driven apps helps you quickly find what you're looking for. 
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/8/2021
-ms.author: mkaur
-ms.custom: ""
-ms.reviewer: ""
+ms.date: 06/21/2023
+ms.subservice: end-user
+ms.author: sericks
+ms.custom: 
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+ms.contributors:
+- mspilde 
 ---
 
-# What is relevance search?
+# What is Dataverse search?
 
-Relevance search for model-driven apps helps you quickly find what you're looking for. It delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. In addition, relevance search delivers the following benefits:
+Dataverse search for model-driven apps helps you quickly find what you're looking for. It delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. In addition, Dataverse search delivers the following benefits:
 
 - **Fast and accurate search**: Provides a precise and quick search experience for model-driven apps, and performance that's superior to [categorized search](quick-find.md#multiple-table-quick-find-categorized-search). 
 
@@ -30,7 +28,7 @@ Relevance search for model-driven apps helps you quickly find what you're lookin
 
 - **Smart**: Finds matches that include inflectional words such as **stream**, **streaming**, or **streamed**. 
 
-- **Search across documents in Microsoft Dataverse**: Includes search results for text in documents that are stored in Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON file formats. It also searches text in notes and attachments. 
+- **Search activities**: Search includeds notes and attachements in activities. 
 
 - **Understanding of underlying data**: Understands data types like **Choice** and **Lookup**, so it can effectively interpret a search query that includes multiple search terms.
 
@@ -40,8 +38,8 @@ Relevance search for model-driven apps helps you quickly find what you're lookin
 
 ### See also
 
-[Search for tables and rows by using relevance search](relevance-search.md)<br/>
+[Search for tables and rows by using Dataverse search](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)<br/>
-[Frequently asked questions about relevance search](relevance-faq.md)
+[Frequently asked questions about Dataverse search](relevance-faq.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

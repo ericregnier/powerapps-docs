@@ -1,18 +1,14 @@
 ---
-title: "SolutionHistoryData table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SolutionHistoryData table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SolutionHistoryData table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # SolutionHistoryData table/entity reference
@@ -25,10 +21,9 @@ solution history data
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutionhistories<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET /solutionhistories<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -179,12 +174,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -202,12 +197,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMicrosoftPublisher Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -225,12 +220,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsOverwriteCustomizations Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -248,12 +243,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPatch Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -271,11 +266,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Operation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Import|
-|1|Uninstall|
-|2|Export|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Import||
+|1|Uninstall||
+|2|Export||
 
 
 
@@ -432,10 +427,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Status Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Start|
-|1|End|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Start||
+|1|End||
 
 
 
@@ -453,19 +448,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SubOperation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|New|
-|2|Upgrade|
-|3|Update|
-|4|Delete|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|New||
+|2|Upgrade||
+|3|Update||
+|4|Delete||
 
 
 
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.solutionhistorydata?text=solutionhistorydata EntityType" />

@@ -2,24 +2,18 @@
 title: "Create a solution in Power Apps | MicrosoftDocs"
 description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
-ms.date: 05/19/2020
+ms.date: 06/14/2023
 ms.reviewer: ""
-ms.service: powerapps
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: e21a4876-08b4-417a-a644-c577a27c5cf1
 caps.latest.revision: 12
+ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create a solution
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution so that it can be backed up or imported to another environment. 
 
@@ -27,7 +21,7 @@ To locate and work with just the components you’ve customized, create a soluti
 > For information about implementing healthy application lifecycle management (ALM) using solutions, see the [Power Platform ALM guide](/power-platform/alm).
   
 To create a solution:   
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 2.  Select **New solution** and then complete the required columns for the solution.
   
@@ -53,14 +47,14 @@ To create a solution:
  You can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
  
 > [!div class="mx-imgBorder"]  
-> ![Create new component in a solution](media/solution-new-component.PNG "Create new component in a solution")  
+> ![Create new component in a solution.](media/solution-new-component.PNG "Create new component in a solution")  
  
  ### Add an existing component to a solution
  
  With solutions that are unmanaged and not the default one, you can use the **Add existing** command to bring in components that aren’t already in the solution.  
  
 > [!div class="mx-imgBorder"]  
-> ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
+> ![Add existing component to a solution.](media/solution-add-existing-component.PNG "Add existing component to a solution")  
 
 > [!NOTE]
 > The list of existing components will be different depending on the version and solutions imported in your environment. 
@@ -70,12 +64,12 @@ When you add an existing table, rather than select **Include all components** or
  Many of the customizations you’ll want to do will involve tables. You can use the **table** filter to show a list of all the tables in the current solution that can be customized in some way. Once you drill into a table, you can see the components that are part of the table as shown with the account table in the following screenshot. 
    
 > [!div class="mx-imgBorder"]  
-> ![Demo solution showing expanded account table](media/solution-entity-account.png "Demo solution showing expanded account table")  
+> ![Demo solution showing expanded account table.](media/solution-entity-account.png "Demo solution showing expanded account table")  
   
 <!--
 When you do this you may see a **Missing Required Components** dialog.  
    
- ![Add Required Components Dialog](media/crm-itpro-cust-addrequiredcomponents.PNG "Add Required Components Dialog")  
+ ![Add Required Components Dialog.](media/crm-itpro-cust-addrequiredcomponents.PNG "Add Required Components Dialog")  
   
  This dialog alerts you that the solution component has dependencies on other solution components. If you select **No, do not include required components**, the solution may fail if you import it into another organization where all those required components do not exist. If the solution import succeeds, the behavior in the other solution may not be identical as the original organization because the components are configured differently than those in the source solution.  
   
@@ -89,13 +83,13 @@ When you make unmanaged changes in an environment, some components, such as form
  
 ### Publish your customizations
 
-1.  Select **Solutions** from the left navigation.
+1.  Select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 2.  Select the solution that you want to publish to open it.
 
 3.  From the list of commands, select **Publish all customizations**.  
 
-![Publish all customizations](media/publish-all-customizations.PNG "Publish all customizations")  
+![Publish all customizations.](media/publish-all-customizations.PNG "Publish all customizations")  
   
 > [!IMPORTANT]
 >  Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.  
@@ -109,7 +103,8 @@ The solution publisher indicates who developed the app. For this reason, you sho
 > The **Common Data Services Default Solution** is associated with the **Microsoft Dataverse Default Publisher**. The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items.
 
 ### Create a solution publisher
-1.	In the Power Apps portal, select **Solutions**. 
+
+1.	In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2.	On the command bar, select **New solution**, in the right pane select the **Publisher** drop down list, and then select **+ Publisher**. 
     > [!div class="mx-imgBorder"] 
     > <img src="media/create-new-pubisher.png" alt="Create a new publisher" height="738" width="400">
@@ -121,9 +116,13 @@ The solution publisher indicates who developed the app. For this reason, you sho
    - **Contact Details**. Optionally, you can add contact and address information.
 4. Select **Save and Close**.
 
+> [!NOTE]
+> Do not use _upgrade as part of the solution name.  _upgrade is an internal reserved word for the solution [upgrade  process](/power-apps/maker/data-platform/update-solutions#apply-the-upgrade-or-update-in-the-target-environment). 
+
 ### Change a solution publisher
+
 You can change a solution publisher for an unmanaged solution by following these steps:
-1.	In the Power Apps portal, select **Solutions**, select **…** next to the solution you want, and then select **Settings**. 
+1.	In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, select **…** next to the solution you want, and then select **Settings**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2.	In the **Solution settings** pane, select **Edit publisher**. 
 3.	Edit the **Display name** and **Prefix** columns to the values you want. The **Option Value Prefix** column generates a number based on the publisher prefix. This number is used when you add options to choices and provides an indicator of which solution was used to add the option. 
 4.	In addition to the prefix, you can also change the solution publisher display name, contact information, and address in the **Contact Details** section. 
@@ -133,12 +132,13 @@ You can change a solution publisher for an unmanaged solution by following these
 
 Use solution segmentation so that you only include table components that are updated when you distribute solution updates. More information: [Use segmented solutions](/power-platform/alm/segmented-solutions-alm) in the Power Platform ALM guide
 
-### Create a segmented solution with table assets 
+### Create a segmented solution with table assets
+
  To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated. The wizard-like setup takes you step by step through the process of adding table assets. 
 
 For example, imagine that you've created a new custom table that doesn't exist in any other environment named *Custom table* and also added a new column named *topten* for the account table. To create a segmented solution, follow these steps. 
   
-1. Go to the Power Apps portal and then select **Solutions**.  
+1. Go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 2.  Select **New solution** and create a solution. Enter information in the required columns. Select **Create**.  
   
@@ -154,11 +154,11 @@ For example, imagine that you've created a new custom table that doesn't exist i
 
       For this example, because *Custom table* has never been imported into the target environment, next to **Custom table** select **Include all components**. Under **Account**, choose **Select components**.  
       > [!div class="mx-imgBorder"] 
-      > ![Add existing tables](media/add-existing-entities1.png)
+      > ![Add existing tables.](media/add-existing-entities1.png)
   
 6.  Since only the *topten* custom column is new to the account  table, select **Top Ten**, and then select **Add**.  
      > [!div class="mx-imgBorder"] 
-     > ![Select table components](media/add-existing-entities2.png)
+     > ![Select table components.](media/add-existing-entities2.png)
 
 7. Select **Add** to add the components to the solution. 
 
@@ -197,6 +197,11 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
   
  > [!div class="mx-imgBorder"] 
  > ![Solution with tables.](media/solution-segmentation-solution-entities-admin.png "Solution with tables.")
+
+### Limitations
+- Solution size is limited to 32 MB.
+- Number of solutions is limited by Microsoft Dataverse capacity.
+- Number of objects in a solution is limited by Dataverse capacity.
 
 ### See also
  [Use solutions](./solutions-overview.md) <br />

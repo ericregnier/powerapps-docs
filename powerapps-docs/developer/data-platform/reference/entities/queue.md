@@ -1,18 +1,14 @@
 ---
-title: "Queue table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Queue table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Queue table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Queue table/entity reference
@@ -25,23 +21,22 @@ A list of records that require action, such as accounts, activities, and cases.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|AddPrincipalToQueue|<xref href="Microsoft.Dynamics.CRM.AddPrincipalToQueue?text=AddPrincipalToQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddPrincipalToQueueRequest>|
-|Assign|PATCH [*org URI*]/api/data/v9.0/queues(*queueid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/queues<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/queues(*queueid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/queues(*queueid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/queues<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RetrieveUserQueues|<xref href="Microsoft.Dynamics.CRM.RetrieveUserQueues?text=RetrieveUserQueues Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUserQueuesRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/queues(*queueid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/queues(*queueid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|AddPrincipalToQueue|<xref:Microsoft.Dynamics.CRM.AddPrincipalToQueue?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.AddPrincipalToQueueRequest>|
+|Assign|PATCH /queues(*queueid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /queues<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /queues(*queueid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /queues(*queueid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /queues<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RetrieveUserQueues|<xref:Microsoft.Dynamics.CRM.RetrieveUserQueues?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUserQueuesRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /queues(*queueid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /queues(*queueid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -148,12 +143,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EmailRouterAccessApproval Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Empty|
-|1|Approved|
-|2|Pending Approval|
-|3|Rejected|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Empty||
+|1|Approved||
+|2|Pending Approval||
+|3|Rejected||
 
 
 
@@ -187,12 +182,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IgnoreUnsolicitedEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Only specific Emails|
-|0|All incoming Emails|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Only specific Emails||
+|0|All incoming Emails||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -227,11 +222,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingEmailDeliveryMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|2|Server-Side Synchronization or Email Router|
-|3|Forward Mailbox|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|2|Server-Side Synchronization or Email Router||
+|3|Forward Mailbox||
 
 
 
@@ -249,13 +244,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingEmailFilteringMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|All email messages|
-|1|Email messages in response to Dynamics 365 email|
-|2|Email messages from Dynamics 365 Leads, Contacts and Accounts|
-|3|Email messages from Dynamics 365 records that are email enabled|
-|4|No email messages|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|All email messages||
+|1|Email messages in response to Dynamics 365 email||
+|2|Email messages from Dynamics 365 Leads, Contacts and Accounts||
+|3|Email messages from Dynamics 365 records that are email enabled||
+|4|No email messages||
 
 
 
@@ -289,10 +284,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingEmailDeliveryMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|2|Server-Side Synchronization or Email Router|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|2|Server-Side Synchronization or Email Router||
 
 
 
@@ -381,10 +376,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### QueueViewType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Public|
-|1|Private|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Public||
+|1|Private||
 
 
 
@@ -483,6 +478,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [PrimaryUserIdName](#BKMK_PrimaryUserIdName)
@@ -506,12 +502,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### AllowEmailCredentials Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -754,8 +750,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -774,12 +770,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsEmailAddressApprovedByO365Admin Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -797,12 +793,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsFaxQueue Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Fax Queue|
-|0|Non-fax Queue|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Fax Queue||
+|0|Non-fax Queue||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1013,12 +1009,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the queue.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1095,9 +1107,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### QueueTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1145,18 +1157,18 @@ Listed by **SchemaName**.
 - [Queue_Email_EmailSender](#BKMK_Queue_Email_EmailSender)
 - [Queue_DuplicateBaseRecord](#BKMK_Queue_DuplicateBaseRecord)
 - [queue_activity_parties](#BKMK_queue_activity_parties)
-- [queue_PostRegardings](#BKMK_queue_PostRegardings)
 - [queue_team](#BKMK_queue_team)
 - [queue_entries](#BKMK_queue_entries)
 - [Queue_ProcessSessions](#BKMK_Queue_ProcessSessions)
 - [queue_PostFollows](#BKMK_queue_PostFollows)
 - [mailbox_regarding_queue](#BKMK_mailbox_regarding_queue)
 - [Queue_BulkDeleteFailures](#BKMK_Queue_BulkDeleteFailures)
+- [email_acceptingentity_queue](#BKMK_email_acceptingentity_queue)
 
 
 ### <a name="BKMK_queue_system_user"></a> queue_system_user
 
-Same as systemuser table [queue_system_user](systemuser.md#BKMK_queue_system_user) Many-To-One relationship.
+Same as the [queue_system_user](systemuser.md#BKMK_queue_system_user) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1171,7 +1183,7 @@ Same as systemuser table [queue_system_user](systemuser.md#BKMK_queue_system_use
 
 ### <a name="BKMK_Queue_AsyncOperations"></a> Queue_AsyncOperations
 
-Same as asyncoperation table [Queue_AsyncOperations](asyncoperation.md#BKMK_Queue_AsyncOperations) Many-To-One relationship.
+Same as the [Queue_AsyncOperations](asyncoperation.md#BKMK_Queue_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1186,7 +1198,7 @@ Same as asyncoperation table [Queue_AsyncOperations](asyncoperation.md#BKMK_Queu
 
 ### <a name="BKMK_queue_principalobjectattributeaccess"></a> queue_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [queue_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_queue_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [queue_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_queue_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1201,7 +1213,7 @@ Same as principalobjectattributeaccess table [queue_principalobjectattributeacce
 
 ### <a name="BKMK_Queue_DuplicateMatchingRecord"></a> Queue_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Queue_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Queue_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Queue_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Queue_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1216,7 +1228,7 @@ Same as duplicaterecord table [Queue_DuplicateMatchingRecord](duplicaterecord.md
 
 ### <a name="BKMK_Queue_SyncErrors"></a> Queue_SyncErrors
 
-Same as syncerror table [Queue_SyncErrors](syncerror.md#BKMK_Queue_SyncErrors) Many-To-One relationship.
+Same as the [Queue_SyncErrors](syncerror.md#BKMK_Queue_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1231,7 +1243,7 @@ Same as syncerror table [Queue_SyncErrors](syncerror.md#BKMK_Queue_SyncErrors) M
 
 ### <a name="BKMK_Queue_Email_EmailSender"></a> Queue_Email_EmailSender
 
-Same as email table [Queue_Email_EmailSender](email.md#BKMK_Queue_Email_EmailSender) Many-To-One relationship.
+Same as the [Queue_Email_EmailSender](email.md#BKMK_Queue_Email_EmailSender) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1246,7 +1258,7 @@ Same as email table [Queue_Email_EmailSender](email.md#BKMK_Queue_Email_EmailSen
 
 ### <a name="BKMK_Queue_DuplicateBaseRecord"></a> Queue_DuplicateBaseRecord
 
-Same as duplicaterecord table [Queue_DuplicateBaseRecord](duplicaterecord.md#BKMK_Queue_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Queue_DuplicateBaseRecord](duplicaterecord.md#BKMK_Queue_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1261,7 +1273,7 @@ Same as duplicaterecord table [Queue_DuplicateBaseRecord](duplicaterecord.md#BKM
 
 ### <a name="BKMK_queue_activity_parties"></a> queue_activity_parties
 
-Same as activityparty table [queue_activity_parties](activityparty.md#BKMK_queue_activity_parties) Many-To-One relationship.
+Same as the [queue_activity_parties](activityparty.md#BKMK_queue_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1274,24 +1286,9 @@ Same as activityparty table [queue_activity_parties](activityparty.md#BKMK_queue
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_queue_PostRegardings"></a> queue_PostRegardings
-
-Same as postregarding table [queue_PostRegardings](postregarding.md#BKMK_queue_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|queue_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_queue_team"></a> queue_team
 
-Same as team table [queue_team](team.md#BKMK_queue_team) Many-To-One relationship.
+Same as the [queue_team](team.md#BKMK_queue_team) many-to-one relationship for the [team](team.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1306,7 +1303,7 @@ Same as team table [queue_team](team.md#BKMK_queue_team) Many-To-One relationshi
 
 ### <a name="BKMK_queue_entries"></a> queue_entries
 
-Same as queueitem table [queue_entries](queueitem.md#BKMK_queue_entries) Many-To-One relationship.
+Same as the [queue_entries](queueitem.md#BKMK_queue_entries) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1321,7 +1318,7 @@ Same as queueitem table [queue_entries](queueitem.md#BKMK_queue_entries) Many-To
 
 ### <a name="BKMK_Queue_ProcessSessions"></a> Queue_ProcessSessions
 
-Same as processsession table [Queue_ProcessSessions](processsession.md#BKMK_Queue_ProcessSessions) Many-To-One relationship.
+Same as the [Queue_ProcessSessions](processsession.md#BKMK_Queue_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1336,7 +1333,7 @@ Same as processsession table [Queue_ProcessSessions](processsession.md#BKMK_Queu
 
 ### <a name="BKMK_queue_PostFollows"></a> queue_PostFollows
 
-Same as postfollow table [queue_PostFollows](postfollow.md#BKMK_queue_PostFollows) Many-To-One relationship.
+Same as the [queue_PostFollows](postfollow.md#BKMK_queue_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1351,7 +1348,7 @@ Same as postfollow table [queue_PostFollows](postfollow.md#BKMK_queue_PostFollow
 
 ### <a name="BKMK_mailbox_regarding_queue"></a> mailbox_regarding_queue
 
-Same as mailbox table [mailbox_regarding_queue](mailbox.md#BKMK_mailbox_regarding_queue) Many-To-One relationship.
+Same as the [mailbox_regarding_queue](mailbox.md#BKMK_mailbox_regarding_queue) many-to-one relationship for the [mailbox](mailbox.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1366,7 +1363,7 @@ Same as mailbox table [mailbox_regarding_queue](mailbox.md#BKMK_mailbox_regardin
 
 ### <a name="BKMK_Queue_BulkDeleteFailures"></a> Queue_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Queue_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Queue_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Queue_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Queue_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1377,6 +1374,23 @@ Same as bulkdeletefailure table [Queue_BulkDeleteFailures](bulkdeletefailure.md#
 |ReferencedEntityNavigationPropertyName|Queue_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_email_acceptingentity_queue"></a> email_acceptingentity_queue
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+Same as the [email_acceptingentity_queue](email.md#BKMK_email_acceptingentity_queue) many-to-one relationship for the [email](email.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|email|
+|ReferencingAttribute|acceptingentityid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|email_acceptingentity_queue|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -1389,7 +1403,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [business_unit_queues2](#BKMK_business_unit_queues2)
 - [lk_queue_modifiedonbehalfby](#BKMK_lk_queue_modifiedonbehalfby)
 - [organization_queues](#BKMK_organization_queues)
-- [owner_queues](#BKMK_owner_queues)
 - [lk_queuebase_createdby](#BKMK_lk_queuebase_createdby)
 - [lk_queuebase_modifiedby](#BKMK_lk_queuebase_modifiedby)
 - [TransactionCurrency_Queue](#BKMK_TransactionCurrency_Queue)
@@ -1399,47 +1412,43 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_queue_defaultmailbox_mailbox"></a> queue_defaultmailbox_mailbox
 
-See mailbox Table [queue_defaultmailbox_mailbox](mailbox.md#BKMK_queue_defaultmailbox_mailbox) One-To-Many relationship.
+See the [queue_defaultmailbox_mailbox](mailbox.md#BKMK_queue_defaultmailbox_mailbox) one-to-many relationship for the [mailbox](mailbox.md) table/entity.
 
 ### <a name="BKMK_business_unit_queues"></a> business_unit_queues
 
-See businessunit Table [business_unit_queues](businessunit.md#BKMK_business_unit_queues) One-To-Many relationship.
+See the [business_unit_queues](businessunit.md#BKMK_business_unit_queues) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_business_unit_queues2"></a> business_unit_queues2
 
-See businessunit Table [business_unit_queues2](businessunit.md#BKMK_business_unit_queues2) One-To-Many relationship.
+See the [business_unit_queues2](businessunit.md#BKMK_business_unit_queues2) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_queue_modifiedonbehalfby"></a> lk_queue_modifiedonbehalfby
 
-See systemuser Table [lk_queue_modifiedonbehalfby](systemuser.md#BKMK_lk_queue_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_queue_modifiedonbehalfby](systemuser.md#BKMK_lk_queue_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_queues"></a> organization_queues
 
-See organization Table [organization_queues](organization.md#BKMK_organization_queues) One-To-Many relationship.
-
-### <a name="BKMK_owner_queues"></a> owner_queues
-
-See owner Table [owner_queues](owner.md#BKMK_owner_queues) One-To-Many relationship.
+See the [organization_queues](organization.md#BKMK_organization_queues) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_queuebase_createdby"></a> lk_queuebase_createdby
 
-See systemuser Table [lk_queuebase_createdby](systemuser.md#BKMK_lk_queuebase_createdby) One-To-Many relationship.
+See the [lk_queuebase_createdby](systemuser.md#BKMK_lk_queuebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_queuebase_modifiedby"></a> lk_queuebase_modifiedby
 
-See systemuser Table [lk_queuebase_modifiedby](systemuser.md#BKMK_lk_queuebase_modifiedby) One-To-Many relationship.
+See the [lk_queuebase_modifiedby](systemuser.md#BKMK_lk_queuebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Queue"></a> TransactionCurrency_Queue
 
-See transactioncurrency Table [TransactionCurrency_Queue](transactioncurrency.md#BKMK_TransactionCurrency_Queue) One-To-Many relationship.
+See the [TransactionCurrency_Queue](transactioncurrency.md#BKMK_TransactionCurrency_Queue) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_queue_primary_user"></a> queue_primary_user
 
-See systemuser Table [queue_primary_user](systemuser.md#BKMK_queue_primary_user) One-To-Many relationship.
+See the [queue_primary_user](systemuser.md#BKMK_queue_primary_user) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_queue_createdonbehalfby"></a> lk_queue_createdonbehalfby
 
-See systemuser Table [lk_queue_createdonbehalfby](systemuser.md#BKMK_lk_queue_createdonbehalfby) One-To-Many relationship.
+See the [lk_queue_createdonbehalfby](systemuser.md#BKMK_lk_queue_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -1472,6 +1481,6 @@ IntersectEntityName: queuemembership<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.queue?text=queue EntityType" />

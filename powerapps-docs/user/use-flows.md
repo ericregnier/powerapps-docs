@@ -1,21 +1,18 @@
 ---
 title: "Use Power Automate to automate processes in model-driven apps| MicrosoftDocs"
 description: How to sse Power Automate to automate processes
-author: mduelae
-manager: kvivek
-ms.service: powerapps
+author: sericks007
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 5/22/2019
-ms.author: mkaur
+ms.subservice: end-user
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use Power Automate to automate processes
 
@@ -32,7 +29,7 @@ Connect with Power Automate from your app to manage your flows.
 1. On the command bar, select **Flow**.  
   
    > [!div class="mx-imgBorder"]
-   > ![Power Automate menu](media/flow.png "Power Automate menu") 
+   > ![Power Automate menu.](media/flow.png "Power Automate menu") 
   
 2. The following options appear:  
   

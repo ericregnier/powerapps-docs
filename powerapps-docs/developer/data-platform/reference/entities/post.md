@@ -1,18 +1,14 @@
 ---
-title: "Post table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Post table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Post table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Post table/entity reference
@@ -25,13 +21,12 @@ An activity feed post.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/posts<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/posts(*postid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/posts(*postid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/posts<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Create|POST /posts<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /posts(*postid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /posts(*postid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /posts<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -55,6 +50,7 @@ An activity feed post.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [LargeText](#BKMK_LargeText)
 - [PostId](#BKMK_PostId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -64,6 +60,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [Type](#BKMK_Type)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_LargeText"></a> LargeText
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the text of a post.|
+|DisplayName|Text|
+|Format|Email|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|largetext|
+|MaxLength|1073741823|
+|RequiredLevel|ApplicationRequired|
+|Type|Memo|
 
 
 ### <a name="BKMK_PostId"></a> PostId
@@ -141,11 +156,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Source Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Auto Post|
-|2|Manual Post|
-|3|ActionHub Post|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Auto Post||
+|2|Manual Post||
+|3|ActionHub Post||
 
 
 
@@ -161,7 +176,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|text|
-|MaxLength|4000|
+|MaxLength|2000|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -197,15 +212,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Type Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Check-in|
-|2|Idea|
-|3|News|
-|4|Private Message|
-|5|Question|
-|6|Re-post|
-|7|Status|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Check-in||
+|2|Idea||
+|3|News||
+|4|Private Message||
+|5|Question||
+|6|Re-post||
+|7|Status||
 
 
 
@@ -511,12 +526,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### PostToYammer Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -618,11 +633,12 @@ Listed by **SchemaName**.
 - [post_BulkDeleteFailures](#BKMK_post_BulkDeleteFailures)
 - [Post_Comments](#BKMK_Post_Comments)
 - [Post_Likes](#BKMK_Post_Likes)
+- [post_activity_file_attachment](#BKMK_post_activity_file_attachment)
 
 
 ### <a name="BKMK_post_AsyncOperations"></a> post_AsyncOperations
 
-Same as asyncoperation table [post_AsyncOperations](asyncoperation.md#BKMK_post_AsyncOperations) Many-To-One relationship.
+Same as the [post_AsyncOperations](asyncoperation.md#BKMK_post_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -637,7 +653,7 @@ Same as asyncoperation table [post_AsyncOperations](asyncoperation.md#BKMK_post_
 
 ### <a name="BKMK_post_BulkDeleteFailures"></a> post_BulkDeleteFailures
 
-Same as bulkdeletefailure table [post_BulkDeleteFailures](bulkdeletefailure.md#BKMK_post_BulkDeleteFailures) Many-To-One relationship.
+Same as the [post_BulkDeleteFailures](bulkdeletefailure.md#BKMK_post_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -652,7 +668,7 @@ Same as bulkdeletefailure table [post_BulkDeleteFailures](bulkdeletefailure.md#B
 
 ### <a name="BKMK_Post_Comments"></a> Post_Comments
 
-Same as postcomment table [Post_Comments](postcomment.md#BKMK_Post_Comments) Many-To-One relationship.
+Same as the [Post_Comments](postcomment.md#BKMK_Post_Comments) many-to-one relationship for the [postcomment](postcomment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -667,7 +683,7 @@ Same as postcomment table [Post_Comments](postcomment.md#BKMK_Post_Comments) Man
 
 ### <a name="BKMK_Post_Likes"></a> Post_Likes
 
-Same as postlike table [Post_Likes](postlike.md#BKMK_Post_Likes) Many-To-One relationship.
+Same as the [Post_Likes](postlike.md#BKMK_Post_Likes) many-to-one relationship for the [postlike](postlike.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -676,6 +692,23 @@ Same as postlike table [Post_Likes](postlike.md#BKMK_Post_Likes) Many-To-One rel
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|Post_Likes|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_post_activity_file_attachment"></a> post_activity_file_attachment
+
+**Added by**: Activities Patch Solution
+
+Same as the [post_activity_file_attachment](activityfileattachment.md#BKMK_post_activity_file_attachment) many-to-one relationship for the [activityfileattachment](activityfileattachment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|activityfileattachment|
+|ReferencingAttribute|parentid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|post_activity_file_attachment|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -689,36 +722,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_post_createdonbehalfby](#BKMK_lk_post_createdonbehalfby)
 - [lk_post_modifiedby](#BKMK_lk_post_modifiedby)
 - [lk_post_modifiedonbehalfby](#BKMK_lk_post_modifiedonbehalfby)
-- [post_PostRegardings](#BKMK_post_PostRegardings)
 - [organization_post](#BKMK_organization_post)
 
 
 ### <a name="BKMK_lk_post_createdby"></a> lk_post_createdby
 
-See systemuser Table [lk_post_createdby](systemuser.md#BKMK_lk_post_createdby) One-To-Many relationship.
+See the [lk_post_createdby](systemuser.md#BKMK_lk_post_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_post_createdonbehalfby"></a> lk_post_createdonbehalfby
 
-See systemuser Table [lk_post_createdonbehalfby](systemuser.md#BKMK_lk_post_createdonbehalfby) One-To-Many relationship.
+See the [lk_post_createdonbehalfby](systemuser.md#BKMK_lk_post_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_post_modifiedby"></a> lk_post_modifiedby
 
-See systemuser Table [lk_post_modifiedby](systemuser.md#BKMK_lk_post_modifiedby) One-To-Many relationship.
+See the [lk_post_modifiedby](systemuser.md#BKMK_lk_post_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_post_modifiedonbehalfby"></a> lk_post_modifiedonbehalfby
 
-See systemuser Table [lk_post_modifiedonbehalfby](systemuser.md#BKMK_lk_post_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_post_PostRegardings"></a> post_PostRegardings
-
-See postregarding Table [post_PostRegardings](postregarding.md#BKMK_post_PostRegardings) One-To-Many relationship.
+See the [lk_post_modifiedonbehalfby](systemuser.md#BKMK_lk_post_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_post"></a> organization_post
 
-See organization Table [organization_post](organization.md#BKMK_organization_post) One-To-Many relationship.
+See the [organization_post](organization.md#BKMK_organization_post) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.post?text=post EntityType" />

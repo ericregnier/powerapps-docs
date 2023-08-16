@@ -1,20 +1,17 @@
 ---
 title: "Walkthrough: Configure Microsoft Azure (SAS) for integration (Microsoft Dataverse) | Microsoft Docs"
 description: "This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Microsoft Dataverse messages posted to the Azure Service Bus."
-keywords: ""
-ms.date: 03/18/2021
-ms.service: powerapps
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+ms.reviewer: pehecke
 ms.topic: article
-ms.assetid: d7b24b11-57f0-ab05-4bec-0b64efee178d
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Tutorial: Configure Azure (SAS) for integration with Microsoft Dataverse
@@ -26,7 +23,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
 > [!NOTE]
 >  This walkthrough applies to any Dataverse deployment when using SAS authorization for Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization).  
 >   
-> You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Download tools from NuGet](download-tools-NuGet.md).
+> You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Dataverse development tools](download-tools-NuGet.md).
   
 ## Prerequisites  
 
@@ -40,7 +37,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
 - The messaging entity must have the `Send` policy permission at a minimum. For a two-way relay, the policy must also have the `Listen` permission.  
 - The authorization connection string of your messaging entity.
   
- ![Define the Azure policy permissions](media/policy-permissions.png "Define the Azure policy permissions")  
+ ![Define the Azure policy permissions.](media/policy-permissions.png "Define the Azure policy permissions")  
   
  Refer to the [Create a Service Bus namespace using the Azure portal](/azure/service-bus-messaging/service-bus-create-namespace-portal) for instructions on how to create a Service Bus namespace and messaging entity.  
   
@@ -56,13 +53,13 @@ A [ServiceEndpoint Table](reference/entities/serviceendpoint.md) contains config
   
 3. Check **Let's Start with the connection string from the Azure Service Bus Portal** and paste the connection string of your Service Bus messaging entity.  
   
- ![Provide authorization connection string](media/sas-connection-string.PNG "Provide authorization connection string")  
+ ![Provide authorization connection string.](media/sas-connection-string.PNG "Provide authorization connection string")  
   
 4. Select **Next**.  
   
 5. Fill out the **Service Endpoint Registration** form by entering the **Designation Type**, **Message Format**, and optionally the **User Information Sent** and **Description** fields.
   
- ![Service endpoint registration](media/service-endpoint-registration.PNG "Service endpoint registration")  
+ ![Service endpoint registration.](media/service-endpoint-registration.PNG "Service endpoint registration")  
   
    For more information about the message format, see [Write a listener application for a Azure solution](write-listener-application-azure-solution.md).  
   
@@ -70,12 +67,12 @@ A [ServiceEndpoint Table](reference/entities/serviceendpoint.md) contains config
   
 7. After a few seconds or so, you will see the new service endpoint in the **Registered Plug-ins & Custom Workflow Activities** list.  
   
- ![New service endpoint](media/new-service-endpoint.PNG "New service endpoint")  
+ ![New service endpoint.](media/new-service-endpoint.PNG "New service endpoint")  
   
 ### See also
 
 [Azure integration](azure-integration.md)<br />
-[Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
+[What is Azure Service Bus?](/azure/service-bus-messaging/service-bus-messaging-overview)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

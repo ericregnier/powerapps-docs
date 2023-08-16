@@ -2,12 +2,15 @@
 title: Dataverse for Teams environment language | Microsoft Docs
 description: Dataverse for Teams environment language.
 author: NHelgren
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/16/2020
+ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # Dataverse for Teams environment language
 
@@ -25,7 +28,7 @@ When a user accesses the Power Apps app within a team in Microsoft Teams, the us
 
     - Already has the required language pack installed, the environment will use the user’s language.
 
-    Also, this does not change the default language of the environment, but provides a localized user experience for the user when viewing the existing information in the team, and allows all new tables and columns created by the user to have localized labels that match her/his language.
+    Also, this does not change the default language of the environment, but provides a localized user experience for the user when viewing the existing information in the team, and allows all new tables and columns created by the user to have localized labels that match their language.
 
 > [!IMPORTANT]
 > - Any existing tables or columns at the time of the language change will not be translated to another language. They will continue to use the existing names.
@@ -39,7 +42,7 @@ User B’s language is set to French in Teams and they access the Power Apps app
 - If the Dataverse for Teams environment doesn't have the French language pack installed, it will be automatically installed in the environment for Team 1. The user interface for User B immediately changes to French while the language pack is installed. After the language pack is installed, any new tables and columns will be created in the French language.
 - If the Dataverse for Teams environment for Team 1 already has the French language pack installed, no additional installation is required.
  
-If the User B changes her/his language in Teams again and accesses the Power Apps app in the team next time, the new language pack will be installed if the language isn't already installed in Dataverse for Teams environment.
+If the User B changes their language in Teams again and accesses the Power Apps app in the team next time, the new language pack will be installed if the language isn't already installed in Dataverse for Teams environment.
 
 ## Supported languages and fallbacks
 
@@ -59,18 +62,19 @@ The fallback languages are denoted in *italics*.
 | Danish                | Danish                | Danish                       | Danish                | Danish                  | Danish                |
 | Dutch                 | Dutch                 | Dutch                        | Dutch                 | Dutch                   | Dutch                 |
 | English (Canada)      | *English US*            | *English US*                   | *English US*            | *English US*              | *English US*            |
-| English UK            | English UK            | *English US*                   | *English US*            | *English US*              | *English US*            |
+| English UK            | *English US*           | *English US*                   | *English US*            | *English US*              | *English US*            |
 | English US            | English US            | English US                   | English US            | English US              | English US            |
 | Estonian              | Estonian              | Estonian                     | Estonian              | *English US*              | Estonian              |
+| Flipino             | *English US*           | *English US*                   | *English US*            | *English US*              | *English UK*            |
 | Finnish               | Finnish               | Finnish                      | Finnish               | *Swedish*                 | Finnish               |
 | French                | French                | French                       | French                | French                  | French                |
-| French (Canada)       | French (Canada)       | *French*                       | *French*                | *French*                  | *French*                |
+| French (Canada)       | *French*           | *French*                       | *French*                | *French*                  | *French*                |
 | German Standard       | German Standard       | German Standard              | German Standard       | German Standard         | German Standard       |
 | Greek                 | Greek                 | Greek                        | Greek                 | *English US*              | Greek                 |
 | Hebrew                | Hebrew                | *English US*                   | *English US*            | *English US*              | Hebrew                |
 | Hindi                 | Hindi                 | Hindi                        | Hindi                 | Hindi                   | Hindi                 |
 | Hungarian             | Hungarian             | Hungarian                    | Hungarian             | *English US*              | Hungarian             |
-| Icelandic             | *English UK*            | *English US*                   | *English US*            | *English US*              | English UK            |
+| Icelandic             | *English US*               | *English US*                   | *English US*            | *English US*              | English UK            |
 | Indonesian            | Indonesian            | Indonesian                   | Indonesian            | *English US*              | Indonesian            |
 | Italian               | Italian               | Italian                      | Italian               | Italian                 | Italian               |
 | Japanese              | Japanese              | Japanese                     | Japanese              | Japanese                | Japanese              |
@@ -79,7 +83,6 @@ The fallback languages are denoted in *italics*.
 | Lithuanian            | Lithuanian            | Lithuanian                   | Lithuanian            | *English US*              | Lithuanian            |
 | Norwegian - NB        | Norwegian - NB        | Norwegian - NB               | Norwegian - NB        | Norwegian - NB          | Norwegian - NB        |
 | Norwegian - NN        | *Norwegian - NB*        | *Norwegian - NB*               | *Norwegian - NB*        | *Norwegian - NB*          | *Norwegian - NB*        |
-| Philipino             | *English UK*            | *English US*                   | *English US*            | *English US*              | *English UK*            |
 | Polish                | Polish                | Polish                       | Polish                | Polish                  | Polish                |
 | Portuguese (Portugal) | Portuguese (Portugal) | Portuguese (Portugal)        | Portuguese (Portugal) | *Brazilian Portuguese*    | Portuguese (Portugal) |
 | Romanian              | Romanian              | Romanian                     | Romanian              | *English US*              | Romanian              |
@@ -96,7 +99,7 @@ The fallback languages are denoted in *italics*.
 | Turkish               | Turkish               | Turkish                      | Turkish               | Turkish                 | Turkish               |
 | Ukrainian             | Ukrainian             | Ukrainian                    | Ukrainian             | *English US*              | Ukrainian             |
 | Vietnamese            | Vietnamese            | Vietnamese                   | *English US*            | *English US*              | Vietnamese            |
-| Welsh                 | *English UK*            | *English US*                   | *English US*            | *English US*              | *English UK*            | 
+| Welsh                 | *English US*             | *English US*                   | *English US*            | *English US*              | *English UK*            | 
 
 ### See also
 

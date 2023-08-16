@@ -1,16 +1,23 @@
 ---
-title: Add list component to a Power Apps portals page using portals Studio. | Microsoft Docs
-description: Learn about how to add list component to a Power Apps portals page using portals Studio.
+title: Add list
+description: Learn how to add list component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 12/01/2022
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: kkendrick
+contributors:
+    - neerajnandwana-msft
+    - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add list
+
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 List is a data-driven configuration to render a list of records without the need for a developer to surface the grid in the portal.
 
@@ -18,28 +25,28 @@ Lists use [Dataverse views](/powerapps/maker/model-driven-apps/create-and-edit-v
 
 To add list component:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
+1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select the page on which you want to add the component.
+1. Select the page on which you want to add the component.
 
-3.  Select an editable element on the canvas.
+1. Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
+1. Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
-5.  Under **Portal components**, select **List**.
+1. Under **Portal components**, select **List**.
 
-6.  In the properties pane on the right side of the screen, select one of the following options:
+1. In the properties pane on the right side of the screen, select one of the following options:
 
     - **Create new**: Create a new list.
     - **Use existing**: Use an existing list.
 
-7.  Enter information or make selection:
+1. Enter information or make selection:
 
     - **Name**: Name of the list.
 
-    - **Entity**: The name of the entity from which the views are loaded.
+    - **Table**: The name of the table from which the views are loaded.
 
-    - **Views**: The list of views of the target entity that is to be rendered. You can select multiple views to display records in the list. The view selected first is the default view.
+    - **Views**: The list of views of the target table that is to be rendered. You can select multiple views to display records in the list. The view selected first is the default view.
 
     - **Create new record**: Allows a user to create a record. Select a webpage that contains a form to create a new record.
 
@@ -49,16 +56,17 @@ To add list component:
 
     - **Delete record**: Allows a user to delete a record.
 
-    - **Empty list message**: Message to be displayed when there are no records to be displayed.
-
     - **Number of records per page**: Enter the number of the records to display on a page.
 
-    - **Enable search in entity list**: Allows a user to search records in the list.
+    - **Enable search in list**: Allows a user to search records in the list.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)  
+    - **Permissions**: Table permissions to be considered for the form. [Configure table permissions](configure/entity-permissions-studio.md) to make the form available to anyone, or any specific roles.  
 
     > [!div class=mx-imgBorder]
-    > ![list properties](media/list-props.png "List properties")
+    > ![list properties.](media/list-props.png "List properties")
+
+    > [!NOTE]
+    > By default, permissions are applied to components containing data. Making it visible to anyone, or only to specific roles, is done by managing table permissions.
 
 ### See also
 

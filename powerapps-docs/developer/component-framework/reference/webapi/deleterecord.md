@@ -1,16 +1,14 @@
 ---
 title: deleteRecord | Microsoft Docs
 description: Deletes a table record.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5c9968bf-d535-425c-b1f1-0db6b7822de1
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # deleteRecord
@@ -19,7 +17,7 @@ ms.assetid: 5c9968bf-d535-425c-b1f1-0db6b7822de1
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps & portals.
 
 ## Syntax
 
@@ -27,7 +25,7 @@ Model-driven apps
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -67,7 +65,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)>
+Type: LookupValue[]
 
 ### Related topics
 

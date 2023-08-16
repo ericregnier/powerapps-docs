@@ -1,18 +1,20 @@
 ---
-title: 'Card control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Card control
+title: Card control in Power Apps
+description: Learn about the details, properties and examples of the card control in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: gregli
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
+  - gregli-msft
 ---
 # Card control in Power Apps
 Provides the display and editing experience for a single field of a **[Display form](control-form-detail.md)** or **[Edit form](control-form-detail.md)** control.

@@ -1,20 +1,22 @@
 ---
-title: Find a property | Microsoft Docs
-description: Find a property by control, by category, or alphabetically.
-author: fikaradz
-manager: kvivek
-ms.service: powerapps
+title: Controls and properties in canvas apps
+description: Learn about properties of different controls in canvas apps.
+author: chmoncay
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm-msft
-ms.date: 01/24/2020
-ms.author: fikaradz
+ms.reviewer: mkaur-msft
+ms.date: 01/06/2021
+ms.subservice: canvas-maker
+ms.author: chmoncay
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
 ---
-# Controls and properties in Power Apps
+
+# Controls and properties in canvas apps
 
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
@@ -22,11 +24,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Add picture](controls/control-add-picture.md)** – Load images from the local device, for upload to a data source.
 
+**[Address input](geospatial-component-input-address.md)** - See dynamic address suggestions as you type.
+
 **[Attachments](controls/control-attachments.md)** – Download and upload files from the local device to a data source.
 
 **[Audio](controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
-**[Barcode scanner](controls/control-new-barcode-scanner.md)** – Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device.
+**[Barcode reader](controls/control-barcodereader.md)** – Scans barcodes, QR codes, and data-matrix codes on an Android, iOS, or Windows device.
+
+**[Barcode scanner (retired)](controls/control-new-barcode-scanner.md)** – Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device. Replaced by the [barcode reader](controls/control-barcodereader.md).
 
 **[Button](controls/control-button.md)** – Interact with the app by clicking or tapping.
 
@@ -42,9 +48,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Combo box](controls/control-combo-box.md)** - Allows users to make selections from provided choices. Supports search and multi-select.
 
-**[Container (experimental)](controls/control-container.md)** - Create nested hierarchy for accessibility and responsiveness. 
+**[Container (experimental)](controls/control-container.md)** - Create nested hierarchy for accessibility and responsiveness.
 
-**[Data table](controls/control-data-table.md)** - Show data in a tabular format.
+**[Data table (preview)](controls/control-data-table.md)** - Show data in a tabular format.
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
 
@@ -54,7 +60,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Edit form](controls/control-form-detail.md)** – Edit and create records in a data source using a form.
 
-**[Entity form](./controls/control-form-detail.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Microsoft Dataverse.
+**[Display and Edit form](./controls/control-form-detail.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Microsoft Dataverse.
 
 **[Export](controls/control-export-import.md)** – Export data for use elsewhere in Power Apps.
 
@@ -71,6 +77,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Line chart](controls/control-column-line-chart.md)** – Show values as data points relative to two axes.
 
 **[List box](controls/control-list-box.md)** – Select one or more items in a list.
+
+**[Map](geospatial-component-map.md)** - View the physical position of objects from a data source, or by inputting new physical locations.
+
+**[Measuring Camera](mixed-reality-component-measure-distance.md)** - Measure distance, area, and volume in mixed reality.
 
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
@@ -96,7 +106,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Stream Video](controls/control-stream-video.md)** – Play videos and browse through channels from the Microsoft Stream service.
 
-**[Label](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency,
+**[Label](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency.
 
 **[Text input](controls/control-text-input.md)** – Type text, numbers, and other data.
 
@@ -105,6 +115,12 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Toggle](controls/control-toggle.md)** – Drag a handle to specify **true** or **false**.
 
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
+
+**[3D object](mixed-reality-component-view-3d.md)** - Rotate and zoom into the model with simple gestures in 3D.
+
+**[View in MR](mixed-reality-component-view-mr.md)** - See how a particular item might fit within a specified space in mixed reality.
+
+**[View shape in MR](mixed-reality-component-view-shape.md)** - See if a simple cube might fit within a specified space in mixed reality.
 
 **[Web barcode scanner (experimental)](controls/control-barcodescanner.md)** – The legacy barcode scanner, which is obsolete but might be useful for scanning codes in a web browser.
 
@@ -123,6 +139,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 ## All properties
 
 ### A
+
+**[AccesibleLabel](controls/properties-accessibility.md)** – Reference information about properties related to accessibility in Power Apps.
 
 **[ActualZoom](controls/control-pdf-viewer.md)** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -172,6 +190,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Color](controls/properties-color-border.md)** – The color of text in a control.  Applies to many controls.
 
+**ContentLanguage** – The language of the control's content, if different from the control's container.
+
 **[Contrast](controls/control-camera.md)** – How easily the user can distinguish between similar colors in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[CurrentFindText](controls/control-pdf-viewer.md)** – The current search term that is in use.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
@@ -192,6 +212,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[DefaultMode](controls/control-form-detail.md)** – The initial mode of a form control, either **Edit**, **New**, or **View**.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
+**DelayOutput** – When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas). Applies to the **[Text input](controls/control-text-input.md)** control.
+
 **[Direction](controls/control-gallery.md)** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **[Disabled](controls/properties-core.md)** – Whether the user can interact with the control.  Applies to many controls.
@@ -208,9 +230,14 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Document](controls/control-pdf-viewer.md)** – The URL, enclosed in double-quotation marks, of a PDF file.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
+**[Drop shadow](controls/properties-color-border.md)** - Adds shadow effects around the control.  Applies to the **[Horizontal container ](controls/control-horizontal-container.md)** and **[Vertical container ](controls/control-vertical-container.md)** control.
+
+- 
 **[Duration](controls/control-timer.md)** – How long a timer runs.  Applies to the **[Timer](controls/control-timer.md)** control.
 
 ### E
+
+**EnableSpellCheck** – Whether a **[Text input](controls/control-text-input.md)** control should use the browser spell check function. Power Apps for Windows doesn't support this property.
 
 **[EndYear](controls/control-date-picker.md)** – The latest year to which the user can set value of a date-picker control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
@@ -233,6 +260,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[FindPrevious](controls/control-pdf-viewer.md)** – Finds the previous instance of **FindText** in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
 **[FindText](controls/control-pdf-viewer.md)** – The search term to look for in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
+
+**[FocusedBorderColor](controls/properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](controls/properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Font](controls/properties-text.md)** – The name of the family of fonts in which text appears.  Applies to many controls.
 

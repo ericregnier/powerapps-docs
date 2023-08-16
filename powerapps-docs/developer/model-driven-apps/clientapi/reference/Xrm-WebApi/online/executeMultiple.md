@@ -1,17 +1,15 @@
 ---
 title: "Xrm.WebApi.online.executeMultiple (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
-ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+description: Includes description and supported parameters for the Xrm.WebApi.online.executeMultiple method.
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.WebApi.online.executeMultiple (Client API reference)
 
@@ -58,7 +56,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -81,7 +79,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following attributes:</p>
+<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following values:</p>
 <ul>
 <li><b>json</b>: (Optional). Promise. Response body in JSON format.</li>
 <li><b>text</b>: (Optional). Promise. Response body in plaintext format. </li>
@@ -104,7 +102,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 ## Return Value
 
-On success, returns a promise containing an array of objects with the attributes specified earlier in the description of **successCallback** function.
+On success, returns a promise containing an array of objects with the values specified earlier in the description of **successCallback** function.
 
 ### See also
 

@@ -1,18 +1,14 @@
 ---
-title: "usermobileofflineprofilemembership table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "usermobileofflineprofilemembership table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the usermobileofflineprofilemembership table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # usermobileofflineprofilemembership table/entity reference
@@ -27,9 +23,10 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -80,12 +77,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### HasMobileOfflineProfileIdConflict Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -636,7 +633,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [usermobileofflineprofilemembership_SyncErrors](syncerror.md#BKMK_usermobileofflineprofilemembership_SyncErrors) Many-To-One relationship.
+Same as the [usermobileofflineprofilemembership_SyncErrors](syncerror.md#BKMK_usermobileofflineprofilemembership_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -653,7 +650,7 @@ Same as syncerror table [usermobileofflineprofilemembership_SyncErrors](syncerro
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [usermobileofflineprofilemembership_AsyncOperations](asyncoperation.md#BKMK_usermobileofflineprofilemembership_AsyncOperations) Many-To-One relationship.
+Same as the [usermobileofflineprofilemembership_AsyncOperations](asyncoperation.md#BKMK_usermobileofflineprofilemembership_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -670,7 +667,7 @@ Same as asyncoperation table [usermobileofflineprofilemembership_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [usermobileofflineprofilemembership_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [usermobileofflineprofilemembership_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -687,7 +684,7 @@ Same as mailboxtrackingfolder table [usermobileofflineprofilemembership_MailboxT
 
 **Added by**: System Solution Solution
 
-Same as processsession table [usermobileofflineprofilemembership_ProcessSession](processsession.md#BKMK_usermobileofflineprofilemembership_ProcessSession) Many-To-One relationship.
+Same as the [usermobileofflineprofilemembership_ProcessSession](processsession.md#BKMK_usermobileofflineprofilemembership_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -704,7 +701,7 @@ Same as processsession table [usermobileofflineprofilemembership_ProcessSession]
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [usermobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefailure.md#BKMK_usermobileofflineprofilemembership_BulkDeleteFailures) Many-To-One relationship.
+Same as the [usermobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefailure.md#BKMK_usermobileofflineprofilemembership_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -721,7 +718,7 @@ Same as bulkdeletefailure table [usermobileofflineprofilemembership_BulkDeleteFa
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -752,46 +749,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_usermobileofflineprofilemembership_createdby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_createdby) One-To-Many relationship.
+See the [lk_usermobileofflineprofilemembership_createdby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usermobileofflineprofilemembership_createdonbehalfby"></a> lk_usermobileofflineprofilemembership_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_usermobileofflineprofilemembership_createdonbehalfby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_createdonbehalfby) One-To-Many relationship.
+See the [lk_usermobileofflineprofilemembership_createdonbehalfby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usermobileofflineprofilemembership_modifiedby"></a> lk_usermobileofflineprofilemembership_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_usermobileofflineprofilemembership_modifiedby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_modifiedby) One-To-Many relationship.
+See the [lk_usermobileofflineprofilemembership_modifiedby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usermobileofflineprofilemembership_modifiedonbehalfby"></a> lk_usermobileofflineprofilemembership_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_usermobileofflineprofilemembership_modifiedonbehalfby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_usermobileofflineprofilemembership_modifiedonbehalfby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_usermobileofflineprofilemembership"></a> organization_usermobileofflineprofilemembership
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_usermobileofflineprofilemembership](organization.md#BKMK_organization_usermobileofflineprofilemembership) One-To-Many relationship.
+See the [organization_usermobileofflineprofilemembership](organization.md#BKMK_organization_usermobileofflineprofilemembership) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId"></a> mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId
 
 **Added by**: System Solution Solution
 
-See mobileofflineprofile Table [mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId](mobileofflineprofile.md#BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId) One-To-Many relationship.
+See the [mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId](mobileofflineprofile.md#BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId) one-to-many relationship for the [mobileofflineprofile](mobileofflineprofile.md) table/entity.
 
 ### <a name="BKMK_systemuser_usermobileofflineprofilemembership_SystemUserId"></a> systemuser_usermobileofflineprofilemembership_SystemUserId
 
 **Added by**: System Solution Solution
 
-See systemuser Table [systemuser_usermobileofflineprofilemembership_SystemUserId](systemuser.md#BKMK_systemuser_usermobileofflineprofilemembership_SystemUserId) One-To-Many relationship.
+See the [systemuser_usermobileofflineprofilemembership_SystemUserId](systemuser.md#BKMK_systemuser_usermobileofflineprofilemembership_SystemUserId) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.usermobileofflineprofilemembership?text=usermobileofflineprofilemembership EntityType" />

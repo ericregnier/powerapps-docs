@@ -1,27 +1,21 @@
 ---
 title: "Write a custom Azure-aware plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write plug-in code that can post a message or the execution context of the current database transaction to the Azure Service Bus."
-keywords: ""
-ms.date: 03/18/2021
-ms.service: powerapps
+ms.date: 06/19/2023
+author: divkamath
+ms.author: dikamath
+ms.reviewer: pehecke
 ms.topic: article
-ms.assetid: 93d0442e-5fc9-c43c-c8c1-a433687f3d0a
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Write a custom Azure-aware plug-in
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Writing a plug-in that works with Azure is similar to writing any other Dynamics 365 Microsoft Dataverse plug-in. However, in addition to invoking any desired web service methods, the plug-in must include code to initiate posting the current transaction's execution context to the Azure Service Bus.  
+Writing a plug-in that works with Azure is similar to writing any other Dataverse plug-in. However, in addition to invoking any desired web service methods, the plug-in must include code to initiate posting the current transaction's execution context to the Azure Service Bus.  
   
 <a name="bkmk_design"></a>
 
@@ -138,10 +132,11 @@ For a plug-in registered to execute asynchronously, the <xref:Microsoft.Xrm.Sdk.
   
 ### See also
 
-[Azure extensions for Dynamics 365](azure-integration.md)<br />
-[Send Dynamics 365 data over the Microsoft Azure Service Bus](work-data-azure-solution.md)<br />
-[Write a plug-In](write-plug-in.md)<br />
-[Event execution pipeline](event-framework.md)<br />
+[Azure extensions for Dynamics 365](azure-integration.md)  
+[Send Dynamics 365 data over the Microsoft Azure Service Bus](work-data-azure-solution.md)  
+[Sample: Azure aware custom plug-in](org-service/samples/azure-aware-custom-plugin.md)  
+[Write a plug-In](write-plug-in.md)  
+[Event execution pipeline](event-framework.md)  
 [Register and deploy plug-Ins](register-plug-in.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

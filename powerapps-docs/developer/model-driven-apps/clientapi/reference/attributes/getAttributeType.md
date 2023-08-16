@@ -1,25 +1,24 @@
 ---
 title: "getAttributeType (Client API reference)| MicrosoftDocs"
-ms.date: 02/13/2019
-ms.service: powerapps
-ms.topic: "reference"
-ms.assetid: 9ef1c886-a0b8-4ba9-bb9f-e6ecfa9d6dff
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+description: Includes description and supported parameters for the getAttributeType method.
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getAttributeType (Client API reference)
 
 
 
-Returns a string value that represents the type of attribute. 
+Returns a string value that represents the type of column. 
 
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -35,12 +34,14 @@ This method will return one of the following **string** values:
 - datetime
 - decimal
 - double
+- file
+- image
 - integer
 - lookup
 - memo
 - money
-- multiselectoptionset
-- optionset
+- multiselectoptionset (choices)
+- optionset (choice)
 - string
 
 

@@ -1,18 +1,16 @@
 ---
 title: "refreshParentGrid (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
+description: Includes description and supported parameters for the refreshParentGrid method.
+author: jasongre
+ms.author: jasongre
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # refreshParentGrid (Client API reference)
 
@@ -30,7 +28,7 @@ search.app:
 
 |Property Name |Type |Required  |Description |
 |---|---|---|---|
-|entityType|String|Yes |Entity type of the record.|
+|entityType|String|Yes |Table type of the record.|
 |id|String|Yes |ID of the record.|
 |name|String|No |Name of the record.|
 

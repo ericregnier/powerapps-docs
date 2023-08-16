@@ -1,24 +1,23 @@
 ---
-title: getValue | Microsoft Docs
-description: Gets the raw value of the record's column.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
+title: EntityRecord.getValue | Microsoft Docs
+description: Gets the value of the record's column.
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 04/21/2023
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+  - JimDaly
 ---
-# getValue
+
+# EntityRecord.getValue
 
 [!INCLUDE[./includes/getvalue-description.md](./includes/getvalue-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -26,20 +25,21 @@ Model-driven apps
 
 ## Parameters
 
-| Parameter Name|Type|Required|Description|
-| ------------- |----|--------|-----------|
-|`columnName`|`string`|Yes|Column name of the record|
-
+| Parameter Name | Type     | Required | Description         |
+| -------------- | -------- | -------- | ------------------- |
+| `columnName`   | `string` | Yes      | The logical name of the column. |
 
 ## Return Value
 
-Type: `string`
+Type: `string` | `Date` | `number` | `number[]` | `boolean` | [EntityReference](./../entityreference.md) | `EntityReference[]` | [FileObject](./../fileobject.md) | [ImageObject](./../imageobject.md)
+
+> [!NOTE]
+> For Canvas apps the [fileSize](../fileobject.md#filesize) and [mimeType](../fileobject.md#mimetype) properties for file columns will be missing on the first call, but the call initiates an asynchronous process to cache these values. After these values are cached, the next `getValue` call will return all attribute values.
 
 ### Related topics
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

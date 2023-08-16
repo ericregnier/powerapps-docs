@@ -1,18 +1,14 @@
 ---
-title: "msdyn_analysiscomponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_analysiscomponent table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_analysiscomponent table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # msdyn_analysiscomponent table/entity reference
@@ -27,22 +23,28 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_analysiscomponents<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_analysiscomponents<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Create|POST /msdyn_analysiscomponents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE /msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retrieve|GET /msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /msdyn_analysiscomponents<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|SetState|PATCH /msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /msdyn_analysiscomponents(*msdyn_analysiscomponentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
 
@@ -85,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_sevlowcount](#BKMK_msdyn_sevlowcount)
 - [msdyn_sevmediumcount](#BKMK_msdyn_sevmediumcount)
 - [msdyn_SolutionHealthRuleSetId](#BKMK_msdyn_SolutionHealthRuleSetId)
+- [msdyn_SuggestionCount](#BKMK_msdyn_SuggestionCount)
 - [msdyn_WarningCount](#BKMK_msdyn_WarningCount)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -140,10 +143,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_AnalysisComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Organization Health|
-|192350001|Component Health|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Organization Health||
+|192350001|Component Health||
+|192350002|Object Health||
 
 
 
@@ -207,14 +211,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Solution|
-|192350001|Entity|
-|192350002|View|
-|192350003|Form|
-|192350004|Plugin|
-|192350005|Configuration|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Solution||
+|192350001|Entity||
+|192350002|View||
+|192350003|Form||
+|192350004|Plugin||
+|192350005|Configuration||
 
 
 
@@ -408,6 +412,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
+### <a name="BKMK_msdyn_SuggestionCount"></a> msdyn_SuggestionCount
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Suggestion Count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_suggestioncount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
 ### <a name="BKMK_msdyn_WarningCount"></a> msdyn_WarningCount
 
 |Property|Value|
@@ -573,6 +593,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -892,12 +913,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -969,7 +1008,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_analysiscomponent_SyncErrors](syncerror.md#BKMK_msdyn_analysiscomponent_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_SyncErrors](syncerror.md#BKMK_msdyn_analysiscomponent_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -986,7 +1025,7 @@ Same as syncerror table [msdyn_analysiscomponent_SyncErrors](syncerror.md#BKMK_m
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_analysiscomponent_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_analysiscomponent_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_analysiscomponent_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1003,7 +1042,7 @@ Same as duplicaterecord table [msdyn_analysiscomponent_DuplicateMatchingRecord](
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_analysiscomponent_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_analysiscomponent_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_analysiscomponent_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1020,7 +1059,7 @@ Same as duplicaterecord table [msdyn_analysiscomponent_DuplicateBaseRecord](dupl
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_analysiscomponent_AsyncOperations](asyncoperation.md#BKMK_msdyn_analysiscomponent_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_AsyncOperations](asyncoperation.md#BKMK_msdyn_analysiscomponent_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1037,7 +1076,7 @@ Same as asyncoperation table [msdyn_analysiscomponent_AsyncOperations](asyncoper
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_analysiscomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_analysiscomponent_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_analysiscomponent_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1054,7 +1093,7 @@ Same as mailboxtrackingfolder table [msdyn_analysiscomponent_MailboxTrackingFold
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_analysiscomponent_ProcessSession](processsession.md#BKMK_msdyn_analysiscomponent_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_ProcessSession](processsession.md#BKMK_msdyn_analysiscomponent_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1071,7 +1110,7 @@ Same as processsession table [msdyn_analysiscomponent_ProcessSession](processses
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_analysiscomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_analysiscomponent_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_analysiscomponent_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1088,7 +1127,7 @@ Same as bulkdeletefailure table [msdyn_analysiscomponent_BulkDeleteFailures](bul
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_analysiscomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_analysiscomponent_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_analysiscomponent_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1103,7 +1142,7 @@ Same as principalobjectattributeaccess table [msdyn_analysiscomponent_PrincipalO
 
 ### <a name="BKMK_msdyn_analysiscomponent_msdyn_analysisresult"></a> msdyn_analysiscomponent_msdyn_analysisresult
 
-Same as msdyn_analysisresult table [msdyn_analysiscomponent_msdyn_analysisresult](msdyn_analysisresult.md#BKMK_msdyn_analysiscomponent_msdyn_analysisresult) Many-To-One relationship.
+Same as the [msdyn_analysiscomponent_msdyn_analysisresult](msdyn_analysisresult.md#BKMK_msdyn_analysiscomponent_msdyn_analysisresult) many-to-one relationship for the [msdyn_analysisresult](msdyn_analysisresult.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1127,7 +1166,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_analysiscomponent_modifiedonbehalfby](#BKMK_lk_msdyn_analysiscomponent_modifiedonbehalfby)
 - [user_msdyn_analysiscomponent](#BKMK_user_msdyn_analysiscomponent)
 - [team_msdyn_analysiscomponent](#BKMK_team_msdyn_analysiscomponent)
-- [owner_msdyn_analysiscomponent](#BKMK_owner_msdyn_analysiscomponent)
 - [business_unit_msdyn_analysiscomponent](#BKMK_business_unit_msdyn_analysiscomponent)
 - [msdyn_analysisjob_msdyn_analysiscomponent](#BKMK_msdyn_analysisjob_msdyn_analysiscomponent)
 - [msdyn_msdyn_solutionhealthruleset_msdyn_analysi](#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_analysi)
@@ -1137,60 +1175,54 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_analysiscomponent_createdby](systemuser.md#BKMK_lk_msdyn_analysiscomponent_createdby) One-To-Many relationship.
+See the [lk_msdyn_analysiscomponent_createdby](systemuser.md#BKMK_lk_msdyn_analysiscomponent_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_analysiscomponent_createdonbehalfby"></a> lk_msdyn_analysiscomponent_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_analysiscomponent_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_analysiscomponent_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_analysiscomponent_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_analysiscomponent_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_analysiscomponent_modifiedby"></a> lk_msdyn_analysiscomponent_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_analysiscomponent_modifiedby](systemuser.md#BKMK_lk_msdyn_analysiscomponent_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_analysiscomponent_modifiedby](systemuser.md#BKMK_lk_msdyn_analysiscomponent_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_analysiscomponent_modifiedonbehalfby"></a> lk_msdyn_analysiscomponent_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_analysiscomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_analysiscomponent_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_analysiscomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_analysiscomponent_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_analysiscomponent"></a> user_msdyn_analysiscomponent
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_analysiscomponent](systemuser.md#BKMK_user_msdyn_analysiscomponent) One-To-Many relationship.
+See the [user_msdyn_analysiscomponent](systemuser.md#BKMK_user_msdyn_analysiscomponent) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_analysiscomponent"></a> team_msdyn_analysiscomponent
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_analysiscomponent](team.md#BKMK_team_msdyn_analysiscomponent) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_analysiscomponent"></a> owner_msdyn_analysiscomponent
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_analysiscomponent](owner.md#BKMK_owner_msdyn_analysiscomponent) One-To-Many relationship.
+See the [team_msdyn_analysiscomponent](team.md#BKMK_team_msdyn_analysiscomponent) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_analysiscomponent"></a> business_unit_msdyn_analysiscomponent
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_analysiscomponent](businessunit.md#BKMK_business_unit_msdyn_analysiscomponent) One-To-Many relationship.
+See the [business_unit_msdyn_analysiscomponent](businessunit.md#BKMK_business_unit_msdyn_analysiscomponent) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_msdyn_analysisjob_msdyn_analysiscomponent"></a> msdyn_analysisjob_msdyn_analysiscomponent
 
-See msdyn_analysisjob Table [msdyn_analysisjob_msdyn_analysiscomponent](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_msdyn_analysiscomponent) One-To-Many relationship.
+See the [msdyn_analysisjob_msdyn_analysiscomponent](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_msdyn_analysiscomponent) one-to-many relationship for the [msdyn_analysisjob](msdyn_analysisjob.md) table/entity.
 
 ### <a name="BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_analysi"></a> msdyn_msdyn_solutionhealthruleset_msdyn_analysi
 
-See msdyn_solutionhealthruleset Table [msdyn_msdyn_solutionhealthruleset_msdyn_analysi](msdyn_solutionhealthruleset.md#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_analysi) One-To-Many relationship.
+See the [msdyn_msdyn_solutionhealthruleset_msdyn_analysi](msdyn_solutionhealthruleset.md#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_analysi) one-to-many relationship for the [msdyn_solutionhealthruleset](msdyn_solutionhealthruleset.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_analysiscomponent?text=msdyn_analysiscomponent EntityType" />

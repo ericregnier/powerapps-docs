@@ -1,18 +1,15 @@
 ---
 title: "setSrc (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
-ms.assetid: d6b6b887-e527-4a16-acd1-6e3fc1759bd6
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+description: Includes description and supported parameters for the setSrc method.
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # setSrc (Client API reference)
 
@@ -36,7 +33,8 @@ iframe, webresource
 
 ### Related topics
 
-[getSrc](getSrc.md)
+[getSrc](getSrc.md)<br/>
+[Known issues: Component from an IFRAME](/power-platform/admin/doc-management-known-issues#components-from-an-iframe)
 
 
 

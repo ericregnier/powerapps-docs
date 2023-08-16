@@ -1,18 +1,19 @@
 ---
-title: 'Web barcode scanner control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the web barcode scanner control
+title: Web barcode scanner control (experimental) in Power Apps
+description: Learn about the details, properties and examples of the web barcode scanner control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/12/2020
+ms.date: 06/15/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
 ---
 # Web barcode scanner control (experimental) in Power Apps
 
@@ -20,12 +21,14 @@ The legacy barcode scanning control, which is obsolete but might be useful for s
 
 ## Description
 
-The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete because of poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
+The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete because of poor performance, and the mobile **[Barcode reader](control-barcodereader.md)** control replaces this control.
 
 > [!NOTE]
 > The web barcode scanner control is only supported on Microsoft Edge, Chrome, Firefox, and Opera browsers. All other browsers will show a warning that some features of the app won't work.
 
 ## Key properties
+
+**BarcodeType** - The barcode type to scan. Supported types: Codabar, Code39, Code128, EAN, I2of5, UPC. **Default: UPC**
 
 **Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses for scanning barcodes.
 
@@ -69,7 +72,7 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 ### Add barcode scanner control
 
-1. Add a **barcode scanner** control, name it **Mybarcode scanner**
+1. Add a **barcode scanner** control, name it "Mybarcode scanner".
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 

@@ -1,25 +1,17 @@
 ---
 title: "Avoid using window.top | MicrosoftDocs"
 description: "Describes how to avoid script errors and incorrect application behavior associated with using window.top in JavaScript customizations."
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
-manager: austinj
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
+
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+
+
 ms.date: 1/15/2019
+ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Avoid using window.top
 
@@ -84,7 +76,7 @@ Any usage of `window.top` should be avoided, if possible. The following are exam
 var myValue = window.top.myGlobalVariable;
 
 // Attempting to access the Xrm namespace at the top level
-myValue = window.top.Xrm.Page.getAttribute("field1");
+myValue = window.top.Xrm.Page.getAttribute("column1");
 ```
 
 <a name='additional'></a>

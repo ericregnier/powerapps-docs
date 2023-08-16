@@ -1,21 +1,17 @@
 ---
-title: "ActivityPointer table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ActivityPointer table/entity."
-ms.date: 03/04/2021
+title: "Activity (ActivityPointer)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Activity (ActivityPointer)  table/entity."
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# ActivityPointer table/entity reference
+# Activity (ActivityPointer)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -25,12 +21,11 @@ Task performed, or to be performed, by a user. An activity is any action for whi
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/activitypointers(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitypointers<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Rollup|<xref href="Microsoft.Dynamics.CRM.Rollup?text=Rollup Function" />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
+|Retrieve|GET /activitypointers(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /activitypointers<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Rollup|<xref:Microsoft.Dynamics.CRM.Rollup?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
 
 ## Properties
 
@@ -182,11 +177,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Community Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Other|
-|1|Facebook|
-|2|Twitter|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Other|Other default|
+|1|Facebook|Facebook item.|
+|2|Twitter|Twitter.|
 
 
 
@@ -205,11 +200,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DeliveryPriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -275,12 +270,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBilled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -298,12 +293,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMapiPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -321,12 +316,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWorkflowCreated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -359,12 +354,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### LeftVoiceMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -411,11 +406,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -719,7 +714,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [DeliveryLastAttemptedOn](#BKMK_DeliveryLastAttemptedOn)
+- [DescriptionBlobId](#BKMK_DescriptionBlobId)
+- [DescriptionBlobId_Name](#BKMK_DescriptionBlobId_Name)
 - [ExchangeRate](#BKMK_ExchangeRate)
+- [FormattedScheduledEnd](#BKMK_FormattedScheduledEnd)
+- [FormattedScheduledStart](#BKMK_FormattedScheduledStart)
 - [InstanceTypeCode](#BKMK_InstanceTypeCode)
 - [IsRegularActivity](#BKMK_IsRegularActivity)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -733,6 +732,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [PostponeActivityProcessingUntil](#BKMK_PostponeActivityProcessingUntil)
@@ -896,6 +896,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
+### <a name="BKMK_DescriptionBlobId"></a> DescriptionBlobId
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description|File that contains description content.|
+|DisplayName|Description File Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_DescriptionBlobId_Name"></a> DescriptionBlobId_Name
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
@@ -906,10 +939,44 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
+
+
+### <a name="BKMK_FormattedScheduledEnd"></a> FormattedScheduledEnd
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|TimeZoneIndependent|
+|Description|Formatted scheduled end time of the activity.|
+|DisplayName|Formatted End Date|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|formattedscheduledend|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_FormattedScheduledStart"></a> FormattedScheduledStart
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|TimeZoneIndependent|
+|Description|Formatted scheduled start time of the activity.|
+|DisplayName|Formatted Start Date|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|formattedscheduledstart|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_InstanceTypeCode"></a> InstanceTypeCode
@@ -926,13 +993,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### InstanceTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Recurring|
-|1|Recurring Master|
-|2|Recurring Instance|
-|3|Recurring Exception|
-|4|Recurring Future Exception|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Recurring||
+|1|Recurring Master||
+|2|Recurring Instance||
+|3|Recurring Exception||
+|4|Recurring Future Exception||
 
 
 
@@ -950,12 +1017,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsRegularActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1120,12 +1187,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the activity.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1328,11 +1411,12 @@ Listed by **SchemaName**.
 - [ActivityPointer_AsyncOperations](#BKMK_ActivityPointer_AsyncOperations)
 - [ActivityPointer_BulkDeleteFailures](#BKMK_ActivityPointer_BulkDeleteFailures)
 - [activity_pointer_recurringappointmentmaster](#BKMK_activity_pointer_recurringappointmentmaster)
+- [activity_pointer_chat](#BKMK_activity_pointer_chat)
 
 
 ### <a name="BKMK_activity_pointer_fax"></a> activity_pointer_fax
 
-Same as fax table [activity_pointer_fax](fax.md#BKMK_activity_pointer_fax) Many-To-One relationship.
+Same as the [activity_pointer_fax](fax.md#BKMK_activity_pointer_fax) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1347,7 +1431,7 @@ Same as fax table [activity_pointer_fax](fax.md#BKMK_activity_pointer_fax) Many-
 
 ### <a name="BKMK_activity_pointer_recurrencerule"></a> activity_pointer_recurrencerule
 
-Same as recurrencerule table [activity_pointer_recurrencerule](recurrencerule.md#BKMK_activity_pointer_recurrencerule) Many-To-One relationship.
+Same as the [activity_pointer_recurrencerule](recurrencerule.md#BKMK_activity_pointer_recurrencerule) many-to-one relationship for the [recurrencerule](recurrencerule.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1362,7 +1446,7 @@ Same as recurrencerule table [activity_pointer_recurrencerule](recurrencerule.md
 
 ### <a name="BKMK_activity_pointer_letter"></a> activity_pointer_letter
 
-Same as letter table [activity_pointer_letter](letter.md#BKMK_activity_pointer_letter) Many-To-One relationship.
+Same as the [activity_pointer_letter](letter.md#BKMK_activity_pointer_letter) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1377,7 +1461,7 @@ Same as letter table [activity_pointer_letter](letter.md#BKMK_activity_pointer_l
 
 ### <a name="BKMK_activitypointer_connections1"></a> activitypointer_connections1
 
-Same as connection table [activitypointer_connections1](connection.md#BKMK_activitypointer_connections1) Many-To-One relationship.
+Same as the [activitypointer_connections1](connection.md#BKMK_activitypointer_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1392,7 +1476,7 @@ Same as connection table [activitypointer_connections1](connection.md#BKMK_activ
 
 ### <a name="BKMK_activity_pointer_phonecall"></a> activity_pointer_phonecall
 
-Same as phonecall table [activity_pointer_phonecall](phonecall.md#BKMK_activity_pointer_phonecall) Many-To-One relationship.
+Same as the [activity_pointer_phonecall](phonecall.md#BKMK_activity_pointer_phonecall) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1407,7 +1491,7 @@ Same as phonecall table [activity_pointer_phonecall](phonecall.md#BKMK_activity_
 
 ### <a name="BKMK_activity_pointer_email"></a> activity_pointer_email
 
-Same as email table [activity_pointer_email](email.md#BKMK_activity_pointer_email) Many-To-One relationship.
+Same as the [activity_pointer_email](email.md#BKMK_activity_pointer_email) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1422,7 +1506,7 @@ Same as email table [activity_pointer_email](email.md#BKMK_activity_pointer_emai
 
 ### <a name="BKMK_activitypointer_activity_parties"></a> activitypointer_activity_parties
 
-Same as activityparty table [activitypointer_activity_parties](activityparty.md#BKMK_activitypointer_activity_parties) Many-To-One relationship.
+Same as the [activitypointer_activity_parties](activityparty.md#BKMK_activitypointer_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1437,7 +1521,7 @@ Same as activityparty table [activitypointer_activity_parties](activityparty.md#
 
 ### <a name="BKMK_activity_pointer_activity_mime_attachment"></a> activity_pointer_activity_mime_attachment
 
-Same as activitymimeattachment table [activity_pointer_activity_mime_attachment](activitymimeattachment.md#BKMK_activity_pointer_activity_mime_attachment) Many-To-One relationship.
+Same as the [activity_pointer_activity_mime_attachment](activitymimeattachment.md#BKMK_activity_pointer_activity_mime_attachment) many-to-one relationship for the [activitymimeattachment](activitymimeattachment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1452,7 +1536,7 @@ Same as activitymimeattachment table [activity_pointer_activity_mime_attachment]
 
 ### <a name="BKMK_activity_pointer_appointment"></a> activity_pointer_appointment
 
-Same as appointment table [activity_pointer_appointment](appointment.md#BKMK_activity_pointer_appointment) Many-To-One relationship.
+Same as the [activity_pointer_appointment](appointment.md#BKMK_activity_pointer_appointment) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1467,7 +1551,7 @@ Same as appointment table [activity_pointer_appointment](appointment.md#BKMK_act
 
 ### <a name="BKMK_activitypointer_connections2"></a> activitypointer_connections2
 
-Same as connection table [activitypointer_connections2](connection.md#BKMK_activitypointer_connections2) Many-To-One relationship.
+Same as the [activitypointer_connections2](connection.md#BKMK_activitypointer_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1482,7 +1566,7 @@ Same as connection table [activitypointer_connections2](connection.md#BKMK_activ
 
 ### <a name="BKMK_slakpiinstance_activitypointer"></a> slakpiinstance_activitypointer
 
-Same as slakpiinstance table [slakpiinstance_activitypointer](slakpiinstance.md#BKMK_slakpiinstance_activitypointer) Many-To-One relationship.
+Same as the [slakpiinstance_activitypointer](slakpiinstance.md#BKMK_slakpiinstance_activitypointer) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1497,7 +1581,7 @@ Same as slakpiinstance table [slakpiinstance_activitypointer](slakpiinstance.md#
 
 ### <a name="BKMK_ActivityPointer_QueueItem"></a> ActivityPointer_QueueItem
 
-Same as queueitem table [ActivityPointer_QueueItem](queueitem.md#BKMK_ActivityPointer_QueueItem) Many-To-One relationship.
+Same as the [ActivityPointer_QueueItem](queueitem.md#BKMK_ActivityPointer_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1512,7 +1596,7 @@ Same as queueitem table [ActivityPointer_QueueItem](queueitem.md#BKMK_ActivityPo
 
 ### <a name="BKMK_activity_pointer_task"></a> activity_pointer_task
 
-Same as task table [activity_pointer_task](task.md#BKMK_activity_pointer_task) Many-To-One relationship.
+Same as the [activity_pointer_task](task.md#BKMK_activity_pointer_task) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1527,7 +1611,7 @@ Same as task table [activity_pointer_task](task.md#BKMK_activity_pointer_task) M
 
 ### <a name="BKMK_activity_pointer_socialactivity"></a> activity_pointer_socialactivity
 
-Same as socialactivity table [activity_pointer_socialactivity](socialactivity.md#BKMK_activity_pointer_socialactivity) Many-To-One relationship.
+Same as the [activity_pointer_socialactivity](socialactivity.md#BKMK_activity_pointer_socialactivity) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1542,7 +1626,7 @@ Same as socialactivity table [activity_pointer_socialactivity](socialactivity.md
 
 ### <a name="BKMK_ActivityPointer_AsyncOperations"></a> ActivityPointer_AsyncOperations
 
-Same as asyncoperation table [ActivityPointer_AsyncOperations](asyncoperation.md#BKMK_ActivityPointer_AsyncOperations) Many-To-One relationship.
+Same as the [ActivityPointer_AsyncOperations](asyncoperation.md#BKMK_ActivityPointer_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1557,7 +1641,7 @@ Same as asyncoperation table [ActivityPointer_AsyncOperations](asyncoperation.md
 
 ### <a name="BKMK_ActivityPointer_BulkDeleteFailures"></a> ActivityPointer_BulkDeleteFailures
 
-Same as bulkdeletefailure table [ActivityPointer_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ActivityPointer_BulkDeleteFailures) Many-To-One relationship.
+Same as the [ActivityPointer_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ActivityPointer_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1572,7 +1656,7 @@ Same as bulkdeletefailure table [ActivityPointer_BulkDeleteFailures](bulkdeletef
 
 ### <a name="BKMK_activity_pointer_recurringappointmentmaster"></a> activity_pointer_recurringappointmentmaster
 
-Same as recurringappointmentmaster table [activity_pointer_recurringappointmentmaster](recurringappointmentmaster.md#BKMK_activity_pointer_recurringappointmentmaster) Many-To-One relationship.
+Same as the [activity_pointer_recurringappointmentmaster](recurringappointmentmaster.md#BKMK_activity_pointer_recurringappointmentmaster) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1581,6 +1665,23 @@ Same as recurringappointmentmaster table [activity_pointer_recurringappointmentm
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|activity_pointer_recurringappointmentmaster|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_activity_pointer_chat"></a> activity_pointer_chat
+
+**Added by**: Activities Patch Solution
+
+Same as the [activity_pointer_chat](chat.md#BKMK_activity_pointer_chat) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_chat|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -1601,7 +1702,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sla_activitypointer](#BKMK_sla_activitypointer)
 - [business_unit_activitypointer](#BKMK_business_unit_activitypointer)
 - [Account_ActivityPointers](#BKMK_Account_ActivityPointers)
-- [owner_activitypointers](#BKMK_owner_activitypointers)
 - [manualsla_activitypointer](#BKMK_manualsla_activitypointer)
 - [team_activity](#BKMK_team_activity)
 - [lk_activitypointer_modifiedby](#BKMK_lk_activitypointer_modifiedby)
@@ -1611,74 +1711,70 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
 
-See interactionforemail Table [interactionforemail_ActivityPointers](interactionforemail.md#BKMK_interactionforemail_ActivityPointers) One-To-Many relationship.
+See the [interactionforemail_ActivityPointers](interactionforemail.md#BKMK_interactionforemail_ActivityPointers) one-to-many relationship for the [interactionforemail](interactionforemail.md) table/entity.
 
 ### <a name="BKMK_KnowledgeBaseRecord_ActivityPointers"></a> KnowledgeBaseRecord_ActivityPointers
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_ActivityPointers](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_ActivityPointers) One-To-Many relationship.
+See the [KnowledgeBaseRecord_ActivityPointers](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_ActivityPointers) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_ActivityPointers"></a> KnowledgeArticle_ActivityPointers
 
-See knowledgearticle Table [KnowledgeArticle_ActivityPointers](knowledgearticle.md#BKMK_KnowledgeArticle_ActivityPointers) One-To-Many relationship.
+See the [KnowledgeArticle_ActivityPointers](knowledgearticle.md#BKMK_KnowledgeArticle_ActivityPointers) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_activitypointer_sendermailboxid_mailbox"></a> activitypointer_sendermailboxid_mailbox
 
-See mailbox Table [activitypointer_sendermailboxid_mailbox](mailbox.md#BKMK_activitypointer_sendermailboxid_mailbox) One-To-Many relationship.
+See the [activitypointer_sendermailboxid_mailbox](mailbox.md#BKMK_activitypointer_sendermailboxid_mailbox) one-to-many relationship for the [mailbox](mailbox.md) table/entity.
 
 ### <a name="BKMK_lk_activitypointer_createdonbehalfby"></a> lk_activitypointer_createdonbehalfby
 
-See systemuser Table [lk_activitypointer_createdonbehalfby](systemuser.md#BKMK_lk_activitypointer_createdonbehalfby) One-To-Many relationship.
+See the [lk_activitypointer_createdonbehalfby](systemuser.md#BKMK_lk_activitypointer_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Contact_ActivityPointers"></a> Contact_ActivityPointers
 
-See contact Table [Contact_ActivityPointers](contact.md#BKMK_Contact_ActivityPointers) One-To-Many relationship.
+See the [Contact_ActivityPointers](contact.md#BKMK_Contact_ActivityPointers) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_activitypointer_modifiedonbehalfby"></a> lk_activitypointer_modifiedonbehalfby
 
-See systemuser Table [lk_activitypointer_modifiedonbehalfby](systemuser.md#BKMK_lk_activitypointer_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_activitypointer_modifiedonbehalfby](systemuser.md#BKMK_lk_activitypointer_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_ActivityPointer"></a> TransactionCurrency_ActivityPointer
 
-See transactioncurrency Table [TransactionCurrency_ActivityPointer](transactioncurrency.md#BKMK_TransactionCurrency_ActivityPointer) One-To-Many relationship.
+See the [TransactionCurrency_ActivityPointer](transactioncurrency.md#BKMK_TransactionCurrency_ActivityPointer) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_sla_activitypointer"></a> sla_activitypointer
 
-See sla Table [sla_activitypointer](sla.md#BKMK_sla_activitypointer) One-To-Many relationship.
+See the [sla_activitypointer](sla.md#BKMK_sla_activitypointer) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_business_unit_activitypointer"></a> business_unit_activitypointer
 
-See businessunit Table [business_unit_activitypointer](businessunit.md#BKMK_business_unit_activitypointer) One-To-Many relationship.
+See the [business_unit_activitypointer](businessunit.md#BKMK_business_unit_activitypointer) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_Account_ActivityPointers"></a> Account_ActivityPointers
 
-See account Table [Account_ActivityPointers](account.md#BKMK_Account_ActivityPointers) One-To-Many relationship.
-
-### <a name="BKMK_owner_activitypointers"></a> owner_activitypointers
-
-See owner Table [owner_activitypointers](owner.md#BKMK_owner_activitypointers) One-To-Many relationship.
+See the [Account_ActivityPointers](account.md#BKMK_Account_ActivityPointers) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_manualsla_activitypointer"></a> manualsla_activitypointer
 
-See sla Table [manualsla_activitypointer](sla.md#BKMK_manualsla_activitypointer) One-To-Many relationship.
+See the [manualsla_activitypointer](sla.md#BKMK_manualsla_activitypointer) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_team_activity"></a> team_activity
 
-See team Table [team_activity](team.md#BKMK_team_activity) One-To-Many relationship.
+See the [team_activity](team.md#BKMK_team_activity) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_activitypointer_modifiedby"></a> lk_activitypointer_modifiedby
 
-See systemuser Table [lk_activitypointer_modifiedby](systemuser.md#BKMK_lk_activitypointer_modifiedby) One-To-Many relationship.
+See the [lk_activitypointer_modifiedby](systemuser.md#BKMK_lk_activitypointer_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_activitypointer_createdby"></a> lk_activitypointer_createdby
 
-See systemuser Table [lk_activitypointer_createdby](systemuser.md#BKMK_lk_activitypointer_createdby) One-To-Many relationship.
+See the [lk_activitypointer_createdby](systemuser.md#BKMK_lk_activitypointer_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_activity"></a> user_activity
 
-See systemuser Table [user_activity](systemuser.md#BKMK_user_activity) One-To-Many relationship.
+See the [user_activity](systemuser.md#BKMK_user_activity) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.activitypointer?text=activitypointer EntityType" />

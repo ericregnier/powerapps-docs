@@ -1,18 +1,14 @@
 ---
-title: "msdyn_AIBFile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_AIBFile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_AIBFile table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # msdyn_AIBFile table/entity reference
@@ -27,22 +23,28 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_aibfiles(*msdyn_aibfileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_aibfiles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_aibfiles(*msdyn_aibfileid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_aibfiles(*msdyn_aibfileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_aibfiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_aibfiles(*msdyn_aibfileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_aibfiles(*msdyn_aibfileid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /msdyn_aibfiles(*msdyn_aibfileid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Create|POST /msdyn_aibfiles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE /msdyn_aibfiles(*msdyn_aibfileid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retrieve|GET /msdyn_aibfiles(*msdyn_aibfileid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /msdyn_aibfiles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|SetState|PATCH /msdyn_aibfiles(*msdyn_aibfileid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /msdyn_aibfiles(*msdyn_aibfileid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
 
@@ -369,6 +371,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [msdyn_AIBDatasetsContainerIdName](#BKMK_msdyn_AIBDatasetsContainerIdName)
+- [msdyn_File](#BKMK_msdyn_File)
 - [msdyn_File_Name](#BKMK_msdyn_File_Name)
 - [msdyn_Image_Timestamp](#BKMK_msdyn_Image_Timestamp)
 - [msdyn_Image_URL](#BKMK_msdyn_Image_URL)
@@ -376,6 +379,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -635,9 +639,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_msdyn_File_Name"></a> msdyn_File_Name
+### <a name="BKMK_msdyn_File"></a> msdyn_File
 
-**Added by**: Active Solution Solution
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|File|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_file|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_File_Name"></a> msdyn_File_Name
 
 |Property|Value|
 |--------|-----|
@@ -747,12 +762,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -817,7 +850,6 @@ Listed by **SchemaName**.
 - [msdyn_aibfile_ProcessSession](#BKMK_msdyn_aibfile_ProcessSession)
 - [msdyn_aibfile_BulkDeleteFailures](#BKMK_msdyn_aibfile_BulkDeleteFailures)
 - [msdyn_aibfile_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aibfile_PrincipalObjectAttributeAccesses)
-- [msdyn_aibfile_FileAttachments](#BKMK_msdyn_aibfile_FileAttachments)
 - [msdyn_AIBDatasetFile_msdyn_AIBuilde](#BKMK_msdyn_AIBDatasetFile_msdyn_AIBuilde)
 
 
@@ -825,7 +857,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_aibfile_SyncErrors](syncerror.md#BKMK_msdyn_aibfile_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_aibfile_SyncErrors](syncerror.md#BKMK_msdyn_aibfile_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -842,7 +874,7 @@ Same as syncerror table [msdyn_aibfile_SyncErrors](syncerror.md#BKMK_msdyn_aibfi
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_aibfile_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_aibfile_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_aibfile_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_aibfile_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -859,7 +891,7 @@ Same as duplicaterecord table [msdyn_aibfile_DuplicateMatchingRecord](duplicater
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_aibfile_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_aibfile_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_aibfile_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_aibfile_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -876,7 +908,7 @@ Same as duplicaterecord table [msdyn_aibfile_DuplicateBaseRecord](duplicaterecor
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_aibfile_AsyncOperations](asyncoperation.md#BKMK_msdyn_aibfile_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_aibfile_AsyncOperations](asyncoperation.md#BKMK_msdyn_aibfile_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -893,7 +925,7 @@ Same as asyncoperation table [msdyn_aibfile_AsyncOperations](asyncoperation.md#B
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_aibfile_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aibfile_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_aibfile_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aibfile_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -910,7 +942,7 @@ Same as mailboxtrackingfolder table [msdyn_aibfile_MailboxTrackingFolders](mailb
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_aibfile_ProcessSession](processsession.md#BKMK_msdyn_aibfile_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_aibfile_ProcessSession](processsession.md#BKMK_msdyn_aibfile_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -927,7 +959,7 @@ Same as processsession table [msdyn_aibfile_ProcessSession](processsession.md#BK
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_aibfile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aibfile_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_aibfile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aibfile_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -944,7 +976,7 @@ Same as bulkdeletefailure table [msdyn_aibfile_BulkDeleteFailures](bulkdeletefai
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_aibfile_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aibfile_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_aibfile_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aibfile_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -957,26 +989,9 @@ Same as principalobjectattributeaccess table [msdyn_aibfile_PrincipalObjectAttri
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_aibfile_FileAttachments"></a> msdyn_aibfile_FileAttachments
-
-**Added by**: System Solution Solution
-
-Same as fileattachment table [msdyn_aibfile_FileAttachments](fileattachment.md#BKMK_msdyn_aibfile_FileAttachments) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibfile_FileAttachments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_msdyn_AIBDatasetFile_msdyn_AIBuilde"></a> msdyn_AIBDatasetFile_msdyn_AIBuilde
 
-Same as msdyn_aibdatasetfile table [msdyn_AIBDatasetFile_msdyn_AIBuilde](msdyn_aibdatasetfile.md#BKMK_msdyn_AIBDatasetFile_msdyn_AIBuilde) Many-To-One relationship.
+Same as the [msdyn_AIBDatasetFile_msdyn_AIBuilde](msdyn_aibdatasetfile.md#BKMK_msdyn_AIBDatasetFile_msdyn_AIBuilde) many-to-one relationship for the [msdyn_aibdatasetfile](msdyn_aibdatasetfile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1000,9 +1015,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_aibfile_modifiedonbehalfby](#BKMK_lk_msdyn_aibfile_modifiedonbehalfby)
 - [user_msdyn_aibfile](#BKMK_user_msdyn_aibfile)
 - [team_msdyn_aibfile](#BKMK_team_msdyn_aibfile)
-- [owner_msdyn_aibfile](#BKMK_owner_msdyn_aibfile)
 - [business_unit_msdyn_aibfile](#BKMK_business_unit_msdyn_aibfile)
-- [FileAttachment_msdyn_AIBFile_msdyn_File](#BKMK_FileAttachment_msdyn_AIBFile_msdyn_File)
 - [msdyn_AIBFile_msdyn_AIBDatasetsCont](#BKMK_msdyn_AIBFile_msdyn_AIBDatasetsCont)
 
 
@@ -1010,62 +1023,50 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aibfile_createdby](systemuser.md#BKMK_lk_msdyn_aibfile_createdby) One-To-Many relationship.
+See the [lk_msdyn_aibfile_createdby](systemuser.md#BKMK_lk_msdyn_aibfile_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aibfile_createdonbehalfby"></a> lk_msdyn_aibfile_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aibfile_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aibfile_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_aibfile_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aibfile_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aibfile_modifiedby"></a> lk_msdyn_aibfile_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aibfile_modifiedby](systemuser.md#BKMK_lk_msdyn_aibfile_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_aibfile_modifiedby](systemuser.md#BKMK_lk_msdyn_aibfile_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aibfile_modifiedonbehalfby"></a> lk_msdyn_aibfile_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aibfile_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aibfile_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_aibfile_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aibfile_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_aibfile"></a> user_msdyn_aibfile
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_aibfile](systemuser.md#BKMK_user_msdyn_aibfile) One-To-Many relationship.
+See the [user_msdyn_aibfile](systemuser.md#BKMK_user_msdyn_aibfile) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_aibfile"></a> team_msdyn_aibfile
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_aibfile](team.md#BKMK_team_msdyn_aibfile) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_aibfile"></a> owner_msdyn_aibfile
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_aibfile](owner.md#BKMK_owner_msdyn_aibfile) One-To-Many relationship.
+See the [team_msdyn_aibfile](team.md#BKMK_team_msdyn_aibfile) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_aibfile"></a> business_unit_msdyn_aibfile
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_aibfile](businessunit.md#BKMK_business_unit_msdyn_aibfile) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_msdyn_AIBFile_msdyn_File"></a> FileAttachment_msdyn_AIBFile_msdyn_File
-
-**Added by**: System Solution Solution
-
-See fileattachment Table [FileAttachment_msdyn_AIBFile_msdyn_File](fileattachment.md) One-To-Many relationship.
+See the [business_unit_msdyn_aibfile](businessunit.md#BKMK_business_unit_msdyn_aibfile) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_msdyn_AIBFile_msdyn_AIBDatasetsCont"></a> msdyn_AIBFile_msdyn_AIBDatasetsCont
 
-See msdyn_aibdatasetscontainer Table [msdyn_AIBFile_msdyn_AIBDatasetsCont](msdyn_aibdatasetscontainer.md#BKMK_msdyn_AIBFile_msdyn_AIBDatasetsCont) One-To-Many relationship.
+See the [msdyn_AIBFile_msdyn_AIBDatasetsCont](msdyn_aibdatasetscontainer.md#BKMK_msdyn_AIBFile_msdyn_AIBDatasetsCont) one-to-many relationship for the [msdyn_aibdatasetscontainer](msdyn_aibdatasetscontainer.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_aibfile?text=msdyn_aibfile EntityType" />

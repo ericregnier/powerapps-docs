@@ -1,27 +1,21 @@
 ---
 title: "Edit the customizations XML file with schema validation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "The customizations.xml file is included within the compressed .zip file exported as a solution. Certain portions of the customizations.xml file can be edited manually. Information about the schema helps you confirm that any modifications you make are valid." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.custom:
-  - ""
+author: caburk
+ms.author: caburk
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: b77d962e-6e3c-bd28-d03c-cf2e23cd742d
-author: Nkrb # GitHub ID
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Edit the customizations XML file with schema validation
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/edit-customizations-xml-file-schema-validation -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/edit-customizations-xml-file-schema-validation -->
 
 The customizations.xml file is included within the compressed .zip file exported as a solution. Certain portions of the customizations.xml file can be edited manually. Information about the schema helps you confirm that any modifications you make are valid.  
   
@@ -63,7 +57,7 @@ The XSD schema files that are used to validate the customization.xml file in a s
   
 3. Select **View** and then select **Properties Window**.  
   
-4. In the **Properties** window, in the **Schemas** field, click the ellipsis [**...**] button.  
+4. In the **Properties** window, in the **Schemas** column, click the ellipsis [**...**] button.  
   
 5. In the **Xml Schemas** dialog box you should see the customizationsSolution.xsd. In the **Use** column, select **Use this schema**.  
   

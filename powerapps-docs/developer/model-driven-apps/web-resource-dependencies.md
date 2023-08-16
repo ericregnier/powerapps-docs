@@ -1,19 +1,18 @@
 ---
 title: "Web resource dependencies (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about defining dependencies between web resources in Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 05/07/2020
-ms.reviewer: ""
-ms.service: powerapps
+author: sriharibs-msft
+ms.author: srihas
+
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Web resource dependencies
 
@@ -21,9 +20,11 @@ You can define dependencies between other web resources. The primary purpose of 
 
 However there are some other behaviors which developers using JavaScript web resources can take advantage of.
 
-The following image shows the dependencies tab within the web resource form. Dependencies between web resources are set in the top list. Attribute dependencies are set using the lower list. Attribute dependencies are only available for JavaScript web resources. More information [Attribute dependencies](#attribute-dependencies)
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-![web resource dependencies tab](media/web-resource-dependencies.PNG)
+The following image shows the dependencies tab within the web resource form. Dependencies between web resources are set in the top list. Column dependencies are set using the lower list. Column dependencies are only available for JavaScript web resources. More information [Column dependencies](#column-dependencies)
+
+![web resource dependencies tab.](media/web-resource-dependencies.PNG)
 
 Within a solution you can define dependencies within solution components. Up until Mode-driven Apps the main purpose of these dependencies was to prevent the deletion of a solution component when another solution component depended on it. With Model-driven apps the behavior for JavaScript web resources is enhanced so that any other web resource listed as a dependency to the JavaScript web resource will be loaded along with the JavaScript web resource. 
 
@@ -37,26 +38,24 @@ However, web resource dependencies are not limited to just RESX web resources. Y
 > [!IMPORTANT]
 > Web resource dependencies does not provide any control over the order in which the web resources are loaded. All the web resources are loaded asynchronously and in parallel. If you have a JavaScript web resource which depends on another JavaScript web resource to be loaded and initialized before it can be initialized, you will need to manage that dependency in another way.
 
-<a name="attribute-dependencies"></a>
+## Column dependencies
 
-## Attribute dependencies
-<!--TODO: Add links to the attribute and attribute.controls collection definitions in the Client API reference -->
-Starting with Model-driven apps, if your JavaScript web resource depends on an entity attribute value that you don’t want to display in the form, you can set the attribute as a dependency for the JavaScript web resource. This means that the attribute will be available within the client API attributes collection so you can get or set the value in your code. When you add a dependency this way, the controls collection of the attribute will be empty because there will be no control on the form.
+Starting with model-driven apps, if your JavaScript web resource depends on a table column value that you don’t want to display in the form, you can set the column as a dependency for the JavaScript web resource. This means that the column will be available within the client API columns collection so you can get or set the value in your code. When you add a dependency this way, the controls collection of the column will be empty because there will be no control on the form.
 
-Before this feature you would need to manually add the attribute to the form and then configure the control to be hidden. Now you can establish this dependency more directly and eliminate the possibility that someone will remove the hidden field from the form. 
+Before this feature you would need to manually add the column to the form and then configure the control to be hidden. Now you can establish this dependency more directly and eliminate the possibility that someone will remove the hidden column from the form. 
 
 
 ### See also
 [Web resources](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
 [Webpage (HTML) web resources](webpage-html-web-resources.md)<br />
-[Script (JScript) web resources](script-jscript-web-resources.md)<br />
+[JavaScript web resources](script-jscript-web-resources.md)<br />
 [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md)<br />
 [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
-[Data (XML) Web resources](data-xml-web-resources.md)<br />
+[Data (XML) web resources](data-xml-web-resources.md)<br />
 [CSS web resources](css-web-resources.md)<br />
 [RESX web resources](resx-web-resources.md)<br />
-[WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br />
+[Web resource table reference](../data-platform/reference/entities/webresource.md)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
 [Sample: Import files as web resources](sample-import-files-web-resources.md)<br />
 

@@ -1,18 +1,14 @@
 ---
-title: "TeamTemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "TeamTemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TeamTemplate table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # TeamTemplate table/entity reference
@@ -25,16 +21,15 @@ Team template for an entity enabled for automatically created access teams.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|AddUserToRecordTeam|<xref href="Microsoft.Dynamics.CRM.AddUserToRecordTeam?text=AddUserToRecordTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/teamtemplates<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/teamtemplates(*teamtemplateid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|RemoveUserFromRecordTeam|<xref href="Microsoft.Dynamics.CRM.RemoveUserFromRecordTeam?text=RemoveUserFromRecordTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemoveUserFromRecordTeamRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/teamtemplates(*teamtemplateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/teamtemplates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/teamtemplates(*teamtemplateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|AddUserToRecordTeam|<xref:Microsoft.Dynamics.CRM.AddUserToRecordTeam?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamRequest>|
+|Create|POST /teamtemplates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /teamtemplates(*teamtemplateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|RemoveUserFromRecordTeam|<xref:Microsoft.Dynamics.CRM.RemoveUserFromRecordTeam?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RemoveUserFromRecordTeamRequest>|
+|Retrieve|GET /teamtemplates(*teamtemplateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /teamtemplates<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /teamtemplates(*teamtemplateid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -60,6 +55,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [DefaultAccessRightsMask](#BKMK_DefaultAccessRightsMask)
 - [Description](#BKMK_Description)
+- [IsCustomizable](#BKMK_IsCustomizable)
 - [ObjectTypeCode](#BKMK_ObjectTypeCode)
 - [TeamTemplateId](#BKMK_TeamTemplateId)
 - [TeamTemplateName](#BKMK_TeamTemplateName)
@@ -95,6 +91,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|2000|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Is Customizable|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomizable|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
 
 
 ### <a name="BKMK_ObjectTypeCode"></a> ObjectTypeCode
@@ -148,12 +159,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [ComponentIdUnique](#BKMK_ComponentIdUnique)
+- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [IsManaged](#BKMK_IsManaged)
 - [IsSystem](#BKMK_IsSystem)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -161,7 +175,50 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [OverwriteTime](#BKMK_OverwriteTime)
+- [SolutionId](#BKMK_SolutionId)
+- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [versionnumber](#BKMK_versionnumber)
+
+
+### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Row id unique|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentidunique|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ComponentState"></a> ComponentState
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Component State|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentstate|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ComponentState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
+
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -255,6 +312,31 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_IsManaged"></a> IsManaged
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether the solution component is part of a managed solution.|
+|DisplayName|Is Managed|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ismanaged|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsManaged Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_IsSystem"></a> IsSystem
 
 |Property|Value|
@@ -269,12 +351,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsSystem Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -369,6 +451,53 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|For internal use only.|
+|DisplayName|Record Overwrite Time|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|overwritetime|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
+
+
+### <a name="BKMK_SolutionId"></a> SolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the associated solution.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|solutionid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|supportingsolutionid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_versionnumber"></a> versionnumber
 
 **Added by**: Access Team Solution
@@ -397,7 +526,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_teamtemplate_Teams"></a> teamtemplate_Teams
 
-Same as team table [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) Many-To-One relationship.
+Same as the [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) many-to-one relationship for the [team](team.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -412,7 +541,7 @@ Same as team table [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) Many-To
 
 ### <a name="BKMK_TeamTemplate_SyncErrors"></a> TeamTemplate_SyncErrors
 
-Same as syncerror table [TeamTemplate_SyncErrors](syncerror.md#BKMK_TeamTemplate_SyncErrors) Many-To-One relationship.
+Same as the [TeamTemplate_SyncErrors](syncerror.md#BKMK_TeamTemplate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -438,22 +567,22 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_teamtemplate_createdonbehalfby"></a> lk_teamtemplate_createdonbehalfby
 
-See systemuser Table [lk_teamtemplate_createdonbehalfby](systemuser.md#BKMK_lk_teamtemplate_createdonbehalfby) One-To-Many relationship.
+See the [lk_teamtemplate_createdonbehalfby](systemuser.md#BKMK_lk_teamtemplate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_modifiedby"></a> lk_teamtemplate_modifiedby
 
-See systemuser Table [lk_teamtemplate_modifiedby](systemuser.md#BKMK_lk_teamtemplate_modifiedby) One-To-Many relationship.
+See the [lk_teamtemplate_modifiedby](systemuser.md#BKMK_lk_teamtemplate_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_createdby"></a> lk_teamtemplate_createdby
 
-See systemuser Table [lk_teamtemplate_createdby](systemuser.md#BKMK_lk_teamtemplate_createdby) One-To-Many relationship.
+See the [lk_teamtemplate_createdby](systemuser.md#BKMK_lk_teamtemplate_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_modifiedonbehalfby"></a> lk_teamtemplate_modifiedonbehalfby
 
-See systemuser Table [lk_teamtemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_teamtemplate_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_teamtemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_teamtemplate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.teamtemplate?text=teamtemplate EntityType" />

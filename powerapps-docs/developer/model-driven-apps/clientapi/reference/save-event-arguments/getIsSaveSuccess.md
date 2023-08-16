@@ -1,23 +1,22 @@
 ---
 title: "getIsSaveSuccess (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Information about getIsSaveSuccess parameter.
-ms.date: 02/01/2021
-ms.service: powerapps
-ms.topic: "reference"
+description: Includes description and supported parameters for the getIsSaveSuccess method.
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 03e970ee-7ed3-4df2-9670-222d76a479fd
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getIsSaveSuccess (Client API reference)
 
 Use this method to know whether the `OnSave` operation is successful or failed.
+
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
 
 ## Syntax
 

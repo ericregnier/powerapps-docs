@@ -5,21 +5,18 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jowells
-manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/18/2021
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Best practices and guidance when using Microsoft Dataverse

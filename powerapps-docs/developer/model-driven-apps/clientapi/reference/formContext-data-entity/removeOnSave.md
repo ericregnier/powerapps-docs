@@ -1,17 +1,15 @@
 ---
 title: "removeOnSave (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 04/07/2020
-ms.service: powerapps
-ms.topic: "reference"
-ms.assetid: 14a92f7c-f4c0-475d-8797-dcbb283db37a
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+description: Removes a function to be called when the record is saved.
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # removeOnSave (Client API reference)
 
@@ -22,6 +20,8 @@ search.app:
 ## Syntax
 
 `formContext.data.entity.removeOnSave(myFunction)`
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 

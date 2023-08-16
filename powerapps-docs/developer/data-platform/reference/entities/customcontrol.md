@@ -1,18 +1,14 @@
 ---
-title: "CustomControl table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "CustomControl table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomControl table/entity."
-ms.date: 03/04/2021
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # CustomControl table/entity reference
@@ -25,14 +21,13 @@ For internal use only.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/customcontrols<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/customcontrols(*customcontrolid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/customcontrols(*customcontrolid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/customcontrols<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/customcontrols(*customcontrolid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST /customcontrols<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /customcontrols(*customcontrolid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /customcontrols(*customcontrolid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /customcontrols<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /customcontrols(*customcontrolid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -63,6 +58,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [Manifest](#BKMK_Manifest)
 - [Name](#BKMK_Name)
+- [SupportedPlatform](#BKMK_SupportedPlatform)
 - [Version](#BKMK_Version)
 
 
@@ -177,6 +173,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_SupportedPlatform"></a> SupportedPlatform
+
+**Added by**: Base Custom Controls Core Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Supported platforms of the CustomControl.|
+|DisplayName|Supported Platforms|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|supportedplatform|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_Version"></a> Version
 
 |Property|Value|
@@ -237,12 +251,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -380,12 +394,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -590,7 +604,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_customcontrol_resource_id"></a> customcontrol_resource_id
 
-Same as customcontrolresource table [customcontrol_resource_id](customcontrolresource.md#BKMK_customcontrol_resource_id) Many-To-One relationship.
+Same as the [customcontrol_resource_id](customcontrolresource.md#BKMK_customcontrol_resource_id) many-to-one relationship for the [customcontrolresource](customcontrolresource.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -617,26 +631,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_customcontrol_createdby"></a> lk_customcontrol_createdby
 
-See systemuser Table [lk_customcontrol_createdby](systemuser.md#BKMK_lk_customcontrol_createdby) One-To-Many relationship.
+See the [lk_customcontrol_createdby](systemuser.md#BKMK_lk_customcontrol_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrol_createdonbehalfby"></a> lk_customcontrol_createdonbehalfby
 
-See systemuser Table [lk_customcontrol_createdonbehalfby](systemuser.md#BKMK_lk_customcontrol_createdonbehalfby) One-To-Many relationship.
+See the [lk_customcontrol_createdonbehalfby](systemuser.md#BKMK_lk_customcontrol_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_customcontrol_organization"></a> customcontrol_organization
 
-See organization Table [customcontrol_organization](organization.md#BKMK_customcontrol_organization) One-To-Many relationship.
+See the [customcontrol_organization](organization.md#BKMK_customcontrol_organization) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrol_modifiedonbehalfby"></a> lk_customcontrol_modifiedonbehalfby
 
-See systemuser Table [lk_customcontrol_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontrol_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_customcontrol_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontrol_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrol_modifiedby"></a> lk_customcontrol_modifiedby
 
-See systemuser Table [lk_customcontrol_modifiedby](systemuser.md#BKMK_lk_customcontrol_modifiedby) One-To-Many relationship.
+See the [lk_customcontrol_modifiedby](systemuser.md#BKMK_lk_customcontrol_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.customcontrol?text=customcontrol EntityType" />

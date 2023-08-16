@@ -1,22 +1,18 @@
 ---
 title: "createRecord (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
+description: Includes description and supported parameters for the createRecord method.
+ms.author: aorth
+author: adrianorth
+ms.date: 08/22/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 848c277b-bd44-4388-852a-0f59a3a15538
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # createRecord (Client API reference)
-
-
 
 [!INCLUDE[./includes/createRecord-description.md](./includes/createRecord-description.md)] 
 
@@ -26,7 +22,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -37,13 +33,13 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>Logical name of the entity you want to create. For example: "account".</td>
+<td>Logical name of the table you want to create. For example: "account".</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>A JSON object defining the attributes and values for the new entity record.</p>
+<td><p>A JSON object defining the columns and values for the new table record.</p>
 <p>See examples later in this topic to see how you can define the <code>data</code> object for various create scenarios.</td>
 </tr>
 <tr>
@@ -52,7 +48,7 @@ search.app:
 <td>No</td>
 <td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
 <ul>
-<li><b>entityType</b>: String. The entity logical name of the new record.</li>
+<li><b>entityType</b>: String. The table logical name of the new record.</li>
 <li><b>id</b>: String. GUID of the new record.</li>
 </ul></td>
 </tr>
@@ -70,13 +66,13 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object containing the values specified earlier in the description of the **successCallback** parameter.
 
 ## Examples
 
-These examples use the same request objects as demonstrated in [Create an entity using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) to define the data object for creating an entity record.
+These examples use the same request objects as demonstrated in [Create a table row using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) to define the data object for creating a table record.
 
-### Basic create 
+### Basic create
 
 Creates a sample account record.
 
@@ -105,15 +101,15 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Create related entity records along with the primary record
+### Create related table records along with the primary record
 
- You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account record along with the primary contact record and an associated opportunity record.
+ You can create tables related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account record along with the primary contact record and an associated opportunity record.
 
 > [!NOTE]
-> Creating related entity records in a single create operation is not supported for offline mode.
+> Creating related table records in a single create operation is not supported for offline mode.
 
 ```JavaScript
-// define data to create primary and related entity records
+// define data to create primary and related table records
 var data =
     {
         "name": "Sample Account",
@@ -147,12 +143,14 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Associate entities on creating new records
+### Associate tables on creating new records
 
-To associate new entity records to existing entity records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios: 
+To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation.
 
+> [!NOTE]
+> The names of single-valued navigation properties are not always the same as the `LogicalName` for the lookup attribute. You should make sure you are using the `Name` attribute value of the `NavigationProperty` element in the Web API $metadata service document. More information: [Web API Navigation Properties](../../../../data-platform/webapi/web-api-navigation-properties.md)
 
-**For online scenario (connected to server)**
+Here is code example:
 
 The following example creates an account record, and associates it to an existing contact record to set the latter as the primary contact for the new account record:
 
@@ -176,9 +174,12 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-**For mobile offine scenario**
+**Deprecated method for mobile offline scenario**
 
-Here is the updated sample code to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
+> [!NOTE]
+> Instead of using `@odata.bind` annotation example above, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for existing customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
+
+The following example uses the deprecated method to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
 
 ```JavaScript
 var data =
@@ -202,12 +203,11 @@ Xrm.WebApi.offline.createRecord("account", data).then(
         // handle error conditions
     }
 );
-``` 
+```
  
 ### Related topics
 
-[Create an entity using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) 
-
+[Create a table row using the Web API](../../../../data-platform/webapi/create-entity-web-api.md)<br />
 [Xrm.WebApi](../xrm-webapi.md)
 
 

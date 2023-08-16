@@ -1,20 +1,22 @@
 ---
-title: 'Add picture control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Add picture control
+title: Add picture control in canvas apps
+description: Information, including properties and examples, about the Add picture control.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 04/17/2020
+ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
 ---
-# Add picture control in Power Apps
+# Add picture control in canvas apps
+
 Takes a photo or loads images from the local device.
 
 ## Description
@@ -71,9 +73,9 @@ See the [Image control reference](control-image.md) for **Image** properties.
 
 **Media** – An identifier for the clip that an audio or video control plays.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[Padding](properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
 
@@ -97,7 +99,7 @@ See the [Image control reference](control-image.md) for **Image** properties.
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**UseMobileCamera** – Whether to use a mobile camera directly, when available.
+**UseMobileCamera** – Whether to use a mobile camera directly, when available. For Android devices, this property requires the experimental setting **Improved Media Capture** turned on.
 
 **[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
@@ -126,7 +128,7 @@ See the [Image control reference](control-image.md) for **Image** properties.
 1. Select the **[Image](control-image.md)** control in the gallery and set it's **Image** property to **ThisItem.Value**.
 1. Press F5, and then click or tap the **[Button](control-button.md)** control.
    
-    The image from the **Add picture** control appears in the **Vertical allery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Vertical gallery** control, set the **[ImagePosition](properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
+    The image from the **Add picture** control appears in the **Vertical Gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Vertical gallery** control, set the **[ImagePosition](properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
 1. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **[Button](control-button.md)** control that you added.
    
     The second image appears in the **Image gallery** control.

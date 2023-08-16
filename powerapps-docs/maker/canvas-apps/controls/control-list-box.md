@@ -1,18 +1,19 @@
 ---
-title: 'List Box control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the List Box control
+title: List Box control in Power Apps
+description: Learn about the details, properties and examples of the List Box control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
+contributors:
+  - mduelae
+  - chmoncay
 ---
 # List Box control in Power Apps
 A list in which the user can select one or multiple items.
@@ -21,13 +22,13 @@ A list in which the user can select one or multiple items.
 A **List Box** control always shows all available choices (unlike a **[Drop down](control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
 
 ## Key properties
-**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user. 
+ > [!NOTE]
+ > You can only have one default selected item. If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-**Selected** – The data record that represents the selected item.  You can only have one default selected item.  If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
-
-When you add a gallery, a list, or a chart, the property list shows **Items** by default so that you can easily specify the data that the new control should show. For example, you might set the **Items** property of a gallery to the **Account** table in Salesforce, a table named **Inventory** that you created in Excel and uploaded to the cloud, or a SharePoint list named **ConferenceSpeakers**.
+When you add a gallery, a list, or a chart, the property list shows **Items** by default so that you can easily specify the data that the new control should show. For example, you might set the **Items** property of a gallery to the **Account** table in Salesforce, a table named **Inventory** that you created in Excel and uploaded to the cloud, or a list named **ConferenceSpeakers**.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -72,9 +73,9 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
 
 **[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -92,7 +93,9 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**Selected** – The data record that represents the selected item.  You can only have one default selected item.  If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
+**Selected** – The data record that represents the selected item.
+  > [!NOTE]
+  > You can only have one default selected item. If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
 
 **SelectedItems** - **Read-only**. Represents a datatable of selected items for a multiselect listbox.
 
@@ -133,7 +136,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
    
-    ![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
+    ![Flooring categories in listbox.](./media/control-list-box/category-listbox.png)
 2. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 3. Set the **[Items](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
    
@@ -141,7 +144,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
    * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
    * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
      
-     ![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
+     ![Flooring names in dropdown lists.](./media/control-list-box/flooring-names.png)
 4. Set the **[Visible](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
    
    * CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
@@ -153,7 +156,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
    
     The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
    
-    ![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
+    ![Selected lists.](./media/control-list-box/selected-lists.png)
 6. (optional) Press Esc to return to the default workspace.
 
 
@@ -174,8 +177,9 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 
-    > [!NOTE]
+  > [!NOTE]
   > The tab key navigates to or away from the **List box**. Arrow keys navigate the contents of the **List box**.
+
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,20 +1,18 @@
 ---
-title: "isValid (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
-ms.topic: "reference"
+title: "data.isValid (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the data.isValid method.
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 93908c95-c813-4f55-9d19-8fd27a0126d7
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
-# isValid (Client API reference)
+# data.isValid (Client API reference)
 
 
 
